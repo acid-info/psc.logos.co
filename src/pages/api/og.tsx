@@ -47,7 +47,7 @@ export default async function handler(request: NextRequest) {
               fontSize: '54px',
             }}
           >
-            Seed
+            PSC
           </div>
 
           <div style={{ fontSize: '42px', marginTop: '20px' }}>

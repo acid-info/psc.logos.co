@@ -1,6 +1,6 @@
 export const siteConfigs = {
-  title: 'Seed',
-  description: 'Seed project',
+  title: 'PSC',
+  description: 'PSC project',
   keywords: [],
   xHandle: '',
   youtubeHandle: '',
