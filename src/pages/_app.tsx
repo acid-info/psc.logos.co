@@ -50,9 +50,40 @@ export default function App({ Component, pageProps }: AppLayoutProps) {
             margin-right: auto;
           }
 
+          @font-face {
+            font-family: 'Georgia';
+            font-weight: 300 900;
+            font-style: normal;
+            font-display: swap;
+            src: url('/fonts/georgia.ttf');
+          }
+
+          @font-face {
+            font-family: 'Space Mono';
+            font-weight: 300 900;
+            font-style: normal;
+            font-display: swap;
+            src: url('/fonts/SpaceMono-Regular.ttf');
+          }
+
+          @font-face {
+            font-family: 'Andale Mono';
+            font-weight: 300 900;
+            font-style: normal;
+            font-display: swap;
+            src: url('/fonts/AndaleMono.ttf');
+          }
+
           body {
             margin: 0;
             background-color: black;
+            color: white;
+
+            font-family: 'Space Mono', monospace;
+          }
+
+          h1 {
+            font-family: 'Georgia', sans-serif;
           }
 
           h1,
