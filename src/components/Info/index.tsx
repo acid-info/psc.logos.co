@@ -17,6 +17,7 @@ const Info: React.FC = () => {
 To help bring ideas into action, Logos is inviting global thought leaders, founders, researchers, and engineers to come together with the community to strengthen the relationships between projects and people advancing human governance, civil liberties, network states, and adjacent movements.
 
 For this first Parallel Society Congress, we invite you to join other prominent speakers from the fields of philosophy, technology, and law to discuss your work and ideas. The event will take place in Bangkok during the global Devcon meetup.
+
 In addition to the conference programming, we will create an experiential and educational exhibition showcasing a retrospective of the cypherpunk movement through installations, immersive spaces, activations, talks, and workshops. Alongside, informal spaces will encourage and support genuine connections and conversations.
 
 As a grassroots movement, we aim to collaborate with projects that are passionate about our shared cause. The experience will support local communities at every touch point – from food and beverages to venue selection and more. 
