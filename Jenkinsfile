@@ -1,13 +1,8 @@
+#!/usr/bin/env groovy
+library 'status-jenkins-lib@v1.8.16'
+
 pipeline {
   agent { label 'linux' }
-
-  parameters {
-    string(
-      name: 'IMAGE_TAG',
-      defaultValue: params.IMAGE_TAG ?: '',
-      description: 'Optional Docker image tag to push.'
-    )
-  }
 
   options {
     disableConcurrentBuilds()
@@ -19,45 +14,37 @@ pipeline {
   }
 
   environment {
-    IMAGE_NAME = ''
-    NEXT_PUBLIC_SITE_URL = "https://${env.JOB_BASE_NAME}"
+    GIT_COMMITTER_NAME = 'status-im-auto'
+    GIT_COMMITTER_EMAIL = 'auto@status.im'
   }
 
   stages {
+    stage('Install') {
+      steps {
+        sh 'yarn install'
+      }
+    }
+
     stage('Build') {
       steps {
         script {
-          withCredentials([
-            string(
-              credentialsId: 'org-github-token',
-              variable: 'NEXT_GITHUB_PERSONAL_ACCESS_TOKEN'
-            ),
-          ]) {
-            image = docker.build(
-              "${IMAGE_NAME}:${GIT_COMMIT.take(8)}",
-              ["--build-arg='NEXT_GITHUB_PERSONAL_ACCESS_TOKEN=${NEXT_GITHUB_PERSONAL_ACCESS_TOKEN}'",
-               "."].join(' ')
-            )
-          }
+          sh 'yarn build'
+          jenkins.genBuildMetaJSON('out/build.json')
         }
       }
     }
 
-    stage('Push') {
-      steps { script {
-        withDockerRegistry([credentialsId: 'dockerhub-statusteam-auto', url: '']) {
-          image.push()
-        }
-      } }
-    }
-
-    stage('Deploy') {
-      when { expression { params.IMAGE_TAG != '' } }
-      steps { script {
-        withDockerRegistry([credentialsId: 'dockerhub-statusteam-auto', url: '']) {
-          image.push(params.IMAGE_TAG)
-        }
-      } }
+    stage('Publish') {
+      steps {
+        sshagent(credentials: ['status-im-auto-ssh']) {
+          sh """
+            ghp-import \
+              -b ${deployBranch()} \
+              -c ${deployDomain()} \
+              -p out
+          """
+         }
+      }
     }
   }
 
@@ -65,3 +52,7 @@ pipeline {
     cleanup { cleanWs() }
   }
 }
+
+def isMasterBranch() { GIT_BRANCH ==~ /.*master/ }
+def deployBranch() { isMasterBranch() ? 'deploy-master' : 'deploy-develop' }
+def deployDomain() { isMasterBranch() ? 'psc.logos.co' : 'dev-psc.logos.co' }
