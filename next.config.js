@@ -11,7 +11,12 @@ const withMDX = createMDX({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
+
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   images: {
     domains: ['avatars.githubusercontent.com', 'source.unsplash.com'],

@@ -1,7 +1,6 @@
 import Info from '@/components/Info'
 import StyledTable from '@/components/Table'
 import styled from '@emotion/styled'
-import Image from 'next/image'
 
 const backgroundImageUrl = '/assets/background.png'
 
@@ -14,7 +13,6 @@ const HomeContainer = () => {
           width={217}
           height={262}
           alt="key-visual"
-          priority
         />
         <Title>PARALLEL SOCIETY CONGRESS</Title>
         <StyledTable />
@@ -57,7 +55,7 @@ const Container = styled.div`
   }
 `
 
-const HeroImage = styled(Image)`
+const HeroImage = styled.img`
   @media screen and (max-width: 768px) {
     width: 261px;
     height: 314px;
