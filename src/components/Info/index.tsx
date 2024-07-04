@@ -11,7 +11,7 @@ const Info: React.FC = () => {
     return (
         <InfoContainer readMore={readMore}>
             <div className="info">
-                <h2>Information:</h2>
+                <h2>INFORMATION:</h2>
                 <p>{`In a swiftly evolving world, our conventional understanding of the nation state is increasingly challenged. This situation is ripe for passionate thinkers and builders to shape humanity’s future through a cultural shift backed by cutting-edge technologies.
 
 To help bring ideas into action, Logos is inviting global thought leaders, founders, researchers, and engineers to come together with the community to strengthen the relationships between projects and people advancing human governance, civil liberties, network states, and adjacent movements.
@@ -27,7 +27,7 @@ If you are interested, please let us know so we can arrange a call to discuss th
                 <MobileReadMoreButton onClick={handleReadMore}>{readMore ? "Show Less" : "Read More"}</MobileReadMoreButton>
             </div>
             <div className="org">
-                <h2>Organization:</h2>
+                <h2>ORGANISATION:</h2>
                 <p>{`Logos is a grassroots movement to create a fully decentralised technology stack that supports the creation of parallel institutions and self-sovereign network states. Our vision is to build technologies that enable digital communities to govern themselves, free from capture.
 
 The Logos technology stack is a politically neutral base for the provisioning of the next generation of governing services, public goods, and social institutions, paving a way to economic opportunities for those who need them most while respecting civil liberties across its design. The aim is to bring greater freedom, transparency, and stability to its citizens through voluntary participation.
