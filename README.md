@@ -1,6 +1,25 @@
-# Reference:
+# psc.logos.co
 
-- Design: https://www.figma.com/design/PiRQ5CNDpfKNlqChXR92RY/Visual-Language?node-id=581-235&t=7wsIXBFEjbRDxdEi-0
+https://psc.logos.co/
+
+## How to Run Locally
+
+1. Clone this repository
+```bash
+$ git clone https://github.com/acid-info/psc.logos.co.git
+```
+
+2. Install the dependencies:
+```bash
+$ yarn install
+```
+
+3. Start the development server:
+```bash
+$ yarn dev
+```
+
+4. Visit `http://localhost:3000` in your browser
 
 ## CI/CD
 
@@ -10,3 +29,4 @@
 The hosting is done using [Caddy server with Git plugin for handling GitHub webhooks](https://github.com/status-im/infra-misc/blob/master/ansible/roles/caddy-git).
 
 Information about deployed build can be also found in `/build.json` available on the website.
+
