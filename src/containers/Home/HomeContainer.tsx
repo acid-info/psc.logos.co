@@ -8,12 +8,7 @@ const HomeContainer = () => {
   return (
     <FullPageBackground>
       <Container>
-        <HeroImage
-          src="/assets/key-visual.png"
-          width={217}
-          height={262}
-          alt="key-visual"
-        />
+        <HeroImage src="/assets/logos.svg" alt="logos" />
         <Title>PARALLEL SOCIETY CONGRESS</Title>
         <StyledTable />
         <Info />
@@ -56,15 +51,13 @@ const Container = styled.div`
 `
 
 const HeroImage = styled.img`
-  @media screen and (max-width: 768px) {
-    width: 261px;
-    height: 314px;
-    margin: 0 auto;
-  }
+  margin: 0 auto;
+  width: 137px;
+  height: 149px;
 
-  @media screen and (max-width: 355px) {
-    width: 217px;
-    height: 262px;
+  @media screen and (max-width: 768px) {
+    width: 93px;
+    height: 96px;
   }
 `
 
@@ -74,7 +67,7 @@ const Title = styled.h1`
   font-weight: 400;
   line-height: 84px;
   max-width: 904px;
-  margin-top: 117px;
+  margin-top: 230px;
 
   @media screen and (max-width: 768px) {
     font-size: 58px;
@@ -82,7 +75,7 @@ const Title = styled.h1`
     font-weight: 400;
     line-height: normal;
 
-    margin-top: 34px;
+    margin-top: 100px;
   }
 `
 
