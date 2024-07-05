@@ -93,7 +93,7 @@ const InfoContainer = styled.div<{ readMore: boolean }>`
         }
 
         & > div {
-            width: 90%;
+            width: auto;
         }
 
         .org {
@@ -105,7 +105,7 @@ const InfoContainer = styled.div<{ readMore: boolean }>`
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-   
+            border-right: none !important;
 
             p {
                 max-height: ${props => props.readMore ? "auto" : "541px"};
