@@ -1,15 +1,15 @@
 {
-    "timestamp": "2024-07-04T15:55:24Z",
+    "timestamp": "2024-07-05T08:04:33Z",
     "git": {
         "commit": "5f0010801d8be15430a5043a9cee5df9e6d64be3",
         "branch": "origin/develop",
         "url": "git@github.com:acid-info/psc.logos.co.git"
     },
     "build": {
-        "id": "9",
-        "number": "9",
+        "id": "10",
+        "number": "10",
         "name": "website/dev-psc.logos.co",
         "slave": "linux-02",
-        "url": "https://ci.infra.status.im/job/website/job/dev-psc.logos.co/9/"
+        "url": "https://ci.infra.status.im/job/website/job/dev-psc.logos.co/10/"
     }
 }
