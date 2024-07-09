@@ -27,7 +27,7 @@ The event will take place in Bangkok during the global Devcon meetup. If you are
             <div className="org">
                 <h2>ORGANISATION:</h2>
                 <p>{`Logos is a cultural movement to reimagine the future of human governance beyond the nation state.
-Rooted in the blockchain revolution, Logos is building a decentralised, politically neutral technology stack that supports the creation of parallel institutions and self-sovereign digital communities. Our vision is to provide the next generation of governing services, public goods, and social institutions to anyone with an internet connection. The aim is to bring greater freedom, transparency, and prosperity to people around the world.
+Rooted in the blockchain revolution, Logos is building a decentralised, politically neutral technology stack that supports the creation of parallel institutions and self-sovereign digital communities. Our vision is to bring greater freedom and prosperity by providing the next generation of governing services, public goods, and social institutions to anyone with an internet connection.
 
 Contact
 events@logos.co`}
