@@ -1,39 +1,35 @@
 import styled from "@emotion/styled";
-import { useState } from "react";
+// import { useState } from "react";
 
 const Info: React.FC = () => {
-    const [readMore, setReadMore] = useState(false);
+    // const [readMore, setReadMore] = useState(false);
 
-    const handleReadMore = () => {
-        setReadMore(prev => !prev);
-    }
+    // const handleReadMore = () => {
+    //     setReadMore(prev => !prev);
+    // }
     
     return (
-        <InfoContainer readMore={readMore}>
+        <InfoContainer>
             <div className="info">
                 <h2>INFORMATION:</h2>
                 <p>{`In a swiftly evolving world, our conventional understanding of the nation state is increasingly challenged. This situation is ripe for passionate thinkers and builders to shape humanity’s future through a cultural shift backed by cutting-edge technologies.
-
+                
 To help bring ideas into action, Logos is inviting global thought leaders, founders, researchers, and engineers to come together with the community to strengthen the relationships between projects and people advancing human governance, civil liberties, network states, and adjacent movements.
 
-For this first Parallel Society Congress, we invite you to join other prominent speakers from the fields of philosophy, technology, and law to discuss your work and ideas. The event will take place in Bangkok during the global Devcon meetup.
+For this first Parallel Society Congress, we invite you to join other prominent speakers from the fields of philosophy, technology, and law to discuss your work and ideas.
 
-In addition to the conference programming, we will create an experiential and educational exhibition showcasing a retrospective of the cypherpunk movement through installations, immersive spaces, activations, talks, and workshops. Alongside, informal spaces will encourage and support genuine connections and conversations.
+In addition to the conference programming, we will have installations, immersive spaces, activations, and workshops. Alongside, informal spaces will encourage and support genuine connections and conversations.
 
-As a grassroots movement, we aim to collaborate with projects that are passionate about our shared cause. The experience will support local communities at every touch point – from food and beverages to venue selection and more. 
-
-If you are interested, please let us know so we can arrange a call to discuss the details.`}
+The event will take place in Bangkok during the global Devcon meetup. If you are interested, please let us know so we can arrange a call to discuss the details.`}
                 </p>
-                <MobileReadMoreButton onClick={handleReadMore}>{readMore ? "Show Less" : "Read More"}</MobileReadMoreButton>
+                {/* <MobileReadMoreButton onClick={handleReadMore}>{readMore ? "Show Less" : "Read More"}</MobileReadMoreButton> */}
             </div>
             <div className="org">
                 <h2>ORGANISATION:</h2>
-                <p>{`Logos is a grassroots movement to create a fully decentralised technology stack that supports the creation of parallel institutions and self-sovereign network states. Our vision is to build technologies that enable digital communities to govern themselves, free from capture.
+                <p>{`Logos is a cultural movement to reimagine the future of human governance beyond the nation state.
+Rooted in the blockchain revolution, Logos is building a decentralised, politically neutral technology stack that supports the creation of parallel institutions and self-sovereign digital communities. Our vision is to provide the next generation of governing services, public goods, and social institutions to anyone with an internet connection. The aim is to bring greater freedom, transparency, and prosperity to people around the world.
 
-The Logos technology stack is a politically neutral base for the provisioning of the next generation of governing services, public goods, and social institutions, paving a way to economic opportunities for those who need them most while respecting civil liberties across its design. The aim is to bring greater freedom, transparency, and stability to its citizens through voluntary participation.
-
-
-Research Forum
+Contact
 events@logos.co`}
                 </p>
             </div>
@@ -41,7 +37,7 @@ events@logos.co`}
     );
     };
 
-const InfoContainer = styled.div<{ readMore: boolean }>`
+const InfoContainer = styled.div`
     display: flex;
     margin-top: 54px;
 
@@ -84,7 +80,7 @@ const InfoContainer = styled.div<{ readMore: boolean }>`
     }
 
     @media screen and (max-width: 768px) {
-        flex-direction: column-reverse;
+        flex-direction: column;
         margin-top: 0px;
         border-top: none;
 
@@ -106,9 +102,10 @@ const InfoContainer = styled.div<{ readMore: boolean }>`
             text-overflow: ellipsis;
             white-space: nowrap;
             border-right: none !important;
+            border-bottom: 1px solid #ffffff;
 
             p {
-                max-height: ${props => props.readMore ? "auto" : "541px"};
+                max-height: auto;
                 overflow: hidden;
 
                 text-overflow: ellipsis;
@@ -120,27 +117,27 @@ const InfoContainer = styled.div<{ readMore: boolean }>`
     }
 `
 
-const MobileReadMoreButton = styled.button`
-    background-color: white;
-    color: black;
-    border: 1px solid white;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 1.82px;
-    padding: 16px;
-    text-transform: uppercase;
-    width: 100%;
+// const MobileReadMoreButton = styled.button`
+//     background-color: white;
+//     color: black;
+//     border: 1px solid white;
+//     font-size: 14px;
+//     font-weight: 400;
+//     line-height: 20px;
+//     letter-spacing: 1.82px;
+//     padding: 16px;
+//     text-transform: uppercase;
+//     width: 100%;
 
-    position: absolute;
-    bottom: 0;
-    left: 0;
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
 
-    cursor: pointer;    
+//     cursor: pointer;    
 
-    @media screen and (min-width: 768px) {
-        display: none;
-    }
-`
+//     @media screen and (min-width: 768px) {
+//         display: none;
+//     }
+// `
 
 export default Info;
