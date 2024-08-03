@@ -14,11 +14,9 @@ const Info: React.FC = () => {
                 <h2>INFORMATION:</h2>
                 <p>{`In a swiftly evolving world, our conventional understanding of the nation state is increasingly challenged. This situation is ripe for passionate thinkers and builders to shape humanity’s future through a cultural shift backed by cutting-edge technologies.
                 
-To help bring ideas into action, Logos is inviting global thought leaders, founders, researchers, and engineers to come together with the community to strengthen the relationships between projects and people advancing human governance, civil liberties, network states, and adjacent movements.
+To help bring ideas into action, Logos is inviting global thought leaders, founders, researchers, and engineers to come together with the community to strengthen the relationships between projects and people advancing human governance, civil liberties, network states, startup cities and adjacent movements.
 
-For this first Parallel Society Congress, we invite you to join other prominent speakers from the fields of philosophy, technology, and law to discuss your work and ideas.
-
-In addition to the conference programming, we will have installations, immersive spaces, activations, and workshops. Alongside, informal spaces will encourage and support genuine connections and conversations.
+For this first Parallel Society Congress, we would like to invite you to join other prominent speakers from the fields of philosophy, technology, and law to discuss your work and ideas.
 
 The event will take place in Bangkok during the global Devcon meetup. If you are interested, please let us know so we can arrange a call to discuss the details.`}
                 </p>
@@ -26,8 +24,7 @@ The event will take place in Bangkok during the global Devcon meetup. If you are
             </div>
             <div className="org">
                 <h2>ORGANISATION:</h2>
-                <p>{`Logos is a cultural movement to reimagine the future of human governance beyond the nation state.
-Rooted in the blockchain revolution, Logos is building a decentralised, politically neutral technology stack that supports the creation of parallel institutions and self-sovereign digital communities. Our vision is to bring greater freedom and prosperity by providing the next generation of governing services, public goods, and social institutions to anyone with an internet connection.
+                <p>{`Logos is a grassroots movement to reimagine the future of human governance beyond the nation state. Rooted in the blockchain revolution, Logos is building a decentralised, politically neutral technology stack that supports the creation of parallel institutions and self-sovereign digital communities. Our vision is to bring greater freedom and prosperity by providing the next generation of governing services, public goods, and social institutions to anyone with an internet connection.
 
 Contact
 events@logos.co`}

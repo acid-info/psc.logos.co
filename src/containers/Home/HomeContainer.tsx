@@ -2,13 +2,13 @@ import Info from '@/components/Info'
 import StyledTable from '@/components/Table'
 import styled from '@emotion/styled'
 
-const backgroundImageUrl = '/assets/background.png'
+const backgroundImageUrl = '/assets/background-reduced.png'
 
 const HomeContainer = () => {
   return (
     <FullPageBackground>
       <Container>
-        <HeroImage src="/assets/logos.svg" alt="logos" />
+        <HeroImage src="/assets/key-visual.svg" alt="logos" />
         <Title>PARALLEL SOCIETY CONGRESS</Title>
         <StyledTable />
         <Info />
@@ -19,7 +19,8 @@ const HomeContainer = () => {
 
 const FullPageBackground = styled.div`
   width: 100vw;
-  height: 1859px;
+  height: auto;
+  padding-bottom: 280px;
   margin: 0;
   background-image: url(${backgroundImageUrl});
   background-size: cover;
@@ -29,7 +30,7 @@ const FullPageBackground = styled.div`
 
   @media screen and (max-width: 768px) {
     height: 100%;
-    padding-bottom: 20px;
+    padding-bottom: 80px;
   }
 `
 
@@ -38,36 +39,36 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 174px auto 0 auto;
+  margin: 116px auto 0 auto;
 
   @media screen and (max-width: 1120px) {
     padding-inline: 16px;
   }
 
   @media screen and (max-width: 768px) {
-    margin: 52px auto 0 auto;
+    margin: 68px auto 0 auto;
     padding: 0 16px;
   }
 `
 
 const HeroImage = styled.img`
   margin: 0 auto;
-  width: 137px;
-  height: 149px;
+  width: 91px;
+  height: 94px;
 
   @media screen and (max-width: 768px) {
-    width: 93px;
-    height: 96px;
+    width: 56px;
+    height: 58px;
   }
 `
 
 const Title = styled.h1`
-  font-size: 92px;
+  font-size: 84px;
   font-style: normal;
   font-weight: 400;
   line-height: 84px;
   max-width: 904px;
-  margin-top: 230px;
+  margin-top: 205px;
 
   @media screen and (max-width: 768px) {
     font-size: 58px;
@@ -75,7 +76,7 @@ const Title = styled.h1`
     font-weight: 400;
     line-height: normal;
 
-    margin-top: 100px;
+    margin-top: 127px;
   }
 `
 

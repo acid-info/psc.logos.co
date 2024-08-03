@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 
 const TableContainer = styled.div`
   width: 100%;
-  margin-top: 120px;
+  margin-top: 100px;
   font-family: 'Andale Mono', Courier, monospace;
   color: #ffffff;
   font-size: 14px;
