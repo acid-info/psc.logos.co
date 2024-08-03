@@ -1,5 +1,4 @@
 import { siteConfigs } from '@/configs/site.configs'
-import { getOpenGraphImageUrl } from '@/utils/og.utils'
 import { getWebsiteUrl } from '@/utils/route.utils'
 import Head from 'next/head'
 
@@ -33,11 +32,7 @@ export default function SEO({
   pagePath = '',
   noIndex = false,
 }: Metadata) {
-  const ogImageUrl =
-    imageUrl ||
-    getOpenGraphImageUrl({
-      pagePath,
-    })
+  const ogImageUrl = 'https://psc.logos.co/assets/og.jpg'
 
   const title = _title || siteConfigs.title
   const description = _description || siteConfigs.description
