@@ -2,19 +2,19 @@ import styled from '@emotion/styled'
 import Link from 'next/link'
 import React from 'react'
 
-const Navbar: React.FC = () => {
-  const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Speakers', href: '#speakers' },
-    { name: 'Location', href: '#location' },
-    { name: 'Programme', href: '#programme' },
-    { name: 'FAQs', href: '#faqs' },
-    { name: 'Merchandise', href: '#merchandise' },
-    { name: 'Partners', href: '#partners' },
-    { name: 'Articles', href: '#articles' },
-    { name: 'Tickets', href: '#tickets' },
-  ]
+export const navItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Speakers', href: '#speakers' },
+  { name: 'Location', href: '#location' },
+  { name: 'Programme', href: '#programme' },
+  { name: 'FAQs', href: '#faqs' },
+  { name: 'Merchandise', href: '#merchandise' },
+  { name: 'Partners', href: '#partners' },
+  { name: 'Articles', href: '#articles' },
+  { name: 'Tickets', href: '#tickets' },
+]
 
+const Navbar: React.FC = () => {
   return (
     <Nav>
       {navItems.map((item, index) => (
@@ -41,6 +41,7 @@ const NavItem = styled(Link)`
   letter-spacing: 2.6px;
   text-decoration: none;
   color: var(--text-color);
+  text-transform: uppercase;
   cursor: pointer;
 
   &:hover {

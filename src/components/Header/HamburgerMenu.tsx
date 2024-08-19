@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
+import Link from 'next/link'
 import { useState } from 'react'
-import Navbar from './Navbar'
+import { navItems } from './Navbar'
 
 const HamburgerIcon = styled.div`
   display: none;
@@ -34,21 +35,37 @@ const MenuOverlay = styled.div<{ isOpen: boolean }>`
   height: 100%;
   background: white;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+  z-index: 9999;
 
-  @media (max-width: 991px) {
+  @media (min-width: 991px) {
     display: none;
   }
 `
 
 const CloseButton = styled.div`
   position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 24px;
+  top: 16px;
+  left: 16px;
   cursor: pointer;
+`
+
+const Nav = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 100px;
+`
+
+const NavItem = styled(Link)`
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 4.2px;
+  margin-left: 16px;
+  text-transform: uppercase;
+
+  color: var(--text-color);
+  text-decoration: none;
 `
 
 const HamburgerMenu = () => {
@@ -64,8 +81,16 @@ const HamburgerMenu = () => {
         <img src="/assets/mobile-menu.svg" alt="mobile-menu" />
       </HamburgerIcon>
       <MenuOverlay isOpen={isOpen}>
-        <CloseButton onClick={toggleMenu}>&times;</CloseButton>
-        <Navbar />
+        <CloseButton onClick={toggleMenu}>
+          <img src="/assets/close-icon.svg" alt="close" />
+        </CloseButton>
+        <Nav>
+          {navItems.map((item, index) => (
+            <NavItem onClick={toggleMenu} key={index} href={item.href}>
+              {item.name}
+            </NavItem>
+          ))}
+        </Nav>
       </MenuOverlay>
     </>
   )
