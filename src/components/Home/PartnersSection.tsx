@@ -42,9 +42,10 @@ const PartnersSection: React.FC = () => {
 
 const PartnerList = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  overflow-x: auto;
   gap: 16px;
   margin-top: 64px;
+
   @media (max-width: 991px) {
     margin-top: 40px;
   }
@@ -56,6 +57,7 @@ const PartnerItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   @media (max-width: 991px) {
     flex: 1 1 calc(50% - 16px);
   }

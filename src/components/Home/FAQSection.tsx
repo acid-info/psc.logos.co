@@ -93,8 +93,12 @@ const Question = styled.button`
   background: none;
   border: none;
   cursor: pointer;
-  font-family: Space Mono, sans-serif;
   text-align: left;
+
+  @media (max-width: 991px) {
+    font-size: 18px;
+    line-height: 28px;
+  }
 `
 
 const ToggleIcon = styled.span<{ isOpen: boolean }>`
@@ -108,7 +112,11 @@ const Answer = styled.div`
   font-size: 16px;
   line-height: 24px;
   color: var(--text-color);
-  font-family: Space Mono, sans-serif;
+
+  @media (max-width: 991px) {
+    font-size: 14px;
+    line-height: 24px;
+  }
 `
 
 export default FAQSection

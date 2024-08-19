@@ -1,6 +1,7 @@
 import { uiConfigs } from '@/configs/ui.configs'
 import styled from '@emotion/styled'
 import { useEffect, useState } from 'react'
+import HamburgerMenu from './HamburgerMenu'
 import Navbar from './Navbar'
 
 const Container = styled.header<{ showLogo: boolean }>`
@@ -10,13 +11,17 @@ const Container = styled.header<{ showLogo: boolean }>`
   position: fixed;
   top: 0;
   background: white;
-  width: 100%;
+  width: 97%;
   max-width: ${uiConfigs.maxContainerWidth}px;
 
   z-index: 1000;
   transition: all 0.3s ease-in-out;
   padding-top: ${({ showLogo }) => (showLogo ? '48px' : '0')};
   margin-top: ${({ showLogo }) => (showLogo ? '0' : '-124px')};
+
+  @media (max-width: 991px) {
+    display: none;
+  }
 `
 
 const Logo = styled.img<{ showLogo: boolean }>`
@@ -55,10 +60,13 @@ const Header = () => {
   }, [lastScrollY])
 
   return (
-    <Container showLogo={showLogo}>
-      <Logo src="/assets/logos.svg" alt="Logo" showLogo={showLogo} />
-      <Navbar />
-    </Container>
+    <>
+      <Container showLogo={showLogo}>
+        <Logo src="/assets/logos.svg" alt="Logo" showLogo={showLogo} />
+        <Navbar />
+      </Container>
+      <HamburgerMenu />
+    </>
   )
 }
 

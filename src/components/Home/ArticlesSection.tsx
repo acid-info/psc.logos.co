@@ -119,6 +119,7 @@ const ArticleItem = styled.article`
 
   @media (max-width: 991px) {
     flex: 1 1 100%;
+    min-width: unset;
   }
 `
 

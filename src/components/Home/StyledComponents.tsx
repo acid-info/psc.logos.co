@@ -6,7 +6,7 @@ export const Section = styled.section`
   scroll-margin-top: 80px;
 
   @media (max-width: 991px) {
-    margin-top: 40px;
+    margin-top: 80px;
   }
 `
 
@@ -19,6 +19,9 @@ export const SectionTitle = styled.h2`
   font-style: normal;
 
   @media (max-width: 991px) {
-    font-size: 40px;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 5.88px;
   }
 `

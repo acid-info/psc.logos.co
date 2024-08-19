@@ -79,13 +79,14 @@ const SeeMoreButton = styled.button`
 `
 
 const ProductList = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   margin-top: 64px;
 
   @media (max-width: 991px) {
     margin-top: 40px;
+    grid-template-columns: repeat(2, 1fr);
   }
 `
 
@@ -97,6 +98,7 @@ const ProductItem = styled.div`
 
   @media (max-width: 991px) {
     flex: 1 1 calc(50% - 16px);
+    min-width: unset;
   }
 `
 

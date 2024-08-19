@@ -13,6 +13,7 @@ const HomeContainer = () => {
 
 const Container = styled.div`
   position: relative;
+  overflow: hidden;
 `
 
 const HeroImage = styled.img`
@@ -25,6 +26,11 @@ const HeroImage = styled.img`
 
   /* transform: rotate(-136.809deg); */
   flex-shrink: 0;
+
+  @media (max-width: 991px) {
+    width: 200px;
+    top: -60px;
+  }
 `
 
 const FooterImage = styled.img`
@@ -34,10 +40,12 @@ const FooterImage = styled.img`
 
   flex-shrink: 0;
 
-  scale: 1.1;
-
-  margin-bottom: -40px;
   /* margin-right: -160px; */
+
+  @media (max-width: 991px) {
+    width: 180px;
+    margin-right: -60px;
+  }
 `
 
 export default HomeContainer

@@ -46,9 +46,14 @@ const Container = styled.div`
 
 const Main = styled.main`
   --main-margin-top: 115px;
+
   margin-top: calc(
     ${uiConfigs.navbarRenderedHeight}px + var(--main-margin-top)
   );
+
+  @media (max-width: 991px) {
+    margin-top: 100px;
+  }
 `
 
 export default HomePage

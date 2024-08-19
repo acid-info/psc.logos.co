@@ -38,11 +38,15 @@ const ProgrammeSection: React.FC = () => {
         {programmeData.map((item, index) => (
           <AccordionItem key={index}>
             <ItemInfo>
-              <span>{item.date}</span>
-              <span>{item.venue}</span>
-              <span>{item.location}</span>
+              <FirstGroup>
+                <span>{item.date}</span>
+                <span>{item.venue}</span>
+              </FirstGroup>
+              <SecondGroup>
+                <span>{item.location}</span>
+                <Time>{item.time}</Time>
+              </SecondGroup>
             </ItemInfo>
-            <Time>{item.time}</Time>
           </AccordionItem>
         ))}
       </List>
@@ -56,9 +60,10 @@ const List = styled.div`
   font-size: 24px;
   color: var(--text-color);
   line-height: 1;
-  font-family: Space Mono, sans-serif;
+
   @media (max-width: 991px) {
     margin-top: 40px;
+    font-size: 18px;
   }
 `
 
@@ -79,13 +84,53 @@ const AccordionItem = styled.div`
 
 const ItemInfo = styled.div`
   display: flex;
-  min-width: 240px;
   align-items: center;
-  gap: 40px;
+  width: 100%;
 
   @media (max-width: 991px) {
-    flex-wrap: wrap;
-    gap: 10px;
+    width: 100%;
+  }
+`
+
+const FirstGroup = styled.div`
+  display: flex;
+  gap: 48px;
+  margin-right: 48px;
+
+  span {
+    white-space: nowrap;
+  }
+
+  @media (max-width: 991px) {
+    flex-direction: column;
+    gap: 8px;
+
+    & > span:last-of-type {
+      font-size: 14px;
+    }
+  }
+`
+
+const SecondGroup = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  & > span {
+    margin-right: auto;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 991px) {
+    flex-direction: column;
+    gap: 8px;
+    text-align: right;
+    margin-left: auto;
+    width: unset;
+
+    & > div:last-of-type {
+      font-size: 14px;
+    }
   }
 `
 

@@ -51,6 +51,11 @@ const RSVPButton = styled.button`
     background-color: var(--text-color);
     color: var(--background-color);
   }
+
+  @media (max-width: 991px) {
+    height: 72px;
+    font-size: 12px;
+  }
 `
 
 export default VideoSection
