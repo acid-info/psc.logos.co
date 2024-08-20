@@ -31,6 +31,7 @@ const Nav = styled.nav`
   justify-content: space-between;
   width: 100%;
   background: white;
+  padding: 16px 0;
 
   transition: padding 0.3s ease-in-out;
 `

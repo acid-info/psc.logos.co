@@ -10,6 +10,7 @@ import LocationSection from './LocationSection'
 import MerchandiseSection from './MerchandiseSection'
 import PartnersSection from './PartnersSection'
 import ProgrammeSection from './ProgrammeSection'
+import SpeakersSection from './SpeakersSection'
 import TicketsSection from './TicketsSection'
 import VideoSection from './VideoSection'
 
@@ -21,6 +22,7 @@ const HomePage: React.FC = () => {
         <HeroSection />
         <VideoSection />
         <LocationSection />
+        <SpeakersSection />
         <ProgrammeSection />
         <FAQSection />
         <MerchandiseSection />

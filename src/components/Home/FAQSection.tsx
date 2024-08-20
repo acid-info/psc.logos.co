@@ -1,5 +1,7 @@
 import styled from '@emotion/styled'
 import React, { useState } from 'react'
+import Markdown from 'react-markdown'
+import rehypeRaw from 'rehype-raw'
 import { Section, SectionTitle } from './StyledComponents'
 
 interface FAQItem {
@@ -9,33 +11,36 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    question: 'What is Nimbus?',
-    answer: 'Nimbus is a decentralized platform...',
-  },
-  {
-    question: 'Is Nimbus open source?',
-    answer: 'Yes, Nimbus is an open-source project...',
-  },
-  {
-    question: 'Which language is Nimbus written in and why?',
+    question: 'How far is the venue from the Queens Convention Centre?',
     answer:
-      'Nimbus is written in Nim, an efficient, general-purpose systems programming language with a Python-like syntax that compiles to C. Nim allows us to implement Ethereum rapidly and take advantage of the mature C-language tooling in a compilation of machine code, and in the analysis of static code.',
+      'The venue is approximately 10 minutes by taxi and 20 minutes by MRT.',
   },
   {
-    question: 'What is the release cadence for Nimbus?',
-    answer: 'The release cadence for Nimbus is...',
+    question: 'How do I register for tickets?',
+    answer:
+      'All registration and ticketing will take place through our <a href="https://lu.ma/87inb10a" target="_blank">Luma page.</a>',
   },
   {
-    question: 'What is your process for testing prior to release?',
-    answer: 'Our testing process includes...',
+    question: 'Is there disabled access?',
+    answer: 'Yes',
   },
   {
-    question: 'How do you communicate about upcoming releases?',
-    answer: 'We communicate about upcoming releases through...',
+    question: 'Is there parking on site?',
+    answer: 'No',
   },
   {
-    question: 'How many validators can we run per machine?',
-    answer: 'The number of validators you can run per machine depends on...',
+    question: 'What public transport is close to the venue?',
+    answer: 'The Samyan MRT station is 5 minutes away by foot.',
+  },
+  {
+    question: 'Will there be food?',
+    answer:
+      'We will have local street food stalls  at lunch time and in the early evening. Drinks available for the duration of the event and local craft beer from 17:00 pm.',
+  },
+  {
+    question: 'What if I have special dietary requests?',
+    answer:
+      'When purchasing your ticket please notify us and we will do our best to accommodate.',
   },
 ]
 
@@ -62,7 +67,9 @@ const FAQSection: React.FC = () => {
                 )}
               </ToggleIcon>
             </Question>
-            {openIndex === index && <Answer>{item.answer}</Answer>}
+            {openIndex === index && (
+              <Answer rehypePlugins={[rehypeRaw]}>{item.answer}</Answer>
+            )}
           </FAQItem>
         ))}
       </FAQList>
@@ -107,11 +114,16 @@ const ToggleIcon = styled.span<{ isOpen: boolean }>`
   transform: ${(props) => (props.isOpen ? 'rotate(180deg)' : 'rotate(0)')};
 `
 
-const Answer = styled.div`
+const Answer = styled(Markdown)`
   padding: 0 0 28px;
   font-size: 16px;
   line-height: 24px;
   color: var(--text-color);
+
+  a {
+    color: var(--text-color);
+    text-decoration: underline;
+  }
 
   @media (max-width: 991px) {
     font-size: 14px;

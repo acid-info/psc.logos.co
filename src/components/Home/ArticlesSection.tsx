@@ -4,7 +4,7 @@ import React from 'react'
 import { Section, SectionTitle } from './StyledComponents'
 
 interface Article {
-  image: string
+  image?: string
   title: string
   date: string
   author: string
@@ -15,46 +15,23 @@ interface Article {
 
 const articlesData: Article[] = [
   {
-    image: '/assets/article-1.png',
-    title: 'Device Pairing in Js-waku and Go-waku',
-    date: 'Apr 24 2023',
-    author: 'beachbum',
+    image: '/assets/article-1.webp',
+    title: 'Jarrad Hope From Offline to Online',
+    date: '23 Jan 2024',
+    author: 'Jarrad Hope',
     excerpt:
-      'Arcu ac viverra fringilla nibh. Tincidunt sit netus malesuada mattis aliquet amet. Aliquam montes odio mattis at aenean eget non ultrices dolor. Est nulla duis eget in amet pellentesque. Et eu eros consequat.',
-    tags: ['tag', 'tag', 'tag'],
-    href: 'https://press.logos.co/podcasts/hashing-it-out/devcon-7-south-east-asia',
+      'Many lines of thought have led me to Logos and its intended application. Although I will surely omit some crucial aspects, here I will construct its history and convey what Logos is and why it matters.',
+    tags: ['Logos', 'Codex', 'Nomos', 'Waku', 'Cypherpunk'],
+    href: 'https://press.logos.co/article/a-genealogy-of-logos',
   },
   {
-    image: '/assets/article-2.png',
-    title:
-      'Waku Privacy and Anonymity Analysis Part I: Definitions and Waku Relay',
-    date: 'Apr 24 2023',
-    author: 'beachbum',
+    title: 'Special Jurisdictions as Laboratories of Governance',
+    date: '20 Feb 2024',
+    author: 'Prof. Tom W. Bell',
     excerpt:
       'Arcu ac viverra fringilla nibh. Tincidunt sit netus malesuada mattis aliquet amet. Aliquam montes odio mattis at aenean eget non ultrices dolor. Est nulla duis eget in amet pellentesque. Et eu eros consequat.',
-    tags: ['tag', 'tag', 'tag'],
-    href: 'https://press.logos.co/podcasts/hashing-it-out/devcon-7-south-east-asia',
-  },
-  {
-    image: '/assets/article-3.png',
-    title:
-      'Waku Privacy and Anonymity Analysis Part I: Definitions and Waku Relay',
-    date: 'Apr 24 2023',
-    author: 'beachbum',
-    excerpt:
-      'Arcu ac viverra fringilla nibh. Tincidunt sit netus malesuada mattis aliquet amet. Aliquam montes odio mattis at aenean eget non ultrices dolor. Est nulla duis eget in amet pellentesque. Et eu eros consequat.',
-    tags: ['tag', 'tag', 'tag'],
-    href: 'https://press.logos.co/podcasts/hashing-it-out/devcon-7-south-east-asia',
-  },
-  {
-    image: '/assets/article-4.png',
-    title: 'Opinion: Pseudo-ethics in the Surveillance Tech Industry',
-    date: 'Apr 24 2023',
-    author: 'beachbum',
-    excerpt:
-      'Arcu ac viverra fringilla nibh. Tincidunt sit netus malesuada mattis aliquet amet. Aliquam montes odio mattis at aenean eget non ultrices dolor. Est nulla duis eget in amet pellentesque. Et eu eros consequat.',
-    tags: ['tag', 'tag', 'tag'],
-    href: 'https://press.logos.co/podcasts/hashing-it-out/devcon-7-south-east-asia',
+    tags: ['SEZs', 'Fintech'],
+    href: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4699681',
   },
 ]
 
@@ -65,9 +42,11 @@ const ArticlesSection: React.FC = () => {
       <ArticleList>
         {articlesData.map((article, index) => (
           <ArticleItem key={index}>
-            <Link href={article.href} target="_blank">
-              <ArticleImage src={article.image} alt={article.title} />
-            </Link>
+            {article.image && (
+              <Link href={article.href} target="_blank">
+                <ArticleImage src={article.image} alt={article.title} />
+              </Link>
+            )}
             <ArticleContent>
               <Link href={article.href} target="_blank">
                 <ArticleTitle>{article.title}</ArticleTitle>

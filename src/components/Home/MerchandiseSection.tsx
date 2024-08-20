@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import React from 'react'
+import React, { useState } from 'react'
 import { Section, SectionTitle } from './StyledComponents'
 
 interface MerchandiseItem {
@@ -10,45 +10,100 @@ interface MerchandiseItem {
 
 const merchandiseData: MerchandiseItem[] = [
   {
-    image: '/assets/product-1.png',
-    name: 'Logos T-shirt',
+    image: '/assets/products/stickers/Sticker_1.jpg',
+    name: 'Sticker 1',
     price: '$10.00',
   },
   {
-    image: '/assets/product-2.png',
-    name: 'Logos T-shirt',
+    image: '/assets/products/stickers/Sticker_2.jpg',
+    name: 'Sticker 2',
     price: '$10.00',
   },
   {
-    image: '/assets/product-3.png',
-    name: 'Logos T-shirt',
+    image: '/assets/products/stickers/Sticker_3.jpg',
+    name: 'Sticker 3',
     price: '$10.00',
   },
   {
-    image: '/assets/product-4.png',
-    name: 'Logos T-shirt',
+    image: '/assets/products/stickers/Sticker_4.jpg',
+    name: 'Sticker 4',
+    price: '$10.00',
+  },
+  {
+    image: '/assets/products/stickers/Sticker_5.jpg',
+    name: 'Sticker 5',
+    price: '$10.00',
+  },
+  {
+    image: '/assets/products/tees/Tee_1_Back.jpg',
+    name: 'Tee 1',
+    price: '$10.00',
+  },
+  {
+    image: '/assets/products/tees/Tee_2_Back.jpg',
+    name: 'Tee 2',
+    price: '$10.00',
+  },
+  {
+    image: '/assets/products/tees/Tee_3_Back.jpg',
+    name: 'Tee 3',
+    price: '$10.00',
+  },
+  {
+    image: '/assets/products/tees/Tee_ALL_fronts.jpg',
+    name: 'Tee All Fronts',
+    price: '$10.00',
+  },
+  {
+    image: '/assets/products/tees/Tee_ORANGE_Back.jpg',
+    name: 'Tee Orange',
+    price: '$10.00',
+  },
+  {
+    image: '/assets/products/tees/Tee_PURPLE_Back.jpg',
+    name: 'Tee Purple',
+    price: '$10.00',
+  },
+  {
+    image: '/assets/products/hats/buckethat_1.jpg',
+    name: 'Bucket Hat 1',
+    price: '$10.00',
+  },
+  {
+    image: '/assets/products/hats/Cap_1.jpg',
+    name: 'Cap 1',
+    price: '$10.00',
+  },
+  {
+    image: '/assets/products/hats/Cap_2.jpg',
+    name: 'Cap 2',
     price: '$10.00',
   },
 ]
 
 const MerchandiseSection: React.FC = () => {
+  const [showAll, setShowAll] = useState(false)
   return (
     <Section id="merchandise">
       <Header>
         <SectionTitle>Merchandise</SectionTitle>
-        <SeeMoreButton>See more</SeeMoreButton>
+        <SeeMoreButton onClick={() => setShowAll((prev) => !prev)}>
+          {showAll ? 'Show less' : 'Show more'}
+        </SeeMoreButton>
       </Header>
       <ProductList>
-        {merchandiseData.map((item, index) => (
-          <ProductItem key={index}>
-            <ProductImage src={item.image} alt={item.name} />
-            <ProductInfo>
-              <ProductName>{item.name}</ProductName>
-              <ProductPrice>{item.price}</ProductPrice>
-            </ProductInfo>
-            <ComingSoonBadge>Coming Soon</ComingSoonBadge>
-          </ProductItem>
-        ))}
+        {merchandiseData
+          .slice(0, showAll ? merchandiseData.length : 4)
+          .map((item, index) => (
+            <ProductItem key={index}>
+              <ProductImage src={item.image} alt={item.name} />
+              <ProductInfo>
+                <ProductName>{item.name}</ProductName>
+                <ProductPrice>{item.price}</ProductPrice>
+              </ProductInfo>
+              <ComingSoonBadge>Coming Soon</ComingSoonBadge>
+            </ProductItem>
+          ))}
       </ProductList>
     </Section>
   )

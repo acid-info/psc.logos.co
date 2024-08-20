@@ -17,7 +17,7 @@ const Container = styled.header<{ showLogo: boolean }>`
   z-index: 1000;
   transition: all 0.3s ease-in-out;
   padding-top: ${({ showLogo }) => (showLogo ? '48px' : '0')};
-  margin-top: ${({ showLogo }) => (showLogo ? '0' : '-124px')};
+  margin-top: ${({ showLogo }) => (showLogo ? '0' : '-108px')};
 
   @media (max-width: 991px) {
     display: none;
@@ -28,7 +28,7 @@ const Logo = styled.img<{ showLogo: boolean }>`
   width: 69px;
   height: 75px;
   flex-shrink: 0;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
   opacity: ${({ showLogo }) => (showLogo ? 1 : 0)};
   transition: opacity 0.3s ease-in-out;
 `

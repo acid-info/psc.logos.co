@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import Link from 'next/link'
 import React from 'react'
 import { Section, SectionTitle } from './StyledComponents'
 
@@ -7,7 +8,9 @@ const LocationSection: React.FC = () => {
     <Section id="location">
       <Header>
         <SectionTitle>Location</SectionTitle>
-        <MapButton>See on map</MapButton>
+        <Link href="https://maps.app.goo.gl/9Qy53CnTXBSUA9zB8" target="_blank">
+          <MapButton>See on map</MapButton>
+        </Link>
       </Header>
       <LocationDisplay>Slowcombo, Bangkok</LocationDisplay>
     </Section>
