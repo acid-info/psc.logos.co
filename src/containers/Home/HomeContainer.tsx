@@ -5,8 +5,12 @@ const HomeContainer = () => {
   return (
     <Container>
       <HomePage />
-      <HeroImage src="/assets/hero-image-cut.png" alt="Hero" />
-      <FooterImage src="/assets/footer-image-cut.png" alt="Footer" />
+      <HeroImage src="/assets/hero-image.png" alt="Hero" />
+      <ParticipantsImage
+        src="/assets/participants-image.png"
+        alt="Participants"
+      />
+      <FooterImage src="/assets/footer-image.png" alt="Footer" />
     </Container>
   )
 }
@@ -18,7 +22,7 @@ const Container = styled.div`
 
 const HeroImage = styled.img`
   position: absolute;
-  top: 0;
+  top: 200px;
   right: 0;
 
   /* margin-top: 140px;
@@ -29,7 +33,19 @@ const HeroImage = styled.img`
 
   @media (max-width: 991px) {
     width: 200px;
-    top: -60px;
+    top: -50px;
+  }
+`
+
+const ParticipantsImage = styled.img`
+  position: absolute;
+  top: 2300px;
+  left: 0;
+
+  flex-shrink: 0;
+
+  @media (max-width: 1450px) {
+    display: none;
   }
 `
 

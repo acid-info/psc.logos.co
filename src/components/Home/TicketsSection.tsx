@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import Link from 'next/link'
 import React from 'react'
 import { Section, SectionTitle } from './StyledComponents'
 
@@ -12,7 +13,9 @@ const TicketsSection: React.FC = () => {
           an unforgettable event. Get your tickets now!
         </Subtitle>
       </Content>
-      <BuyTicketsButton>Buy Tickets</BuyTicketsButton>
+      <CustomLink href={'https://lu.ma/87inb10a'} target="_blank">
+        <BuyTicketsButton>Buy Tickets</BuyTicketsButton>
+      </CustomLink>
     </Section>
   )
 }
@@ -50,6 +53,10 @@ const BuyTicketsButton = styled.button`
   @media (max-width: 991px) {
     margin-top: 40px;
   }
+`
+
+const CustomLink = styled(Link)`
+  text-decoration: none;
 `
 
 export default TicketsSection

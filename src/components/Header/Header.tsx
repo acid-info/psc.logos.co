@@ -16,21 +16,12 @@ const Container = styled.header<{ showLogo: boolean }>`
 
   z-index: 1000;
   transition: all 0.3s ease-in-out;
-  padding-top: ${({ showLogo }) => (showLogo ? '48px' : '0')};
-  margin-top: ${({ showLogo }) => (showLogo ? '0' : '-108px')};
+  padding-top: ${({ showLogo }) => (showLogo ? '40px' : '0')};
+  margin-top: ${({ showLogo }) => (showLogo ? '0' : '0')};
 
   @media (max-width: 991px) {
     display: none;
   }
-`
-
-const Logo = styled.img<{ showLogo: boolean }>`
-  width: 69px;
-  height: 75px;
-  flex-shrink: 0;
-  margin-bottom: 32px;
-  opacity: ${({ showLogo }) => (showLogo ? 1 : 0)};
-  transition: opacity 0.3s ease-in-out;
 `
 
 const Header = () => {
@@ -62,7 +53,6 @@ const Header = () => {
   return (
     <>
       <Container showLogo={showLogo}>
-        <Logo src="/assets/logos.svg" alt="Logo" showLogo={showLogo} />
         <Navbar />
       </Container>
       <HamburgerMenu />

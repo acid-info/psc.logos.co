@@ -12,7 +12,7 @@ const LocationSection: React.FC = () => {
           <MapButton>See on map</MapButton>
         </Link>
       </Header>
-      <LocationDisplay>Slowcombo, Bangkok</LocationDisplay>
+      <LocationDisplay></LocationDisplay>
     </Section>
   )
 }
@@ -41,20 +41,22 @@ const MapButton = styled.button`
   }
 `
 
-const LocationDisplay = styled.div`
-  border-radius: 999px;
+const LocationDisplay = styled.img`
   margin-top: 64px;
-  height: 426px;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
+  padding-top: 38%;
+  margin-top: 64px;
+
   color: var(--text-color);
-  border: 1px solid var(--text-color);
-  @media (max-width: 991px) {
-    margin-top: 40px;
-    height: 300px;
+  background-image: url('/assets/map-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  @media (max-width: 500px) {
+    padding-top: 80%;
+    background-image: url('/assets/map-mobile.svg');
+    margin-top: 32px;
   }
 `
 

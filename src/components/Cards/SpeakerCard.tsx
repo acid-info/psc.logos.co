@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 interface SpeakerCardProps {
   initial: string
   name: string
+  title: string
   bio: string
   expanded: boolean
   onToggle: () => void
@@ -12,6 +13,7 @@ interface SpeakerCardProps {
 const SpeakerCard: React.FC<SpeakerCardProps> = ({
   initial,
   name,
+  title,
   bio,
   expanded,
   onToggle,
@@ -22,6 +24,7 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
       <InitialCircle>{initial}</InitialCircle>
       <CardContent>
         <SpeakerName>{name}</SpeakerName>
+        <SpeakerTitle>{title}</SpeakerTitle>
         <SpeakerBio expanded={expanded}>{bio}</SpeakerBio>
         <ReadMoreButton onClick={onToggle}>
           {expanded ? 'Read less' : 'Read more'}
@@ -77,6 +80,11 @@ const SpeakerName = styled.h3`
   font-size: 18px;
   line-height: 1;
   margin: 0;
+`
+
+const SpeakerTitle = styled.p`
+  font-size: 14px;
+  margin-top: 8px;
 `
 
 const SpeakerBio = styled.p<{ expanded: boolean }>`

@@ -9,23 +9,19 @@ interface Partner {
 
 const partnersData: Partner[] = [
   {
-    logo: '/assets/partner-1.svg',
-    name: 'IFT',
-  },
-  {
-    logo: '/assets/partner-2.svg',
+    logo: '/assets/partners/codex.svg',
     name: 'Codex',
   },
   {
-    logo: '/assets/partner-3.svg',
-    name: 'Keycard',
+    logo: '/assets/partners/ift.svg',
+    name: 'IFT',
   },
   {
-    logo: '/assets/partner-1.svg',
+    logo: '/assets/partners/build.svg',
     name: 'Build Cities',
   },
   {
-    logo: '/assets/partner-2.svg',
+    logo: '/assets/partners/charter-cities-institute.svg',
     name: 'Charter Cities Institute',
   },
 ]
@@ -92,7 +88,8 @@ const PartnerName = styled.div`
   margin-top: 16px;
   font-size: 18px;
   color: var(--text-color);
-  font-family: Space Mono, sans-serif;
+  text-align: center;
+  font-family: Courier;
 `
 
 export default PartnersSection

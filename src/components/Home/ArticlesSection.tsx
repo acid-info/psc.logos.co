@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Section, SectionTitle } from './StyledComponents'
 
 interface Article {
@@ -15,7 +15,7 @@ interface Article {
 
 const articlesData: Article[] = [
   {
-    image: '/assets/article-1.webp',
+    image: '/assets/articles/article-1.webp',
     title: 'Jarrad Hope From Offline to Online',
     date: '23 Jan 2024',
     author: 'Jarrad Hope',
@@ -35,7 +35,15 @@ const articlesData: Article[] = [
   },
 ]
 
+const MAX_ARTICLES = 4
+
 const ArticlesSection: React.FC = () => {
+  const [showSeeMore, setShowSeeMore] = React.useState(false)
+
+  useEffect(() => {
+    setShowSeeMore(articlesData.length > MAX_ARTICLES)
+  }, [])
+
   return (
     <Section id="articles">
       <SectionTitle>Articles</SectionTitle>
@@ -65,7 +73,7 @@ const ArticlesSection: React.FC = () => {
           </ArticleItem>
         ))}
       </ArticleList>
-      <SeeMoreButton>See more</SeeMoreButton>
+      {showSeeMore && <SeeMoreButton>See more</SeeMoreButton>}
     </Section>
   )
 }
