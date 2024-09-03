@@ -47,11 +47,9 @@ const Container = styled.div`
 `
 
 const Main = styled.main`
-  --main-margin-top: 115px;
+  --main-margin-top: 164px;
 
-  margin-top: calc(
-    ${uiConfigs.navbarRenderedHeight}px + var(--main-margin-top)
-  );
+  margin-top: calc(var(--main-margin-top));
 
   @media (max-width: 991px) {
     margin-top: 100px;

@@ -22,7 +22,7 @@ const Container = styled.div`
 
 const HeroImage = styled.img`
   position: absolute;
-  top: 200px;
+  top: 60px;
   right: 0;
 
   /* margin-top: 140px;
