@@ -4,14 +4,15 @@ import React from 'react'
 import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 import ArticlesSection from './ArticlesSection'
+import EventInfoSection from './EventInfoSection'
 import FAQSection from './FAQSection'
 import HeroSection from './HeroSection'
 import LocationSection from './LocationSection'
 import MerchandiseSection from './MerchandiseSection'
 import PartnersSection from './PartnersSection'
-import ProgrammeSection from './ProgrammeSection'
-import SpeakersSection from './SpeakersSection'
-import TicketsSection from './TicketsSection'
+// import ProgrammeSection from './ProgrammeSection'
+import ParticipantsSection from './SpeakersSection'
+// import TicketsSection from './TicketsSection'
 import VideoSection from './VideoSection'
 
 const HomePage: React.FC = () => {
@@ -21,14 +22,15 @@ const HomePage: React.FC = () => {
       <Main>
         <HeroSection />
         <VideoSection />
+        <EventInfoSection />
         <LocationSection />
-        <SpeakersSection />
-        <ProgrammeSection />
-        <FAQSection />
-        <MerchandiseSection />
+        <ParticipantsSection />
         <PartnersSection />
+        {/* <ProgrammeSection /> */}
         <ArticlesSection />
-        <TicketsSection />
+        <MerchandiseSection />
+        <FAQSection />
+        {/* <TicketsSection /> */}
       </Main>
       <Footer />
     </Container>

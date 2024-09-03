@@ -33,9 +33,37 @@ const speakersData: Speaker[] = [
     title: 'author Your Next Government',
     bio: 'Professor Tom W. Bell earned his J.D. from the University of Chicago, then practised law in Silicon Valley and Washington, D.C. before joining the faculty of Chapman University Fowler School of Law in Orange County, California. He teaches Constitutional Law, all of the first-year common law courses, and electives in IP, technology, and business law. Bell has published widely on special jurisdictions, copyrights, Internet law, prediction markets, and the Third Amendment (the one about quartering troops). His books include "Intellectual Privilege: Copyright, Common Law, and the Common Good" (Mercatus 2014) and "Your Next Government? From the Nation State to Stateless Nations" (Cambridge University Press 2018). As a consultant, Bell has an active practice designing, installing, and supporting legal systems for special jurisdictions.',
   },
+  {
+    id: 4,
+    initial: 'A',
+    name: 'Angelo Alessio',
+    title: 'founder build_cities',
+    bio: 'Bio',
+  },
+  {
+    id: 5,
+    initial: 'M',
+    name: 'Mark Lutter',
+    title: 'founder and Executive Chairman of the Charter Cities Institute',
+    bio: 'Bio',
+  },
+  {
+    id: 6,
+    initial: 'G',
+    name: 'Guy-Louis Grau',
+    title: 'program lead Keycard',
+    bio: 'From a young age, Guy-Louis Grau has been passionate about hacking electronic devices, turning household gadgets into his personal playground. He graduated as an electronics engineer from École Centrale Paris and led the development of innovative consumer electronics at various companies for more than 15 years. His introduction to Ethereum in 2017 lit a fire under him and sparked an obsession with crafting software and hardware to uphold user sovereignty. Currently, Guy-Louis is leading the development of Keycard, an open-source, principle-backed hardware wallet, for the IFT.',
+  },
+  {
+    id: 7,
+    initial: 'F',
+    name: 'Federico Ast',
+    title: 'co-founder Kleros',
+    bio: 'Federico Ast earned degrees in economics and philosophy from the University of Buenos Aires and holds a Ph.D. in management from IAE Business School. He is co-founder and CEO at Kleros. A pioneer in the field of decentralised justice, Ast has lectured at prestigious universities, including Stanford and Oxford, and spoken at international organisations such as the United Nations. He is passionate about leveraging exponential technologies like artificial intelligence, crowdsourcing, and blockchain to drive social innovation.',
+  },
 ]
 
-const SpeakersSection: React.FC = () => {
+const ParticipantsSection: React.FC = () => {
   const [expandedCards, setExpandedCards] = useState<{
     [key: number]: boolean
   }>({})
@@ -75,4 +103,4 @@ const SpeakerGrid = styled.div`
   }
 `
 
-export default SpeakersSection
+export default ParticipantsSection

@@ -9,16 +9,20 @@ interface Partner {
 
 const partnersData: Partner[] = [
   {
-    logo: '/assets/partners/codex.svg',
-    name: 'Codex',
-  },
-  {
     logo: '/assets/partners/ift.svg',
     name: 'IFT',
   },
   {
+    logo: '/assets/partners/ift.svg',
+    name: 'Logos',
+  },
+  {
     logo: '/assets/partners/build.svg',
     name: 'Build Cities',
+  },
+  {
+    logo: '/assets/partners/codex.svg',
+    name: 'Codex',
   },
   {
     logo: '/assets/partners/charter-cities-institute.svg',
