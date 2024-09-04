@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import HamburgerMenu from './HamburgerMenu'
 import Navbar from './Navbar'
 
-const Container = styled.header<{ showLogo: boolean }>`
+const Container = styled.header<{ showNavbar: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,8 +16,9 @@ const Container = styled.header<{ showLogo: boolean }>`
 
   z-index: 1000;
   transition: all 0.3s ease-in-out;
-  padding-top: ${({ showLogo }) => (showLogo ? '40px' : '0')};
-  margin-top: ${({ showLogo }) => (showLogo ? '0' : '0')};
+  padding-top: ${({ showNavbar }) => (showNavbar ? '0' : '0')};
+  margin-top: ${({ showNavbar }) =>
+    showNavbar ? `-${uiConfigs.navbarRenderedHeight}px` : '0'};
 
   @media (max-width: 991px) {
     display: none;
@@ -25,17 +26,17 @@ const Container = styled.header<{ showLogo: boolean }>`
 `
 
 const Header = () => {
-  const [showLogo, setShowLogo] = useState(true)
+  const [showNavbar, setShowNavbar] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
 
   const controlLogoVisibility = () => {
     if (typeof window !== 'undefined') {
       if (window.scrollY > lastScrollY) {
         // Scrolling down
-        setShowLogo(false)
+        setShowNavbar(false)
       } else {
         // Scrolling up
-        setShowLogo(true)
+        setShowNavbar(true)
       }
       setLastScrollY(window.scrollY)
     }
@@ -52,7 +53,7 @@ const Header = () => {
 
   return (
     <>
-      <Container showLogo={showLogo}>
+      <Container showNavbar={showNavbar}>
         <Navbar />
       </Container>
       <HamburgerMenu />

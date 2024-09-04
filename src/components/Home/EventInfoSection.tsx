@@ -15,7 +15,6 @@ const EventInfoSection = () => {
       </Link>
       <TableContainer>
         <TableSection>
-          <TableContent>Location</TableContent>
           <TableContent>
             Bangkok, Slowcombo
             <CopyButton onClick={copyLocation}>
@@ -24,7 +23,6 @@ const EventInfoSection = () => {
           </TableContent>
         </TableSection>
         <TableSection>
-          <TableContent>Date</TableContent>
           <TableContent>November 11, 2024</TableContent>
         </TableSection>
       </TableContainer>

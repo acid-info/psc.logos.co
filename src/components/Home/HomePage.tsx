@@ -49,7 +49,7 @@ const Container = styled.div`
 `
 
 const Main = styled.main`
-  --main-margin-top: 164px;
+  --main-margin-top: 94px;
 
   margin-top: calc(var(--main-margin-top));
 
