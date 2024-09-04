@@ -32,7 +32,7 @@ export default function SEO({
   pagePath = '',
   noIndex = false,
 }: Metadata) {
-  const ogImageUrl = 'https://psc-v2.vercel.app/assets/og.jpg'
+  const ogImageUrl = `${getWebsiteUrl()}/assets/og.jpg`
 
   const title = _title || siteConfigs.title
   const description = _description || siteConfigs.description
