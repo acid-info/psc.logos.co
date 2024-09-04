@@ -13,6 +13,7 @@ import PartnersSection from './PartnersSection'
 // import ProgrammeSection from './ProgrammeSection'
 import ParticipantsSection from './SpeakersSection'
 // import TicketsSection from './TicketsSection'
+import AboutLogosSection from './AboutLogosSection'
 import VideoSection from './VideoSection'
 
 const HomePage: React.FC = () => {
@@ -23,12 +24,13 @@ const HomePage: React.FC = () => {
         <HeroSection />
         <VideoSection />
         <EventInfoSection />
-        <LocationSection />
         <ParticipantsSection />
         <PartnersSection />
+        <AboutLogosSection />
         {/* <ProgrammeSection /> */}
         <ArticlesSection />
         <MerchandiseSection />
+        <LocationSection />
         <FAQSection />
         {/* <TicketsSection /> */}
       </Main>

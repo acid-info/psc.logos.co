@@ -4,14 +4,14 @@ import React from 'react'
 
 export const navItems = [
   { name: 'Home', href: '/' },
-  { name: 'Speakers', href: '#speakers' },
-  { name: 'Location', href: '#location' },
-  { name: 'Programme', href: '#programme' },
-  { name: 'FAQs', href: '#faqs' },
-  { name: 'Merchandise', href: '#merchandise' },
+  { name: 'Participants', href: '#speakers' },
   { name: 'Partners', href: '#partners' },
+  { name: 'About', href: '#about-logos' },
   { name: 'Articles', href: '#articles' },
-  { name: 'Tickets', href: '#tickets' },
+  { name: 'Merchandise', href: '#merchandise' },
+  { name: 'Location', href: '#location' },
+  // { name: 'Programme', href: '#programme' },
+  { name: 'FAQs', href: '#faqs' },
 ]
 
 const Navbar: React.FC = () => {

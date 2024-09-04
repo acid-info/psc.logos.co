@@ -13,7 +13,7 @@ const partnersData: Partner[] = [
     name: 'IFT',
   },
   {
-    logo: '/assets/partners/ift.svg',
+    logo: '/assets/partners/logos.svg',
     name: 'Logos',
   },
   {
@@ -21,12 +21,24 @@ const partnersData: Partner[] = [
     name: 'Build Cities',
   },
   {
+    logo: '/assets/partners/charter-cities-institute.svg',
+    name: 'Charter Cities Institute',
+  },
+  {
+    logo: '/assets/partners/funding-the-commons.svg',
+    name: 'Funding the Commons',
+  },
+  {
+    logo: '/assets/partners/kleros.svg',
+    name: 'Kleros',
+  },
+  {
     logo: '/assets/partners/codex.svg',
     name: 'Codex',
   },
   {
-    logo: '/assets/partners/charter-cities-institute.svg',
-    name: 'Charter Cities Institute',
+    logo: '/assets/partners/codex.svg',
+    name: 'Keycard',
   },
 ]
 
@@ -49,13 +61,15 @@ const PartnersSection: React.FC = () => {
 }
 
 const PartnerList = styled.div`
-  display: flex;
-  overflow-x: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   margin-top: 64px;
 
   @media (max-width: 991px) {
     margin-top: 40px;
+    display: flex;
+    overflow-x: auto;
   }
 `
 

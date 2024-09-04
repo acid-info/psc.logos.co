@@ -4,7 +4,7 @@ import React from 'react'
 const VideoSection: React.FC = () => {
   return (
     <Section>
-      <video autoPlay loop muted playsInline controls>
+      <video autoPlay loop muted playsInline>
         <source src="/assets/demo-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>

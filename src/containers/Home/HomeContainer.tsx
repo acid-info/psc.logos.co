@@ -22,7 +22,7 @@ const Container = styled.div`
 
 const HeroImage = styled.img`
   position: absolute;
-  top: 60px;
+  top: 0px;
   right: 0;
 
   /* margin-top: 140px;
@@ -53,14 +53,14 @@ const FooterImage = styled.img`
   position: absolute;
   bottom: 0;
   right: 0;
+  width: 600px;
+  z-index: -1;
 
   flex-shrink: 0;
 
   /* margin-right: -160px; */
-
-  @media (max-width: 991px) {
-    width: 180px;
-    margin-right: -60px;
+  @media (max-width: 1200px) {
+    display: none;
   }
 `
 

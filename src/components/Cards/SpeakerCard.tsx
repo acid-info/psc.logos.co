@@ -84,7 +84,12 @@ const SpeakerName = styled.h3`
 
 const SpeakerTitle = styled.p`
   font-size: 14px;
+  line-height: 24px;
   margin-top: 8px;
+  height: 99px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  white-space: pre-wrap;
 `
 
 const SpeakerBio = styled.p<{ expanded: boolean }>`
