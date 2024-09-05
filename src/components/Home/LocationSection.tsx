@@ -12,7 +12,9 @@ const LocationSection: React.FC = () => {
           <MapButton>See on map</MapButton>
         </Link>
       </Header>
-      <LocationDisplay></LocationDisplay>
+      <Link href="https://maps.app.goo.gl/9Qy53CnTXBSUA9zB8" target="_blank">
+        <LocationDisplay></LocationDisplay>
+      </Link>
     </Section>
   )
 }

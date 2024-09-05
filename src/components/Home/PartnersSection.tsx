@@ -37,7 +37,7 @@ const partnersData: Partner[] = [
     name: 'Codex',
   },
   {
-    logo: '/assets/partners/codex.svg',
+    logo: '/assets/partners/keycard.svg',
     name: 'Keycard',
   },
 ]
