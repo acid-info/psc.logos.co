@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 interface SpeakerCardProps {
   initial: string
   name: string
+  profileImage?: string
   title: string
   bio: string
   expanded: boolean
@@ -13,6 +14,7 @@ interface SpeakerCardProps {
 const SpeakerCard: React.FC<SpeakerCardProps> = ({
   initial,
   name,
+  profileImage,
   title,
   bio,
   expanded,
@@ -21,7 +23,9 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
 }) => {
   return (
     <CardWrapper className={className}>
-      <InitialCircle>{initial}</InitialCircle>
+      <InitialCircle>
+        {profileImage ? <img src={profileImage} alt={name} /> : initial}
+      </InitialCircle>
       <CardContent>
         <SpeakerName>{name}</SpeakerName>
         <SpeakerTitle>{title}</SpeakerTitle>

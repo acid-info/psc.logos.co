@@ -4,7 +4,7 @@ import React from 'react'
 
 export const navItems = [
   { name: 'Home', href: '/' },
-  { name: 'Participants', href: '#speakers' },
+  { name: 'Participants', href: '#participants' },
   { name: 'Partners', href: '#partners' },
   { name: 'About', href: '#about-logos' },
   { name: 'Articles', href: '#articles' },

@@ -16,7 +16,7 @@ const HeroSection = () => {
 }
 
 const Container = styled.div`
-  margin-bottom: 48px;
+  margin-bottom: 88px;
 
   a {
     text-decoration: none;
