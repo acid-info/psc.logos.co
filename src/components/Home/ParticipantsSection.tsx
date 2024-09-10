@@ -42,8 +42,8 @@ const speakersData: Speaker[] = [
     initial: 'A',
     name: 'Angelo Alessio',
     title: 'Founder\nbuild_cities',
-    // profileImage: '/assets/participants/angelo-alessio.png',
-    bio: 'Bio',
+    profileImage: '/assets/participants/angelo-alessio.png',
+    bio: 'Angelo Alessio is the founder and protocol architect at build_cities, a protocol for economic development. Prior to build_cities, Angelo was a Director of Product at Acorns following an acquisition of his previous company Harvest, which automatically negotiated bank fees for consumers using AI. Prior to Harvest & Acorns, Angelo consulted for various startups in product and growth domains.  Angelo holds an MBA from New York University and is an Army veteran.',
   },
   {
     id: 5,
