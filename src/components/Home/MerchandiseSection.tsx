@@ -99,7 +99,7 @@ const MerchandiseSection: React.FC = () => {
               <ProductImage src={item.image} alt={item.name} />
               <ProductInfo>
                 <ProductName>{item.name}</ProductName>
-                <ProductPrice>{item.price}</ProductPrice>
+                {/* <ProductPrice>{item.price}</ProductPrice> */}
               </ProductInfo>
               <ComingSoonBadge>Coming Soon</ComingSoonBadge>
             </ProductItem>
