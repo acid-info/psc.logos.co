@@ -83,13 +83,14 @@ const FAQSection: React.FC = () => {
 const FAQList = styled.div`
   margin-top: 64px;
   width: 100%;
+
   @media (max-width: 991px) {
     margin-top: 40px;
   }
 `
 
 const FAQItem = styled.div`
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px dashed var(--text-color);
 `
 
 const Question = styled.button`

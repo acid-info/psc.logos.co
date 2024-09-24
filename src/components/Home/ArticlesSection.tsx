@@ -60,11 +60,6 @@ const ArticlesSection: React.FC = () => {
                 <ArticleTitle>{article.title}</ArticleTitle>
               </Link>
               <ArticleExcerpt>{article.excerpt}</ArticleExcerpt>
-              <TagList>
-                {article.tags.map((tag, tagIndex) => (
-                  <Tag key={tagIndex}>{tag}</Tag>
-                ))}
-              </TagList>
             </ArticleContent>
           </ArticleItem>
         ))}
@@ -115,44 +110,36 @@ const ArticleImage = styled.img`
 const ArticleContent = styled.div``
 
 const ArticleTitle = styled.h3`
-  font-size: 24px;
+  font-size: 20px;
+  font-style: normal;
   line-height: 32px;
-  font-weight: 400;
 
   @media (max-width: 768px) {
     font-size: 16px;
-    font-weight: 400;
     line-height: 24px;
   }
 `
 
 const ArticleExcerpt = styled.p`
-  margin-top: 16px;
-  font-size: 14px;
-  line-height: 20px;
-
-  @media (max-width: 768px) {
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
-  }
-`
-
-const TagList = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 16px;
-`
-
-const Tag = styled.span`
   font-size: 12px;
-  color: var(--text-color);
-  padding: 4px 8px;
-  border: 1px solid var(--text-color);
-  font-family: Helvetica, sans-serif;
+  font-style: normal;
+  line-height: 20px;
 `
+
+// const TagList = styled.div`
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 8px;
+//   margin-top: 16px;
+// `
+
+// const Tag = styled.span`
+//   font-size: 12px;
+//   color: var(--text-color);
+//   padding: 4px 8px;
+//   border: 1px solid var(--text-color);
+//   font-family: Helvetica, sans-serif;
+// `
 
 const SeeMoreButton = styled.button`
   display: block;

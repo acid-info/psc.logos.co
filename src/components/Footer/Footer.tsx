@@ -64,7 +64,7 @@ const FooterWrapper = styled.footer`
 `
 
 const TopSection = styled.section`
-  border-top: 1px solid #000;
+  border-top: 1px dashed #000;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   width: 100%;
@@ -108,7 +108,7 @@ const BottomSection = styled.section`
   padding-bottom: 66px;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  border-top: 1px solid #000;
+  border-top: 1px dashed #000;
   width: 100%;
 
   @media (max-width: 768px) {
