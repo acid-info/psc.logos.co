@@ -7,7 +7,7 @@ export const SocialLinks: React.FC = () => {
     <SocialLinksWrapper>
       <h3>Socials:</h3>
       <LinksList>
-        <Link href="https://discord.gg/logos-state" target="_blank">
+        <Link href="https://discord.com/invite/logosnetwork" target="_blank">
           Discord
         </Link>
         <Link href="https://www.youtube.com/@LogosNetwork" target="_blank">

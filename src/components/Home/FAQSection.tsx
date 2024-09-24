@@ -99,12 +99,15 @@ const Question = styled.button`
   align-items: center;
   width: 100%;
   padding: 24px 0;
-  font-size: 24px;
   color: var(--text-color);
   background: none;
   border: none;
   cursor: pointer;
   text-align: left;
+
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
 
   span {
     margin-right: 16px;
