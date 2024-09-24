@@ -51,14 +51,14 @@ const ArticlesSection: React.FC = () => {
         {articlesData.map((article, index) => (
           <ArticleItem key={index}>
             {article.image && (
-              <Link href={article.href} target="_blank">
+              <CustomLink href={article.href} target="_blank">
                 <ArticleImage src={article.image} alt={article.title} />
-              </Link>
+              </CustomLink>
             )}
             <ArticleContent>
-              <Link href={article.href} target="_blank">
+              <CustomLink href={article.href} target="_blank">
                 <ArticleTitle>{article.title}</ArticleTitle>
-              </Link>
+              </CustomLink>
               <ArticleExcerpt>{article.excerpt}</ArticleExcerpt>
             </ArticleContent>
           </ArticleItem>
@@ -98,6 +98,11 @@ const ArticleItem = styled.article`
   @media (max-width: 768px) {
     min-width: unset;
   }
+`
+
+const CustomLink = styled(Link)`
+  display: flex;
+  flex-direction: column;
 `
 
 const ArticleImage = styled.img`
