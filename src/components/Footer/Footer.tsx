@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import Link from 'next/link'
 import React from 'react'
 import { InfraLinks } from './InfraLink'
 import { LegalLinks } from './LegalLinks'
@@ -22,7 +23,12 @@ const Footer: React.FC = () => {
         </ContactInfo>
       </TopSection>
       <BottomSection>
-        <BusinessUnits>Logos Business Units</BusinessUnits>
+        <BusinessUnits>
+          Built by{' '}
+          <Link href="https://free.technology/" target="_blank">
+            IFT
+          </Link>
+        </BusinessUnits>
         <LegalLinks />
         <InfraLinks />
       </BottomSection>
@@ -117,7 +123,7 @@ const BottomSection = styled.section`
   }
 `
 
-const BusinessUnits = styled.h2`
+const BusinessUnits = styled.p`
   color: #000;
   font-size: 14px;
   width: 50%;
