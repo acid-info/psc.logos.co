@@ -174,7 +174,7 @@ const SpeakerGrid = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   margin-top: 24px;
   width: 100%;
-  gap: 64px 16px;
+  gap: 40px 16px;
   align-items: start;
 
   @media (max-width: 991px) {

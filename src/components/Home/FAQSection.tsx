@@ -98,7 +98,7 @@ const Question = styled.button`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 28px 0;
+  padding: 24px 0;
   font-size: 24px;
   color: var(--text-color);
   background: none;

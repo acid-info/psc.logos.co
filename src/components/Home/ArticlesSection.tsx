@@ -104,7 +104,11 @@ const ArticleImage = styled.img`
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 16px;
+  }
 `
 
 const ArticleContent = styled.div``
@@ -113,10 +117,12 @@ const ArticleTitle = styled.h3`
   font-size: 20px;
   font-style: normal;
   line-height: 32px;
+  margin-bottom: 24px;
 
   @media (max-width: 768px) {
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 16px;
   }
 `
 
