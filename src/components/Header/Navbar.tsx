@@ -4,12 +4,12 @@ import React from 'react'
 
 export const navItems = [
   { name: 'Home', href: '/' },
-  { name: 'Participants', href: '#participants' },
+  { name: 'Speakers', href: '#participants' },
   { name: 'Partners', href: '#partners' },
   { name: 'About', href: '#about-logos' },
   { name: 'Articles', href: '#articles' },
   { name: 'Merchandise', href: '#merchandise' },
-  { name: 'Location', href: '#location' },
+  // { name: 'Location', href: '#location' },
   // { name: 'Programme', href: '#programme' },
   { name: 'FAQs', href: '#faqs' },
 ]
