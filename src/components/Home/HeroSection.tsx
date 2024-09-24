@@ -17,7 +17,7 @@ const HeroSection = () => {
       </Descriptoin>
       <CTAContainer>
         <Info>11 NOV 2024 - SLOWCOMBO, BANKOK</Info>
-        <Link href="lu.ma/psc1" target="_blank">
+        <Link href="https://lu.ma/psc1" target="_blank">
           <CTA>CLAIM YOUR SPOT</CTA>
         </Link>
       </CTAContainer>

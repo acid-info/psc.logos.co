@@ -11,9 +11,10 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    question: 'How far is the venue from the Queens Convention Centre?',
+    question:
+      'How far is the venue from the Queen Sirikit Convention Centre (DevCon)?',
     answer:
-      'The venue is approximately 10 minutes by taxi and 20 minutes by MRT.',
+      'The venue is approximately 10 minutes by taxi without traffic and 10 minutes by MRT underground train.',
   },
   {
     question: 'How do I register for tickets?',
@@ -26,21 +27,23 @@ const faqData: FAQItem[] = [
   },
   {
     question: 'Is there parking on site?',
-    answer: 'No',
+    answer:
+      'No. Alternatively, you can park your vehicle at Samyan Mirtown mall for an affordable day rate.',
   },
   {
     question: 'What public transport is close to the venue?',
-    answer: 'The Samyan MRT station is 5 minutes away by foot.',
+    answer:
+      "Samyan MRT station is 5 minutes away by foot. Use Exit 2 and follow the crowd through the left tunnel for ease of walk. If you're at the Siam BTS station, it is only 10 mins away with a motorbike taxi.",
   },
   {
     question: 'Will there be food?',
     answer:
-      'We will have local street food stalls  at lunch time and in the early evening. Drinks available for the duration of the event and local craft beer from 17:00 pm.',
+      'We will have local street-food stalls at lunch time and in the early evening. Drinks available for the duration of the event and local craft beer from 17:00 pm.',
   },
   {
     question: 'What if I have special dietary requests?',
     answer:
-      'When purchasing your ticket please notify us and we will do our best to accommodate.',
+      'Upon getting your ticket please notify us and we will do our best to accommodate. We have some vegetarian options but we need to pre-order, so please confirm if you require.',
   },
 ]
 
@@ -58,7 +61,7 @@ const FAQSection: React.FC = () => {
         {faqData.map((item, index) => (
           <FAQItem key={index}>
             <Question onClick={() => toggleFAQ(index)}>
-              {item.question}
+              <span>{item.question}</span>
               <ToggleIcon isOpen={openIndex === index}>
                 {openIndex === index ? (
                   <img src="/assets/minus.svg" alt="minus" />
@@ -101,6 +104,10 @@ const Question = styled.button`
   border: none;
   cursor: pointer;
   text-align: left;
+
+  span {
+    margin-right: 16px;
+  }
 
   @media (max-width: 991px) {
     font-size: 18px;
