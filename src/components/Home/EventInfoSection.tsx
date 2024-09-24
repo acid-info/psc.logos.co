@@ -10,7 +10,7 @@ const EventInfoSection = () => {
 
   return (
     <Container>
-      <Link href="https://lu.ma/87inb10a" target="_blank">
+      <Link href="lu.ma/psc1" target="_blank">
         <RSVPButton>RSVP</RSVPButton>
       </Link>
       <TableContainer>

@@ -13,7 +13,7 @@ const TicketsSection: React.FC = () => {
           an unforgettable event. Get your tickets now!
         </Subtitle>
       </Content>
-      <CustomLink href={'https://lu.ma/87inb10a'} target="_blank">
+      <CustomLink href={'lu.ma/psc1'} target="_blank">
         <BuyTicketsButton>Buy Tickets</BuyTicketsButton>
       </CustomLink>
     </Section>

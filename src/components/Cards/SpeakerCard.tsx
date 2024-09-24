@@ -5,6 +5,7 @@ interface SpeakerCardProps {
   name: string
   profileImage?: string
   title: string
+  org: string
   bio: string
   expanded: boolean
   onToggle: () => void
@@ -16,6 +17,7 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
   name,
   profileImage,
   title,
+  org,
   bio,
   expanded,
   onToggle,
@@ -23,12 +25,13 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
 }) => {
   return (
     <CardWrapper className={className}>
-      <InitialCircle>
+      <ImageContainer>
         {profileImage ? <img src={profileImage} alt={name} /> : initial}
-      </InitialCircle>
+      </ImageContainer>
       <CardContent>
         <SpeakerName>{name}</SpeakerName>
         <SpeakerTitle>{title}</SpeakerTitle>
+        <SpeakerOrg>{org}</SpeakerOrg>
         <SpeakerBio expanded={expanded}>{bio}</SpeakerBio>
         <ReadMoreButton onClick={onToggle}>
           {expanded ? 'Read less' : 'Read more'}
@@ -44,33 +47,49 @@ const CardWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
-`
-
-const InitialCircle = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  height: 256px;
-  max-width: 100%;
-  width: 256px;
-  overflow: hidden;
-  color: var(--text-text-primary, #000);
-  white-space: nowrap;
-  font-size: 18px;
-  font-family: Courier, monospace;
-  line-height: 24px;
-  border: 1px solid rgba(0, 0, 0, 1);
-  text-align: center;
 
   @media (max-width: 991px) {
     margin: 0 auto;
-    white-space: initial;
-    padding: 100px 0;
+  }
+
+  @media (max-width: 768px) {
+    min-width: unset;
+  }
+`
+
+const ImageContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-size: 18px;
+
+  img {
+    width: 100%;
+    height: auto; // Ensure image resizes proportionally
+    object-fit: cover;
+  }
+
+  @media (max-width: 991px) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
   }
 `
 
 const CardContent = styled.div`
+  flex: 1;
   display: flex;
   margin-top: 24px;
   width: 100%;
@@ -82,20 +101,30 @@ const CardContent = styled.div`
 
 const SpeakerName = styled.h3`
   font-size: 18px;
-  line-height: 1;
-  margin: 0;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 24px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
 `
 
 const SpeakerTitle = styled.p`
-  font-size: 14px;
+  font-size: 12px;
   line-height: 24px;
-  margin-top: 24px;
-  height: 99px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border: 1px dashed #000;
   white-space: pre-wrap;
-  padding-block: 8px;
+  padding: 8px;
   box-sizing: border-box;
+`
+
+const SpeakerOrg = styled(SpeakerTitle)`
+  border: 1px dashed #000;
+  border-top: none;
 `
 
 const SpeakerBio = styled.p<{ expanded: boolean }>`
@@ -105,7 +134,7 @@ const SpeakerBio = styled.p<{ expanded: boolean }>`
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: ${(props) => (props.expanded ? 'unset' : '3')};
+  -webkit-line-clamp: ${(props) => (props.expanded ? 'unset' : '4')};
   -webkit-box-orient: vertical;
 `
 

@@ -59,10 +59,6 @@ const ArticlesSection: React.FC = () => {
               <Link href={article.href} target="_blank">
                 <ArticleTitle>{article.title}</ArticleTitle>
               </Link>
-              <ArticleMeta>
-                <ArticleDate>{article.date}</ArticleDate>
-                <ArticleAuthor>by {article.author}</ArticleAuthor>
-              </ArticleMeta>
               <ArticleExcerpt>{article.excerpt}</ArticleExcerpt>
               <TagList>
                 {article.tags.map((tag, tagIndex) => (
@@ -84,7 +80,7 @@ const ArticleList = styled.div`
   gap: 64px 16px;
   margin-top: 64px;
 
-  @media (max-width: 991px) {
+  @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
     margin-top: 40px;
   }
@@ -104,8 +100,7 @@ const ArticleItem = styled.article`
     text-decoration: underline;
   }
 
-  @media (max-width: 991px) {
-    flex: 1 1 100%;
+  @media (max-width: 768px) {
     min-width: unset;
   }
 `
@@ -114,34 +109,34 @@ const ArticleImage = styled.img`
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  margin-bottom: 16px;
 `
 
-const ArticleContent = styled.div`
-  margin-top: 16px;
-`
+const ArticleContent = styled.div``
 
 const ArticleTitle = styled.h3`
   font-size: 24px;
   line-height: 32px;
   font-weight: 400;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
 `
-
-const ArticleMeta = styled.div`
-  display: flex;
-  gap: 8px;
-  margin-top: 16px;
-  font-size: 14px;
-  font-family: Helvetica, sans-serif;
-`
-
-const ArticleDate = styled.span``
-
-const ArticleAuthor = styled.span``
 
 const ArticleExcerpt = styled.p`
   margin-top: 16px;
   font-size: 14px;
   line-height: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
 `
 
 const TagList = styled.div`

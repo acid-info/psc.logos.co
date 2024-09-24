@@ -18,7 +18,7 @@ const faqData: FAQItem[] = [
   {
     question: 'How do I register for tickets?',
     answer:
-      'All registration and ticketing will take place through our <a href="https://lu.ma/87inb10a" target="_blank">Luma page.</a>',
+      'All registration and ticketing will take place through our <a href="lu.ma/psc1" target="_blank">Luma page.</a>',
   },
   {
     question: 'Is there disabled access?',

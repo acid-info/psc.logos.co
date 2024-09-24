@@ -9,10 +9,6 @@ interface Partner {
 
 const partnersData: Partner[] = [
   {
-    logo: '/assets/partners/ift.svg',
-    name: 'IFT',
-  },
-  {
     logo: '/assets/partners/logos.svg',
     name: 'Logos',
   },
@@ -25,12 +21,12 @@ const partnersData: Partner[] = [
     name: 'Charter Cities Institute',
   },
   {
-    logo: '/assets/partners/funding-the-commons.svg',
-    name: 'Funding the Commons',
-  },
-  {
     logo: '/assets/partners/kleros.svg',
     name: 'Kleros',
+  },
+  {
+    logo: '/assets/partners/funding-the-commons.svg',
+    name: 'Funding the Commons',
   },
   {
     logo: '/assets/partners/codex.svg',
@@ -39,6 +35,10 @@ const partnersData: Partner[] = [
   {
     logo: '/assets/partners/keycard.svg',
     name: 'Keycard',
+  },
+  {
+    logo: '/assets/partners/ift.svg',
+    name: 'IFT',
   },
 ]
 
@@ -62,32 +62,25 @@ const PartnersSection: React.FC = () => {
 
 const PartnerList = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 16px;
-  margin-top: 64px;
+  margin-top: 24px;
+  padding-bottom: 56px;
 
   @media (max-width: 991px) {
-    margin-top: 40px;
-    display: flex;
-    overflow-x: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 16px;
   }
 `
 
 const PartnerItem = styled.div`
-  flex: 1 1 calc(33.333% - 16px);
-  min-width: 240px;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @media (max-width: 991px) {
-    flex: 1 1 calc(50% - 16px);
-  }
 `
 
 const LogoContainer = styled.div`
   border-radius: 999px;
-  border: 1px solid var(--text-color);
   width: 100%;
   aspect-ratio: 1;
   display: flex;
@@ -107,7 +100,7 @@ const PartnerName = styled.div`
   font-size: 18px;
   color: var(--text-color);
   text-align: center;
-  font-family: Courier;
+  line-height: 24px;
 `
 
 export default PartnersSection

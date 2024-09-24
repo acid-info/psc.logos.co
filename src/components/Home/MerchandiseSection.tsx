@@ -10,28 +10,38 @@ interface MerchandiseItem {
 
 const merchandiseData: MerchandiseItem[] = [
   {
-    image: '/assets/products/stickers/Sticker_1.jpg',
-    name: 'Sticker 1',
+    image: '/assets/products/hats/hats.png',
+    name: 'Hats',
+    price: '$10.00',
+  },
+  {
+    image: '/assets/products/stickers/stickers.png',
+    name: 'Stickers',
+    price: '$10.00',
+  },
+  {
+    image: '/assets/products/tees/t-shirts.png',
+    name: 'T-shirts',
     price: '$10.00',
   },
   {
     image: '/assets/products/stickers/Sticker_2.jpg',
-    name: 'Sticker 2',
+    name: 'Sticker 1',
     price: '$10.00',
   },
   {
     image: '/assets/products/stickers/Sticker_3.jpg',
-    name: 'Sticker 3',
+    name: 'Sticker 2',
     price: '$10.00',
   },
   {
     image: '/assets/products/stickers/Sticker_4.jpg',
-    name: 'Sticker 4',
+    name: 'Sticker 3',
     price: '$10.00',
   },
   {
     image: '/assets/products/stickers/Sticker_5.jpg',
-    name: 'Sticker 5',
+    name: 'Sticker 4',
     price: '$10.00',
   },
   {
@@ -45,23 +55,18 @@ const merchandiseData: MerchandiseItem[] = [
     price: '$10.00',
   },
   {
-    image: '/assets/products/tees/Tee_3_Back.jpg',
+    image: '/assets/products/tees/Tee_ALL_fronts.jpg',
     name: 'Tee 3',
     price: '$10.00',
   },
   {
-    image: '/assets/products/tees/Tee_ALL_fronts.jpg',
-    name: 'Tee All Fronts',
-    price: '$10.00',
-  },
-  {
     image: '/assets/products/tees/Tee_ORANGE_Back.jpg',
-    name: 'Tee Orange',
+    name: 'Tee 4',
     price: '$10.00',
   },
   {
     image: '/assets/products/tees/Tee_PURPLE_Back.jpg',
-    name: 'Tee Purple',
+    name: 'Tee 5',
     price: '$10.00',
   },
   {
@@ -70,13 +75,8 @@ const merchandiseData: MerchandiseItem[] = [
     price: '$10.00',
   },
   {
-    image: '/assets/products/hats/Cap_1.jpg',
-    name: 'Cap 1',
-    price: '$10.00',
-  },
-  {
     image: '/assets/products/hats/Cap_2.jpg',
-    name: 'Cap 2',
+    name: 'Cap 1',
     price: '$10.00',
   },
 ]
@@ -88,12 +88,12 @@ const MerchandiseSection: React.FC = () => {
       <Header>
         <SectionTitle>Merchandise</SectionTitle>
         <SeeMoreButton onClick={() => setShowAll((prev) => !prev)}>
-          {showAll ? 'Show less' : 'Show more'}
+          {showAll ? 'SHOW LESS' : 'SEE ALL'}
         </SeeMoreButton>
       </Header>
       <ProductList>
         {merchandiseData
-          .slice(0, showAll ? merchandiseData.length : 4)
+          .slice(0, showAll ? merchandiseData.length : 3)
           .map((item, index) => (
             <ProductItem key={index}>
               <ProductImage src={item.image} alt={item.name} />
@@ -121,10 +121,10 @@ const Header = styled.div`
 
 const SeeMoreButton = styled.button`
   font-size: 12px;
-  color: var(--text-color);
   padding: 6px 12px;
+  background-color: black;
+  color: white;
   border: 1px solid var(--text-color);
-  background: none;
   cursor: pointer;
 
   :hover {
@@ -135,32 +135,25 @@ const SeeMoreButton = styled.button`
 
 const ProductList = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  margin-top: 64px;
+  margin-top: 24px;
+  padding: 32px;
+  border: 1px dashed #000;
 
-  @media (max-width: 991px) {
-    margin-top: 40px;
-    grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 768px) {
+    margin-top: 16px;
+    grid-template-columns: 1fr;
   }
 `
 
 const ProductItem = styled.div`
-  flex: 1 1 calc(25% - 16px);
-  min-width: 240px;
   display: flex;
   flex-direction: column;
-
-  @media (max-width: 991px) {
-    flex: 1 1 calc(50% - 16px);
-    min-width: unset;
-  }
 `
 
 const ProductImage = styled.img`
   width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
 `
 
 const ProductInfo = styled.div`
@@ -172,18 +165,12 @@ const ProductName = styled.div`
   color: var(--text-color);
 `
 
-const ProductPrice = styled.div`
-  font-size: 12px;
-  color: var(--text-color);
-  margin-top: 4px;
-`
-
 const ComingSoonBadge = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 999px;
-  border: 1px solid var(--text-color);
+  border: 1px dashed var(--text-color);
   color: var(--text-color);
   line-height: 24px;
 
