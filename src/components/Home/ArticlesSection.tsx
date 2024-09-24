@@ -73,11 +73,11 @@ const ArticleList = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 64px 16px;
-  margin-top: 64px;
+  margin-top: 24px;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 40px;
+    margin-top: 16px;
   }
 `
 

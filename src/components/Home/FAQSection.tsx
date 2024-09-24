@@ -81,11 +81,11 @@ const FAQSection: React.FC = () => {
 }
 
 const FAQList = styled.div`
-  margin-top: 64px;
+  margin-top: 24px;
   width: 100%;
 
   @media (max-width: 991px) {
-    margin-top: 40px;
+    margin-top: 16px;
   }
 `
 
