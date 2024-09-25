@@ -15,23 +15,44 @@ interface Article {
 
 const articlesData: Article[] = [
   {
-    image: '/assets/articles/article-1.webp',
-    title: 'Jarrad Hope From Offline to Online',
-    date: '23 Jan 2024',
+    image: '/assets/articles/why-build-a-network-state.webp',
+    title: 'Why Build a Network State?: An Introduction',
+    date: '3 Mar 2024',
     author: 'Jarrad Hope',
     excerpt:
-      'Many lines of thought have led me to Logos and its intended application. Although I will surely omit some crucial aspects, here I will construct its history and convey what Logos is and why it matters.',
-    tags: ['Logos', 'Codex', 'Nomos', 'Waku', 'Cypherpunk'],
+      'Voluntary, non-territorial governance services would lead to greater freedom, accountability, and a more peaceful future',
+    tags: [],
+    href: 'https://press.logos.co/article/why-build-a-network-state',
+  },
+  {
+    image: '/assets/articles/logos-network-aug-2024.webp',
+    title: 'State of the Logos Network: August 2024',
+    date: '5 Sep 2024',
+    author: 'Logos',
+    excerpt: 'Your roundup of recent developments from the Logos ecosystem',
+    tags: [],
+    href: 'https://press.logos.co/article/logos-network-aug-2024',
+  },
+  {
+    image: '/assets/articles/a-genealogy-of-logos.webp',
+    title: 'From Offline to Online Piracy: A Genealogy of Logos',
+    date: '23 Jan 2024',
+    author: '',
+    excerpt:
+      'Considering the origins of Logos, the rationale behind each protocol of its technology stack, and its potential to reshape the social order',
+    tags: [],
     href: 'https://press.logos.co/article/a-genealogy-of-logos',
   },
   {
-    title: 'Special Jurisdictions as Laboratories of Governance',
-    date: '20 Feb 2024',
-    author: 'Prof. Tom W. Bell',
+    image:
+      '/assets/articles/how-to-ethically-build-public-goods-infrastructure.png',
+    title: 'How To Ethically Build Public Goods Infrastructure',
+    date: '2 Nov 2023',
+    author: '',
     excerpt:
-      'Arcu ac viverra fringilla nibh. Tincidunt sit netus malesuada mattis aliquet amet. Aliquam montes odio mattis at aenean eget non ultrices dolor. Est nulla duis eget in amet pellentesque. Et eu eros consequat.',
-    tags: ['SEZs', 'Fintech'],
-    href: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4699681',
+      'Adhering to our principles is not an easy route, but it is necessary for ethically building public goods',
+    tags: [],
+    href: 'https://press.logos.co/article/how-to-ethically-build-public-goods-infrastructure',
   },
 ]
 

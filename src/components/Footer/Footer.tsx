@@ -9,13 +9,7 @@ const Footer: React.FC = () => {
   return (
     <FooterWrapper>
       <TopSection>
-        <Copyright>
-          Parallel Society Congress <MobileLineBreak />©
-          {new Date().getFullYear()}
-          <br />
-          <MobileLineBreak />
-          All rights reserved.
-        </Copyright>
+        <Copyright>Parallel Society Congress</Copyright>
         <SocialLinks />
         <ContactInfo>
           <h3>Partnership requests:</h3>
@@ -129,10 +123,10 @@ const BusinessUnits = styled.p`
   width: 50%;
 `
 
-const MobileLineBreak = styled.br`
-  @media (min-width: 768px) {
-    display: none;
-  }
-`
+// const MobileLineBreak = styled.br`
+//   @media (min-width: 768px) {
+//     display: none;
+//   }
+// `
 
 export default Footer
