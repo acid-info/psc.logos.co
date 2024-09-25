@@ -34,7 +34,7 @@ const AboutLogosSection: React.FC = () => {
         </Row>
         <Wrapper>
           <Paragraph expanded={expanded === 'psc'}>
-            {`About PSC
+            {`About Parallel Society Congress
 
 ​The first Parallel Society Congress is an invitation to discuss some of the most pressing questions we face as a civilisation. What will succeed the waning 400-year-old nation-state technology? How can we unlock the value latent in inefficient governance and its institutions? Is this how crypto can live up to its initial promise?
 

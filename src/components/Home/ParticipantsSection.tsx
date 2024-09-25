@@ -35,7 +35,7 @@ const speakersData: Speaker[] = [
   {
     id: 3,
     initial: 'A',
-    name: 'Aqeel',
+    name: 'Aqeel Mohammad',
     title: 'Product Strategy',
     org: 'Codex',
     profileImage: '/assets/participants/aqeel.png',
