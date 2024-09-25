@@ -46,7 +46,7 @@ const partnersData: Partner[] = [
   },
   {
     logo: '/assets/partners/logos-ordinals.svg',
-    name: 'Logos Ordinals',
+    name: 'Logos Operators',
   },
 ]
 

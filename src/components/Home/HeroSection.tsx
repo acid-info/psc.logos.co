@@ -13,7 +13,9 @@ const HeroSection = () => {
       <Descriptoin>
         As nation states lose their grasp, innovation emerges to imagine
         alternatives. Tap into the next wave of leaders, builders, and pioneers
-        on the most important frontier of all.
+        on the most important frontier of all. Expect activations, talks and
+        workshops on building network states, pop-up communities, charter
+        cities, decentralised governance and the technology that sustains it.
       </Descriptoin>
       <CTAContainer>
         <Info>Bangkok, Nov 11, 2024</Info>
