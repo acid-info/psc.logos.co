@@ -16,7 +16,7 @@ const HeroSection = () => {
         on the most important frontier of all.
       </Descriptoin>
       <CTAContainer>
-        <Info>Nov 11, 2024</Info>
+        <Info>Bangkok, Nov 11, 2024</Info>
         <Link href="https://lu.ma/psc1" target="_blank">
           <CTA>CLAIM YOUR SPOT</CTA>
         </Link>
