@@ -28,22 +28,22 @@ const faqData: FAQItem[] = [
   {
     question: 'Is there parking on site?',
     answer:
-      'No. Alternatively, you can park your vehicle at Samyan Mirtown mall for an affordable day rate.',
+      'No. However, you can park your vehicle at Samyan Mirtown mall for an affordable day rate.',
   },
   {
     question: 'What public transport is close to the venue?',
     answer:
-      "Samyan MRT station is 5 minutes away by foot. Use Exit 2 and follow the crowd through the left tunnel for ease of walk. If you're at the Siam BTS station, it is only 10 mins away with a motorbike taxi.",
+      'Samyan MRT station is five minutes away by foot. Use Exit 2 and follow the crowd through the left tunnel for ease of walk.\nFrom the Siam BTS station, the venue is only 10 minutes away via a motorcycle taxi.',
   },
   {
     question: 'Will there be food?',
     answer:
-      'We will have local street-food stalls at lunch time and in the early evening. Drinks available for the duration of the event and local craft beer from 17:00 pm.',
+      'We will have local street food stalls at lunchtime and in the early evening. Drinks are available for the duration of the event and local craft beer from 17:00.',
   },
   {
     question: 'What if I have special dietary requests?',
     answer:
-      'Upon getting your ticket please notify us and we will do our best to accommodate. We have some vegetarian options but we need to pre-order, so please confirm if you require.',
+      'Upon getting your ticket please notify us, and we will do our best to accommodate. We have some vegetarian options, but we need to pre-order, so please confirm if you require them.',
   },
 ]
 

@@ -14,7 +14,7 @@ const partnersData: Partner[] = [
   },
   {
     logo: '/assets/partners/build.svg',
-    name: 'Build Cities',
+    name: 'build_cities',
   },
   {
     logo: '/assets/partners/charter-cities-institute.svg',
