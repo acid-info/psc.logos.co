@@ -40,6 +40,14 @@ const partnersData: Partner[] = [
     logo: '/assets/partners/ift.svg',
     name: 'IFT',
   },
+  {
+    logo: '/assets/partners/waku.svg',
+    name: 'Waku',
+  },
+  {
+    logo: '/assets/partners/logos-ordinals.svg',
+    name: 'Logos Ordinals',
+  },
 ]
 
 const PartnersSection: React.FC = () => {
