@@ -12,11 +12,11 @@ const HeroSection = () => {
       <Subtitle>Building beyond the nation state</Subtitle>
       <Descriptoin>
         As nation states lose their grasp, innovation emerges to imagine
-        alternatives. Tap into the next wave of leaders, builders and pioneers
+        alternatives. Tap into the next wave of leaders, builders, and pioneers
         on the most important frontier of all.
       </Descriptoin>
       <CTAContainer>
-        <Info>11 NOV 2024 - SLOWCOMBO, BANKOK</Info>
+        <Info>Nov 11, 2024</Info>
         <Link href="https://lu.ma/psc1" target="_blank">
           <CTA>CLAIM YOUR SPOT</CTA>
         </Link>
