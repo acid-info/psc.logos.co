@@ -12,6 +12,7 @@ export const navItems = [
   // { name: 'Location', href: '#location' },
   // { name: 'Programme', href: '#programme' },
   { name: 'FAQs', href: '#faqs' },
+  { name: 'Tickets', href: '#tickets' },
 ]
 
 const Navbar: React.FC = () => {

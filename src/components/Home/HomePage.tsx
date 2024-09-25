@@ -33,7 +33,7 @@ const HomePage: React.FC = () => {
         <FAQSection />
         {/* <TicketsSection /> */}
         <CustomLink href="https://lu.ma/psc1" target="_blank">
-          <RegisterButton>REGISTER FOR TICKETS</RegisterButton>
+          <RegisterButton id="tickets">REGISTER FOR TICKETS</RegisterButton>
         </CustomLink>
       </Main>
       <Footer />
@@ -81,6 +81,8 @@ const RegisterButton = styled.button`
   width: 100%;
   margin-top: 104px;
   cursor: pointer;
+
+  scroll-margin-top: 20px;
 
   @media (max-width: 768px) {
     padding: 6px 12px;
