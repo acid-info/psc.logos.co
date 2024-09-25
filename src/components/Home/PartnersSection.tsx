@@ -52,7 +52,7 @@ const partnersData: Partner[] = [
 
 const PartnersSection: React.FC = () => {
   return (
-    <Section id="partners">
+    <Section id="collaborators">
       <SectionTitle>Collaborators</SectionTitle>
       <PartnerList>
         {partnersData.map((partner, index) => (
