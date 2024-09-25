@@ -34,26 +34,26 @@ const AboutLogosSection: React.FC = () => {
         </Row>
         <Wrapper>
           <Paragraph expanded={expanded === 'psc'}>
-            {`PSC
+            {`About PSC
 
-The first Parallel Society Congress is an invitation to discuss some of the most pressing questions we face as a civilisation. What will succeed the ageing 400-year-old nation-state technology? How can we unlock the value latent in inefficient governance and institutions? Is this how crypto can live up to its initial promise? 
+​The first Parallel Society Congress is an invitation to discuss some of the most pressing questions we face as a civilisation. What will succeed the waning 400-year-old nation-state technology? How can we unlock the value latent in inefficient governance and its institutions? Is this how crypto can live up to its initial promise?
 
-Inspired by Eastern European dissidents living under repressive regimes, instead of fighting a rigged system head-on, we are creating cutting edge technology, alternative media, autonomous physical communities, and independent educational institutions that operate independently of centralised authorities—protecting human societies through technology and innovation.
+Inspired by Eastern European dissidents living under repressive regimes, instead of fighting a rigged system head-on, we are creating state-of-the-art technology, alternative media, autonomous physical communities, and parallel educational institutions that operate independently of centralised authorities – protecting human societies through technology and innovation.
 
-​To support this nascent coalition our partners will host activations, talks, and workshops. ​Join us on the cutting edge of innovation to build prosperous and free alternatives for humanity.
+​To support this nascent coalition, our partners will host activations, talks, and workshops. ​Join us at the bleeding edge to build free and prosperous alternatives for humanity.
 `}
           </Paragraph>
           <MobileReadMoreWithMargin onClick={handleExpandClick}>
             Read more
           </MobileReadMoreWithMargin>
           <Paragraph expanded={expanded === 'logos'}>
-            {`LOGOS
+            {`About Logos
             
-Logos is a cultural movement to reimagine the future of human governance beyond the nation state. Rooted in the blockchain revolution, Logos is building a decentralised, politically neutral technology stack that supports the creation of parallel institutions and self-sovereign digital communities. 
+Logos is a cultural movement to reimagine the future of human governance beyond the nation state. Rooted in the blockchain revolution, Logos is building a decentralised, politically neutral technology stack that supports the creation of parallel institutions and self-sovereign digital communities.
 
 Our vision is to bring greater freedom and prosperity by providing the next generation of governing services, public goods, and social institutions to anyone with an internet connection.
 
-​Read our Manifesto for a deeper dive into our ideals and technology.`}
+​Read our manifesto for a deeper dive into our ideals and technology.`}
           </Paragraph>
           <MobileReadMore onClick={handleExpandClick}>Read more</MobileReadMore>
           <Link href="https://logos.co/manifesto/" target="_blank">
