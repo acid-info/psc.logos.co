@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
-import Link from 'next/link'
 import React from 'react'
+import Markdown from 'react-markdown'
+import rehypeRaw from 'rehype-raw'
 import { Section, SectionTitle } from './StyledComponents'
 
 const AboutLogosSection: React.FC = () => {
@@ -27,14 +28,11 @@ const AboutLogosSection: React.FC = () => {
     <Section id="about-logos">
       <Container>
         <Row>
-          <SectionTitle>About Logos</SectionTitle>
-          <Link href="https://logos.co/manifesto/" target="_blank">
-            <Button>Manifesto</Button>
-          </Link>
+          <SectionTitle>About</SectionTitle>
         </Row>
         <Wrapper>
-          <Paragraph expanded={expanded === 'psc'}>
-            {`About Parallel Society Congress
+          <Paragraph rehypePlugins={[rehypeRaw]} expanded={expanded === 'psc'}>
+            {`Parallel Society Congress
 
 ​The first Parallel Society Congress is an invitation to discuss some of the most pressing questions we face as a civilisation. What will succeed the waning 400-year-old nation-state technology? How can we unlock the value latent in inefficient governance and its institutions? Is this how crypto can live up to its initial promise?
 
@@ -46,19 +44,19 @@ Inspired by Eastern European dissidents living under repressive regimes, instead
           <MobileReadMoreWithMargin onClick={handleExpandClick}>
             Read more
           </MobileReadMoreWithMargin>
-          <Paragraph expanded={expanded === 'logos'}>
-            {`About Logos
+          <Paragraph
+            rehypePlugins={[rehypeRaw]}
+            expanded={expanded === 'logos'}
+          >
+            {`Logos
             
 Logos is a cultural movement to reimagine the future of human governance beyond the nation state. Rooted in the blockchain revolution, Logos is building a decentralised, politically neutral technology stack that supports the creation of parallel institutions and self-sovereign digital communities.
 
 Our vision is to bring greater freedom and prosperity by providing the next generation of governing services, public goods, and social institutions to anyone with an internet connection.
 
-​Read our manifesto for a deeper dive into our ideals and technology.`}
+​Read our <a href="https://logos.co/manifesto/" target="_blank">Manifesto</a> for a deeper dive into our ideals and technology.`}
           </Paragraph>
           <MobileReadMore onClick={handleExpandClick}>Read more</MobileReadMore>
-          <Link href="https://logos.co/manifesto/" target="_blank">
-            <MobileButton>MANIFESTO</MobileButton>
-          </Link>
         </Wrapper>
       </Container>
     </Section>
@@ -78,6 +76,16 @@ const Wrapper = styled.div`
   gap: 32px;
   min-height: 460px;
 
+  a {
+    text-decoration: underline;
+    color: var(--text-color);
+  }
+
+  a:visited,
+  a:hover {
+    color: var(--text-color);
+  }
+
   @media (max-width: 991px) {
     flex-direction: column;
     gap: 24px;
@@ -85,7 +93,7 @@ const Wrapper = styled.div`
   }
 `
 
-const Paragraph = styled.p<{ expanded: boolean }>`
+const Paragraph = styled(Markdown)<{ expanded: boolean }>`
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
