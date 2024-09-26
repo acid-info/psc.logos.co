@@ -93,7 +93,7 @@ const speakersData: Speaker[] = [
     title: 'Founder',
     org: 'EdgeCity',
     profileImage: '/assets/participants/janine.png',
-    bio: 'Janine Leger was a driving force behind Zuzalu Montenegro and ZuConnect. Previously, she led the Gitcoin Public Goods Funding workstream and built multiple popup co-living communities. She is also a strong local leader in Austin, where she lives.',
+    bio: "Janine Leger is the Co-founder of Edge City, an organisation that convenes builders across tech, science and society in pop-up villages around the globe. She's one of the co-creators of Zuzalu and led the Public Goods Funding team at Gitcoin.",
   },
   {
     id: 10,
