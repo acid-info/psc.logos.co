@@ -28,7 +28,7 @@ const faqData: FAQItem[] = [
   {
     question: 'Is there parking on site?',
     answer:
-      'No. However, you can park your vehicle at Samyan Mirtown mall for an affordable day rate.',
+      'No. However, you can park your vehicle at Samyan Mitrtown mall for an affordable day rate.',
   },
   {
     question: 'What public transport is close to the venue?',

@@ -90,7 +90,7 @@ const speakersData: Speaker[] = [
     id: 9,
     initial: 'J',
     name: 'Janine Leger',
-    title: 'Founder',
+    title: 'Co-founder',
     org: 'EdgeCity',
     profileImage: '/assets/participants/janine.png',
     bio: "Janine Leger is the Co-founder of Edge City, an organisation that convenes builders across tech, science and society in pop-up villages around the globe. She's one of the co-creators of Zuzalu and led the Public Goods Funding team at Gitcoin.",
@@ -140,6 +140,14 @@ const speakersData: Speaker[] = [
     profileImage: '/assets/participants/yann.png',
     bio: 'Yann Aouidef is building the mechanism design of Kleros, considering law and economics, game theory, social choice theory, and economic experiments. Yann is a PhD candidate at the Paris Center in Law and Economics. His topic thesis is "Economics and Law of the Blockchain: Applications To Decentralized Justice Mechanisms".',
   },
+  {
+    id: 15,
+    initial: 'L',
+    name: 'Layer0x',
+    title: 'Legal Architect',
+    org: 'Powerhouse (MakerDAO spinoff)',
+    bio: 'Powerhouse builds operational and legal infrastructure as public goods for network organisations. As a legal architect for Sky (formerly MakerDAO) and Powerhouse itself, Layer0x handles legal system design for DAOs, i.e., frameworks, processes, and entities that fulfil legal functions, such as public procurement, fundraising, project management, IP management, insurance, and legal defence. This includes designing open-source hybrid techno-legal tools that will help DAOs derisk and operate efficiently at scale.',
+  },
 ]
 
 const ParticipantsSection: React.FC = () => {
@@ -153,7 +161,7 @@ const ParticipantsSection: React.FC = () => {
 
   return (
     <Section id="participants">
-      <SectionTitle>SPEAKERS</SectionTitle>
+      <SectionTitle>Participants</SectionTitle>
       <SpeakerGrid>
         {speakersData.map((speaker, index) => (
           <SpeakerCard
