@@ -48,6 +48,14 @@ const partnersData: Partner[] = [
     logo: '/assets/partners/logos-ordinals.svg',
     name: 'Logos Operators',
   },
+  {
+    logo: '/assets/partners/zuvillage-georgia.svg',
+    name: 'ZuVillage Georgia',
+  },
+  {
+    logo: '/assets/partners/shan-hai-woo.svg',
+    name: 'Shan Hai Woo',
+  },
 ]
 
 const PartnersSection: React.FC = () => {
