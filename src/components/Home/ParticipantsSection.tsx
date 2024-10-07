@@ -145,9 +145,18 @@ const speakersData: Speaker[] = [
     initial: 'L',
     name: 'Layer0x',
     title: 'Legal Architect',
-    org: 'Powerhouse (MakerDAO spinoff)',
+    org: 'Powerhouse\n(MakerDAO spinoff)',
     profileImage: '/assets/participants/layer0x.jpg',
     bio: 'Powerhouse builds operational and legal infrastructure as public goods for network organisations. As a legal architect for Sky (formerly MakerDAO) and Powerhouse itself, Layer0x handles legal system design for DAOs, i.e., frameworks, processes, and entities that fulfil legal functions, such as public procurement, fundraising, project management, IP management, insurance, and legal defence. This includes designing open-source hybrid techno-legal tools that will help DAOs derisk and operate efficiently at scale.',
+  },
+  {
+    id: 16,
+    initial: 'A',
+    name: 'Andrej Berlin',
+    title: 'Organisational Designer &\nBusiness Manager',
+    org: 'DeepWork',
+    profileImage: '/assets/participants/andrej-berlin.jpg',
+    bio: 'Andrej Berlin is an expert in web3-native business management and organisational design. He is the creator of the decentralised design firm and organisational consultancy Deep Work, with 10 years of experience from over 100 different organisations, services, and products.',
   },
 ]
 
