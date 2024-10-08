@@ -31,7 +31,7 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
       <CardContent>
         <SpeakerName>{name}</SpeakerName>
         <SpeakerTitle>{title}</SpeakerTitle>
-        <SpeakerOrg>{org}</SpeakerOrg>
+        <SpeakerOrg titleLines={title.includes('\n') ? 1 : 2}>{org}</SpeakerOrg>
         <SpeakerBio expanded={expanded}>{bio}</SpeakerBio>
         <ReadMoreButton onClick={onToggle}>
           {expanded ? 'Read less' : 'Read more'}
@@ -69,7 +69,7 @@ const ImageContainer = styled.div`
 
   img {
     width: 100%;
-    height: auto; // Ensure image resizes proportionally
+    height: auto;
     object-fit: cover;
   }
 
@@ -115,16 +115,32 @@ const SpeakerName = styled.h3`
 
 const SpeakerTitle = styled.p`
   font-size: 12px;
-  line-height: 24px;
+  line-height: 1.5;
   border: 1px dashed #000;
   white-space: pre-wrap;
   padding: 8px;
   box-sizing: border-box;
+  max-height: 48px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  flex-shrink: 0;
 `
 
-const SpeakerOrg = styled(SpeakerTitle)`
-  border: 1px dashed #000;
+const SpeakerOrg = styled(SpeakerTitle)<{ titleLines?: number }>`
   border-top: none;
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  min-height: 32px;
+  max-height: 48px;
+  height: ${({ titleLines }) => (titleLines === 1 ? '32px' : '48px')};
 `
 
 const SpeakerBio = styled.p<{ expanded: boolean }>`

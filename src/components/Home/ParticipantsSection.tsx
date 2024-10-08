@@ -109,7 +109,7 @@ const speakersData: Speaker[] = [
     initial: 'P',
     name: 'Peter Ludlow',
     title: 'Author',
-    org: 'Crypto Anarchy, Cyberstates, and Pirate Utopias',
+    org: 'Crypto Anarchy, Cyberstates,\nand Pirate Utopias',
     profileImage: '/assets/participants/peter-ludlow.png',
     bio: 'Peter Ludlow entered the world of philosophy through a deep interest in linguistics, the philosophy of language, and digital technologies. His early work in artificial intelligence and natural language processing showed him the cooperative part of language comprehension – an idea explored in his book, Living Words. This led him to make significant contributions to our understanding of how meaning is a shared, collaborative enterprise. As a leading voice in the philosophy of mind and language, Peter has authored and contributed to influential works on the intersection of technology and society, including the seminal anthology on how cyberspace is poised to impact human organisation, Crypto Anarchy, Cyberstates, and Pirate Utopias. His current focus is on the potential for digital platforms to foster self-sovereign communities and new, decentralised yet collaborative social orders.',
   },
