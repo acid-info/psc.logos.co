@@ -115,32 +115,41 @@ const SpeakerName = styled.h3`
 
 const SpeakerTitle = styled.p`
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 24px;
   border: 1px dashed #000;
   white-space: pre-wrap;
   padding: 8px;
   box-sizing: border-box;
-  max-height: 48px;
+  max-height: 64px;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   flex-shrink: 0;
+
+  @media (max-width: 768px) {
+    -webkit-line-clamp: 3;
+    max-height: unset;
+  }
 `
 
 const SpeakerOrg = styled(SpeakerTitle)<{ titleLines?: number }>`
   border-top: none;
   display: flex;
   align-items: center;
-
+  line-height: 24px;
   overflow: hidden;
   text-overflow: ellipsis;
   flex-grow: 1;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  min-height: 32px;
-  max-height: 48px;
-  height: ${({ titleLines }) => (titleLines === 1 ? '32px' : '48px')};
+  min-height: 40px;
+  max-height: 64px;
+  height: ${({ titleLines }) => (titleLines === 1 ? '40px' : '64px')};
+
+  @media (max-width: 768px) {
+    height: unset;
+  }
 `
 
 const SpeakerBio = styled.p<{ expanded: boolean }>`
