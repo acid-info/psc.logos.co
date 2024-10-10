@@ -11,6 +11,11 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
+    question: 'What should I expect at the event?',
+    answer:
+      "Parallel Society Congress is not another crypto conference. The main stage will host inspiring and illuminating talks; the coalition room will feature interactive workshops, demos, and learning; and engaging activations will animate each of the venue's three floors.\n\nThe spacious ground floor area will be open to hang out, network, eat, and drink while you connect with potential collaborators for your alternate-future-building project. We encourage you to engage with the activities you're most passionate about.",
+  },
+  {
     question:
       'How far is the venue from the Queen Sirikit Convention Centre (DevCon)?',
     answer:
@@ -130,6 +135,7 @@ const Answer = styled(Markdown)`
   font-size: 16px;
   line-height: 24px;
   color: var(--text-color);
+  white-space: pre-wrap;
 
   a {
     color: var(--text-color);

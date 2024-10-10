@@ -102,7 +102,7 @@ const speakersData: Speaker[] = [
     title: 'Co-founder',
     org: 'EdgeCity',
     profileImage: '/assets/participants/janine.png',
-    bio: "Janine Leger is the Co-founder of Edge City, an organisation that convenes builders across tech, science and society in pop-up villages around the globe. She's one of the co-creators of Zuzalu and led the Public Goods Funding team at Gitcoin.",
+    bio: "Janine Leger is the Co-founder of Edge City, an organisation that convenes builders across tech, science, and society in pop-up villages around the globe. She's one of the co-creators of Zuzalu and led the Public Goods Funding team at Gitcoin.",
   },
   {
     id: 15,
