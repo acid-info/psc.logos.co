@@ -3,7 +3,6 @@ import Link from 'next/link'
 import React from 'react'
 
 export const navItems = [
-  { name: 'Home', href: '/' },
   { name: 'Participants', href: '#participants' },
   { name: 'Collaborators', href: '#collaborators' },
   { name: 'About', href: '#about-logos' },
@@ -23,6 +22,9 @@ const Navbar: React.FC = () => {
           {item.name}
         </NavItem>
       ))}
+      <Link href="https://lu.ma/psc1" target="_blank">
+        <TicketButton>TICKETS</TicketButton>
+      </Link>
     </Nav>
   )
 }
@@ -35,6 +37,10 @@ const Nav = styled.nav`
   padding: 16px 0;
 
   transition: padding 0.3s ease-in-out;
+
+  a {
+    text-decoration: none;
+  }
 `
 
 const NavItem = styled(Link)`
@@ -44,12 +50,28 @@ const NavItem = styled(Link)`
   text-decoration: none;
   color: var(--text-color);
   text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
   cursor: pointer;
 
   &:hover {
     color: var(--text-color);
     text-decoration: underline;
   }
+`
+
+const TicketButton = styled.button`
+  display: flex;
+  padding: 6px 28px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  background: white;
+
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
 `
 
 export default Navbar
