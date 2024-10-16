@@ -100,7 +100,7 @@ const Container = styled.div`
   }
 
   p {
-    width: 355px;
+    max-width: 355px;
     font-size: 14px;
     text-transform: uppercase;
   }
