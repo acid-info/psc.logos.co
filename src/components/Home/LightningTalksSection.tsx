@@ -1,36 +1,45 @@
 import { breakpoints } from '@/configs/ui.configs'
 import styled from '@emotion/styled'
-import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import Markdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
+import LightningTalksModal from '../Modals/LightningTalksModal'
 import { Section } from './StyledComponents'
 
 const LightningTalksSection: React.FC = () => {
+  const [openModal, setOpenModal] = useState(false)
+
   return (
-    <Section id="lightning-talks">
-      <Container>
-        <Wrapper>
-          <Title>Lightning Talks</Title>
-          <Content>
-            <Paragraph rehypePlugins={[rehypeRaw]}>
-              {`Do you have an alternative governance project you want to share with aligned and empathetic thinkers? Do you need collaborators, feedback, or just a forum to hone your pitch?
+    <>
+      <LightningTalksModal
+        isOpen={openModal}
+        onClose={() => setOpenModal(false)}
+      />
+      <Section id="lightning-talks">
+        <Container>
+          <Wrapper>
+            <Title>Lightning Talks</Title>
+            <Content>
+              <Paragraph rehypePlugins={[rehypeRaw]}>
+                {`Do you have an alternative governance project you want to share with aligned and empathetic thinkers? Do you need collaborators, feedback, or just a forum to hone your pitch?
 
 Following our open-source principles, Parallel Society Congress offers a space for lightning talks. The goal is to spotlight innovative teams pushing the frontier of the post-nation-state movement.`}
-            </Paragraph>
-            <Divider></Divider>
-            <Paragraph rehypePlugins={[rehypeRaw]}>
-              {`We welcome projects in any stage of development from the following areas: cyberstates / network states, charter cities, pop-up communities, SEZs, special administrative zones, network nations, decentralised governance, or the technology needed to support any of the above.
+              </Paragraph>
+              <Divider></Divider>
+              <Paragraph rehypePlugins={[rehypeRaw]}>
+                {`We welcome projects in any stage of development from the following areas: cyberstates / network states, charter cities, pop-up communities, SEZs, special administrative zones, network nations, decentralised governance, or the technology needed to support any of the above.
 
 You can present a pitch, a new feature of an established initiative, a project overview, or just a promising idea. Apply below and come share your vision with the community.`}
-            </Paragraph>
-            <Link href="mailto:events@logos.co" target="_blank">
-              <SubmitButton>Submit</SubmitButton>
-            </Link>
-          </Content>
-        </Wrapper>
-      </Container>
-    </Section>
+              </Paragraph>
+
+              <SubmitButton onClick={() => setOpenModal(true)}>
+                Submit
+              </SubmitButton>
+            </Content>
+          </Wrapper>
+        </Container>
+      </Section>
+    </>
   )
 }
 
