@@ -55,6 +55,7 @@ const articlesData: Article[] = [
     href: 'https://press.logos.co/article/how-to-ethically-build-public-goods-infrastructure',
   },
   {
+    image: '/assets/articles/building-judicial-system-for-internet-age.png',
     title: 'Building a Judicial System for the Internet Age',
     date: '2 Nov 2023',
     author: '',
@@ -102,7 +103,7 @@ const ArticlesSection: React.FC = () => {
 const ArticleList = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 64px 16px;
+  gap: 54px 16px;
   margin-top: 24px;
 
   @media (max-width: 768px) {
