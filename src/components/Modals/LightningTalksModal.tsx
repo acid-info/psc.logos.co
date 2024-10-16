@@ -35,11 +35,13 @@ const LightningTalksModal = ({
           </CloseButton>
         </Header>
         <p>
-          Want to present your project at our upcoming event in Bangkok on
-          November 11?
+          Upon acceptance of your talk, you agree to not present about raising
+          funds, selling tokens, or other financial details regarding your
+          project. It will be strictly about spreading your ideas or interests
+          to the audience.
           <br />
           <br />
-          PREPARE the following details and email them to us at
+          Prepare the following details and email to us at
           <a href="mailto:events@logos.co">events@logos.co</a>:
         </p>
         <ul>
