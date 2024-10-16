@@ -164,6 +164,7 @@ const Button = styled.button<{ color: 'white' | 'black' }>`
     color === 'white' ? '1px solid #000' : '1px solid #fff'};
   text-transform: uppercase;
   width: 100%;
+  cursor: pointer;
 `
 
 const CloseButton = styled.button`
