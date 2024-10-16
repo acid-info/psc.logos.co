@@ -127,6 +127,9 @@ const Container = styled.div`
   @media (max-width: ${breakpoints.sm}px) {
     width: calc(100vw - 24px);
     margin: 12px;
+    height: calc(100vh - 24px);
+    overflow-y: auto;
+    justify-content: flex-start;
   }
 `
 
