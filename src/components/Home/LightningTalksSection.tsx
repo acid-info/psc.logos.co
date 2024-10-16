@@ -38,6 +38,12 @@ const Container = styled.div`
   a {
     text-decoration: none;
   }
+
+  margin-top: 216px;
+
+  @media (max-width: ${breakpoints.sm}px) {
+    margin-top: 156px;
+  }
 `
 
 const Wrapper = styled.div`
