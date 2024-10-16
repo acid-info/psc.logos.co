@@ -95,7 +95,7 @@ const ArticlesSection: React.FC = () => {
           </ArticleItem>
         ))}
       </ArticleList>
-      {showSeeMore && <SeeMoreButton>See more</SeeMoreButton>}
+      {/* {showSeeMore && <SeeMoreButton>See more</SeeMoreButton>} */}
     </Section>
   )
 }
