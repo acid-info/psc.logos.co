@@ -12,7 +12,7 @@ export const navItems = [
   // { name: 'Location', href: '#location' },
   // { name: 'Programme', href: '#programme' },
   { name: 'FAQs', href: '#faqs' },
-  { name: 'Tickets', href: '#tickets' },
+  { name: 'Lightning Talks', href: '#lightning-talks' },
 ]
 
 const Navbar: React.FC = () => {

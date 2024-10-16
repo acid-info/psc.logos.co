@@ -34,7 +34,7 @@ const FooterWrapper = styled.footer`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: 150px;
+  margin-top: 66px;
 
   a {
     text-decoration: underline;

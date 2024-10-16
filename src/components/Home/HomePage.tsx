@@ -13,6 +13,7 @@ import ParticipantsSection from './ParticipantsSection'
 // import TicketsSection from './TicketsSection'
 import Link from 'next/link'
 import AboutLogosSection from './AboutLogosSection'
+import LightningTalksSection from './LightningTalksSection'
 import VideoSection from './VideoSection'
 
 const HomePage: React.FC = () => {
@@ -35,6 +36,7 @@ const HomePage: React.FC = () => {
         <CustomLink href="https://lu.ma/psc1" target="_blank">
           <RegisterButton id="tickets">REGISTER FOR TICKETS</RegisterButton>
         </CustomLink>
+        <LightningTalksSection />
       </Main>
       <Footer />
     </Container>
