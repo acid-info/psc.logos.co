@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import Link from 'next/link'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Section, SectionTitle } from './StyledComponents'
 
 interface Article {
@@ -70,16 +70,22 @@ const MAX_ARTICLES = 4
 
 const ArticlesSection: React.FC = () => {
   const [showSeeMore, setShowSeeMore] = React.useState(false)
+  const [count, setCount] = useState(MAX_ARTICLES)
 
   useEffect(() => {
     setShowSeeMore(articlesData.length > MAX_ARTICLES)
   }, [])
 
+  const handleSeeMore = () => {
+    setCount(articlesData.length)
+    setShowSeeMore(false)
+  }
+
   return (
     <Section id="articles">
       <SectionTitle>Articles</SectionTitle>
       <ArticleList>
-        {articlesData.map((article, index) => (
+        {articlesData.slice(0, count).map((article, index) => (
           <ArticleItem key={index}>
             {article.image && (
               <CustomLink href={article.href} target="_blank">
@@ -95,7 +101,9 @@ const ArticlesSection: React.FC = () => {
           </ArticleItem>
         ))}
       </ArticleList>
-      {/* {showSeeMore && <SeeMoreButton>See more</SeeMoreButton>} */}
+      {showSeeMore && (
+        <SeeMoreButton onClick={handleSeeMore}>See more</SeeMoreButton>
+      )}
     </Section>
   )
 }

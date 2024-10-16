@@ -29,7 +29,7 @@ const LightningTalksModal = ({
     <Modal isOpen={isOpen} onClose={onClose}>
       <Container>
         <Header>
-          <h2>Submit Your Talk</h2>
+          <h2>SUBMIT YOUR TALK</h2>
           <CloseButton onClick={onClose}>
             <img src="/assets/close.svg" />
           </CloseButton>
