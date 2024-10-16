@@ -1,3 +1,4 @@
+import { breakpoints } from '@/configs/ui.configs'
 import styled from '@emotion/styled'
 import Link from 'next/link'
 import React from 'react'
@@ -6,54 +7,23 @@ import rehypeRaw from 'rehype-raw'
 import { Section } from './StyledComponents'
 
 const LightningTalksSection: React.FC = () => {
-  const [expanded, setExpanded] = React.useState<'psc' | 'logos' | null>(null)
-
-  const handleExpandClick = (event: React.MouseEvent) => {
-    const target = event.target as HTMLElement
-    if (target.tagName === 'A') {
-      return
-    }
-
-    setExpanded((prev) => {
-      if (prev === 'psc') {
-        return 'logos'
-      } else if (prev === 'logos') {
-        return 'psc'
-      } else {
-        return 'psc'
-      }
-    })
-  }
-
   return (
     <Section id="lightning-talks">
       <Container>
         <Wrapper>
           <Title>Lightning Talks</Title>
-          <MobileReadMoreWithMargin onClick={handleExpandClick}>
-            Read more
-          </MobileReadMoreWithMargin>
           <Content>
-            <Paragraph
-              rehypePlugins={[rehypeRaw]}
-              expanded={expanded === 'logos'}
-            >
+            <Paragraph rehypePlugins={[rehypeRaw]}>
               {`Do you have an alternative governance project you want to share with aligned and empathetic thinkers? Do you need collaborators, feedback, or just a forum to hone your pitch?
 
 Following our open-source principles, Parallel Society Congress offers a space for lightning talks. The goal is to spotlight innovative teams pushing the frontier of the post-nation-state movement.`}
             </Paragraph>
             <Divider></Divider>
-            <Paragraph
-              rehypePlugins={[rehypeRaw]}
-              expanded={expanded === 'logos'}
-            >
+            <Paragraph rehypePlugins={[rehypeRaw]}>
               {`We welcome projects in any stage of development from the following areas: cyberstates / network states, charter cities, pop-up communities, SEZs, special administrative zones, network nations, decentralised governance, or the technology needed to support any of the above.
 
 You can present a pitch, a new feature of an established initiative, a project overview, or just a promising idea. Apply below and come share your vision with the community.`}
             </Paragraph>
-            <MobileReadMore onClick={handleExpandClick}>
-              Read more
-            </MobileReadMore>
             <Link href="mailto:events@logos.co" target="_blank">
               <SubmitButton>Submit</SubmitButton>
             </Link>
@@ -85,10 +55,11 @@ const Wrapper = styled.div`
     color: var(--text-color);
   }
 
-  @media (max-width: 991px) {
+  @media (max-width: ${breakpoints.sm}px) {
     flex-direction: column;
     gap: 24px;
     min-height: unset;
+    border-top: none;
   }
 `
 
@@ -99,6 +70,11 @@ const Title = styled.h2`
   text-transform: uppercase;
   width: 50%;
   border-right: 1px dashed #000;
+
+  @media (max-width: ${breakpoints.sm}px) {
+    width: 100%;
+    border-right: none;
+  }
 `
 
 const Content = styled.div`
@@ -106,9 +82,15 @@ const Content = styled.div`
   white-space: pre-wrap;
   padding-top: 24px;
   padding-left: 24px;
+
+  @media (max-width: ${breakpoints.sm}px) {
+    width: 100%;
+    padding-left: 0;
+    border-top: 1px dashed #000;
+  }
 `
 
-const Paragraph = styled(Markdown)<{ expanded: boolean }>`
+const Paragraph = styled(Markdown)`
   font-size: 16px;
   line-height: 24px;
 
@@ -116,13 +98,6 @@ const Paragraph = styled(Markdown)<{ expanded: boolean }>`
     font-size: 14px;
     line-height: 20px;
     width: 100%;
-
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-
-    -webkit-line-clamp: ${(props) => (props.expanded ? 'unset' : '8')};
-    -webkit-box-orient: vertical;
   }
 `
 

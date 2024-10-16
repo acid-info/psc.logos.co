@@ -59,7 +59,7 @@ const FooterWrapper = styled.footer`
   }
 
   @media (max-width: 768px) {
-    margin-top: 170px;
+    margin-top: 96px;
   }
 `
 
