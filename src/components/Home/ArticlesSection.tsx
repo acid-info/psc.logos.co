@@ -54,6 +54,15 @@ const articlesData: Article[] = [
     tags: [],
     href: 'https://press.logos.co/article/how-to-ethically-build-public-goods-infrastructure',
   },
+  {
+    title: 'Building a Judicial System for the Internet Age',
+    date: '2 Nov 2023',
+    author: '',
+    excerpt:
+      'In this paper, we introduce Kleros, a decision-making protocol which uses blockchain and crowdsourcing for adjudicating claims.',
+    tags: [],
+    href: 'https://medium.com/kleros/kleros-a-decentralized-justice-protocol-for-the-internet-38d596a6300d',
+  },
 ]
 
 const MAX_ARTICLES = 4
