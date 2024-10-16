@@ -97,6 +97,7 @@ const Container = styled.div`
     margin: 0;
     margin-top: 118px;
     margin-bottom: 58px;
+    max-width: 378px;
 
     @media (max-width: ${breakpoints.sm}px) {
       margin-top: 60px;
