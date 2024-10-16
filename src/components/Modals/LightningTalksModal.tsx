@@ -37,8 +37,11 @@ const LightningTalksModal = ({
         <p>
           Upon acceptance of your talk, you agree to not present about raising
           funds, selling tokens, or other financial details regarding your
-          project. It will be strictly about spreading your ideas or interests
-          to the audience.
+          project.
+          <br />
+          <br />
+          It will be strictly about spreading your ideas or interests to the
+          audience.
           <br />
           <br />
           Prepare the following details and email to us at
@@ -92,17 +95,17 @@ const Container = styled.div`
   ul {
     padding: 0;
     margin: 0;
-    margin-top: 124px;
+    margin-top: 118px;
     margin-bottom: 58px;
 
     @media (max-width: ${breakpoints.sm}px) {
-      margin-top: 62px;
+      margin-top: 60px;
       margin-bottom: 57px;
     }
   }
 
   p {
-    max-width: 355px;
+    max-width: 377px;
     font-size: 14px;
     text-transform: uppercase;
   }
@@ -134,7 +137,7 @@ const Header = styled.div`
   margin-bottom: 50px;
 
   @media (max-width: ${breakpoints.sm}px) {
-    margin-bottom: 57px;
+    margin-bottom: 32px;
   }
 `
 
