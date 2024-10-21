@@ -103,7 +103,7 @@ const Question = styled.button`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 24px 0;
+  padding: 32px 0;
   color: var(--text-color);
   background: none;
   border: none;

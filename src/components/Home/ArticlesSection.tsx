@@ -15,25 +15,6 @@ interface Article {
 
 const articlesData: Article[] = [
   {
-    image: '/assets/articles/why-build-a-network-state.webp',
-    title: 'Why Build a Network State?: An Introduction',
-    date: '3 Mar 2024',
-    author: 'Jarrad Hope',
-    excerpt:
-      'Voluntary, non-territorial governance services would lead to greater freedom, accountability, and a more peaceful future',
-    tags: [],
-    href: 'https://press.logos.co/article/why-build-a-network-state',
-  },
-  {
-    image: '/assets/articles/logos-network-aug-2024.webp',
-    title: 'State of the Logos Network: August 2024',
-    date: '5 Sep 2024',
-    author: 'Logos',
-    excerpt: 'Your roundup of recent developments from the Logos ecosystem',
-    tags: [],
-    href: 'https://press.logos.co/article/logos-network-aug-2024',
-  },
-  {
     image: '/assets/articles/a-genealogy-of-logos.webp',
     title: 'From Offline to Online Piracy: A Genealogy of Logos',
     date: '23 Jan 2024',
@@ -42,6 +23,26 @@ const articlesData: Article[] = [
       'Considering the origins of Logos, the rationale behind each protocol of its technology stack, and its potential to reshape the social order',
     tags: [],
     href: 'https://press.logos.co/article/a-genealogy-of-logos',
+  },
+  {
+    image: '/assets/articles/building-judicial-system-for-internet-age.png',
+    title: 'Building a Judicial System for the Internet Age',
+    date: '2 Nov 2023',
+    author: '',
+    excerpt:
+      'In this paper, we introduce Kleros, a decision-making protocol which uses blockchain and crowdsourcing for adjudicating claims.',
+    tags: [],
+    href: 'https://medium.com/kleros/kleros-a-decentralized-justice-protocol-for-the-internet-38d596a6300d',
+  },
+  {
+    image: '/assets/articles/what-is-polycentric-law.webp',
+    title: 'What Is Polycentric Law?',
+    date: '20 Oct 2024',
+    author: '',
+    excerpt:
+      'In this paper, we introduce Kleros, a decision-making protocol which uses blockchain and crowdsourcing for adjudicating claims.',
+    tags: [],
+    href: 'https://press.logos.co/article/what-is-polycentric-law',
   },
   {
     image:
@@ -53,16 +54,6 @@ const articlesData: Article[] = [
       'Adhering to our principles is not an easy route, but it is necessary for ethically building public goods',
     tags: [],
     href: 'https://press.logos.co/article/how-to-ethically-build-public-goods-infrastructure',
-  },
-  {
-    image: '/assets/articles/building-judicial-system-for-internet-age.png',
-    title: 'Building a Judicial System for the Internet Age',
-    date: '2 Nov 2023',
-    author: '',
-    excerpt:
-      'In this paper, we introduce Kleros, a decision-making protocol which uses blockchain and crowdsourcing for adjudicating claims.',
-    tags: [],
-    href: 'https://medium.com/kleros/kleros-a-decentralized-justice-protocol-for-the-internet-38d596a6300d',
   },
 ]
 

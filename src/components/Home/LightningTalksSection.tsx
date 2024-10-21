@@ -118,8 +118,8 @@ const Paragraph = styled(Markdown)`
 
 const Divider = styled.div`
   height: 1px;
-  border-top: 1px dashed #000;
-  margin: 24px 0;
+  /* border-top: 1px dashed #000; */
+  margin: 16px 0;
 `
 
 const MobileReadMore = styled.p`
