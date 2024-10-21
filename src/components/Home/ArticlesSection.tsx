@@ -40,7 +40,7 @@ const articlesData: Article[] = [
     date: '20 Oct 2024',
     author: '',
     excerpt:
-      'In this paper, we introduce Kleros, a decision-making protocol which uses blockchain and crowdsourcing for adjudicating claims.',
+      'Polycentric law simply extends that observation from commercial services to government ones. Just as competition makes life better for those who seek banking, cleaning, and pet care services, it can benefit those seeking fair and efficient legal systems. Competition helps consumers and citizens alike.',
     tags: [],
     href: 'https://press.logos.co/article/what-is-polycentric-law',
   },
