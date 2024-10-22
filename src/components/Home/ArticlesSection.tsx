@@ -40,7 +40,7 @@ const articlesData: Article[] = [
     date: '20 Oct 2024',
     author: '',
     excerpt:
-      'Polycentric law simply extends that observation from commercial services to government ones. Just as competition makes life better for those who seek banking, cleaning, and pet care services, it can benefit those seeking fair and efficient legal systems. Competition helps consumers and citizens alike.',
+      'Polycentric law simply extends that observation from commercial services to government ones. Just as competition makes life better for those who seek banking, cleaning, and pet care services, it can benefit those seeking fair and efficient legal systems.',
     tags: [],
     href: 'https://press.logos.co/article/what-is-polycentric-law',
   },
