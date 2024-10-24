@@ -4,7 +4,7 @@ import SpeakerCard from '../Cards/SpeakerCard'
 import { Section, SectionTitle } from './StyledComponents'
 
 interface Speaker {
-  id: number
+  id: string
   initial: string
   name: string
   title: string
@@ -15,7 +15,7 @@ interface Speaker {
 
 const speakersData: Speaker[] = [
   {
-    id: 16,
+    id: 'andrej-berlin',
     initial: 'A',
     name: 'Andrej Berlin',
     title: 'Organisational Designer &\nBusiness Manager',
@@ -24,7 +24,7 @@ const speakersData: Speaker[] = [
     bio: 'Andrej Berlin is an expert in web3-native business management and organisational design. He is the creator of the decentralised design firm and organisational consultancy Deep Work, with 10 years of experience from over 100 different organisations, services, and products.',
   },
   {
-    id: 1,
+    id: 'angelo-alessio',
     initial: 'A',
     name: 'Angelo Alessio',
     title: 'Founder',
@@ -33,7 +33,7 @@ const speakersData: Speaker[] = [
     bio: 'Angelo Alessio is the founder and protocol architect at build_cities, a protocol for economic development. Prior to build_cities, Angelo was a Director of Product at Acorns following an acquisition of his previous company Harvest, which automatically negotiated bank fees for consumers using AI. Before Harvest and Acorns, Angelo consulted for various startups in the product and growth domains. Angelo holds an MBA from New York University and is an army veteran.',
   },
   {
-    id: 2,
+    id: 'arnaud-deville',
     initial: 'A',
     name: 'Arnaud Deville',
     title: 'Full Stack Engineer',
@@ -42,7 +42,7 @@ const speakersData: Speaker[] = [
     bio: "Arnaud Deville is a full-stack developer with 12 years of experience in a variety of programming languages, including TypeScript, JavaScript, React, and Go. Currently, he is part of the Institute of Free Technology, working on the Codex project as a full-stack developer for the website and the protocol's marketplace component.\n\nOver the past decade, he has contributed to various sectors, dedicating three years to health projects and four years to education. His most recent engagement was in fintech, where he worked on developing an alternative currency system based on gold.",
   },
   {
-    id: 3,
+    id: 'aqeel-mohammad',
     initial: 'A',
     name: 'Aqeel Mohammad',
     title: 'Product Strategy',
@@ -51,7 +51,7 @@ const speakersData: Speaker[] = [
     bio: 'Aqeel Mohammad is a product strategist and designer focused on leading market adoption for emerging technologies and democratising their production. Currently, he is a contributor at the Institute of Free Technology, working on the Codex project.',
   },
   {
-    id: 4,
+    id: 'audrey-tang',
     initial: 'A',
     name: 'Audrey Tang',
     title: 'Founder',
@@ -60,7 +60,7 @@ const speakersData: Speaker[] = [
     bio: 'Audrey Tang founded DRK Lab, which actively supports blockchain public goods development through grants and support for research and developer communities. It also fosters Web3 industry growth through initiatives like the Shanhaiwoo community and has launched the Web3 Young Scholars Program and Web3 Scholars Conference to drive industry development and collaboration among scholars, researchers, and practitioners. Audrey has over eight years of experience in the blockchain industry and draws on a background in investment, project strategy, ecosystem development, and brand expansion.',
   },
   {
-    id: 5,
+    id: 'david-casey',
     initial: 'D',
     name: 'David Casey',
     title: 'Director',
@@ -69,7 +69,16 @@ const speakersData: Speaker[] = [
     bio: "A four-time founder, David Casey enjoys working at the ecosystem level to engineer systemic change and currently is a Director at Funding the Commons, which aims to accelerate blockchain-based public goods funding. In 2013, David became interested in blockchain technology's utility for cross-border payments within one of his own companies. By 2015, he deployed his first blockchain-based asset using Bitcoin’s Colored Coins protocol. Within the blockchain industry, David has worn multiple hats, including roles as a founder and CEO.",
   },
   {
-    id: 6,
+    id: 'eva-klaus',
+    initial: 'E',
+    name: 'Eva Klaus',
+    title: 'Researcher at Africa Urban Lab',
+    org: 'Co-Founder at Zanzalu',
+    profileImage: '/assets/participants/eva-klaus.jpg',
+    bio: 'Eva is a researcher at the Africa Urban Lab under the Cities, Culture, and Technology research cluster. Prior to joining AUL, she held positions at the Charter Cities Institute, London School of Economics, and World Bank. Most recently, she co-founded Zanzalu, a pop-up city based in Fumba Town, Zanzibar.',
+  },
+  {
+    id: 'federico-ast',
     initial: 'F',
     name: 'Federico Ast',
     title: 'Co-Founder',
@@ -78,7 +87,7 @@ const speakersData: Speaker[] = [
     bio: 'Federico Ast earned degrees in economics and philosophy from the University of Buenos Aires and holds a PhD in management from IAE Business School. He is the co-founder and CEO of Kleros. A pioneer in the field of decentralised justice, Federico has lectured at prestigious universities, including Stanford and Oxford, and spoken at international organisations such as the United Nations. He is passionate about leveraging exponential technologies like artificial intelligence, crowdsourcing, and blockchain to drive social innovation.',
   },
   {
-    id: 7,
+    id: 'guy-louis-grau',
     initial: 'G',
     name: 'Guy-Louis Grau',
     title: 'Program Lead',
@@ -87,7 +96,7 @@ const speakersData: Speaker[] = [
     bio: 'From a young age, Guy-Louis Grau has been passionate about hacking electronic devices, turning household gadgets into his personal playground. He graduated as an electronics engineer from École Centrale Paris and led the development of innovative consumer electronics at various companies for more than 15 years. His introduction to Ethereum in 2017 lit a fire under him and sparked an obsession with crafting software and hardware to uphold user sovereignty. Currently, Guy-Louis is leading the development of Keycard, an open-source, principle-backed hardware wallet, for the IFT.',
   },
   {
-    id: 8,
+    id: 'jarrad-hope',
     initial: 'J',
     name: 'Jarrad Hope',
     title: 'Co-Founder',
@@ -96,7 +105,7 @@ const speakersData: Speaker[] = [
     bio: 'Jarrad Hope came to Bitcoin in early 2011 through agorism, counter-economics, and crypto anarchy. Seeing that Bitcoin could operate a monetary policy in a hostile environment, he began to view public blockchains as a voluntary social order, one that did not depend on a monopoly of violence. From there, he participated in early attempts to generalise the Bitcoin script to advance institutional libertarianism, ultimately becoming an early contributor to Ethereum. While advancing privacy technologies through the development of the e2e and p2p private messaging client and super app Status, Jarrad realised that privacy technologies are not enough and now advocates for self-sovereign crypto networks and the realisation of a latent cypherpunk dream, the cryptostate.',
   },
   {
-    id: 9,
+    id: 'janine-leger',
     initial: 'J',
     name: 'Janine Leger',
     title: 'Co-founder',
@@ -105,7 +114,7 @@ const speakersData: Speaker[] = [
     bio: "Janine Leger is the Co-founder of Edge City, an organisation that convenes builders across tech, science, and society in pop-up villages around the globe. She's one of the co-creators of Zuzalu and led the Public Goods Funding team at Gitcoin.",
   },
   {
-    id: 15,
+    id: 'layer0x',
     initial: 'L',
     name: 'Layer0x',
     title: 'Legal Architect',
@@ -114,7 +123,7 @@ const speakersData: Speaker[] = [
     bio: 'Powerhouse builds operational and legal infrastructure as public goods for network organisations. As a legal architect for Sky (formerly MakerDAO) and Powerhouse itself, Layer0x handles legal system design for DAOs, i.e., frameworks, processes, and entities that fulfil legal functions, such as public procurement, fundraising, project management, IP management, insurance, and legal defence. This includes designing open-source hybrid techno-legal tools that will help DAOs derisk and operate efficiently at scale.',
   },
   {
-    id: 10,
+    id: 'mark-lutter',
     initial: 'M',
     name: 'Mark Lutter',
     title: 'Founder and Executive Chairman',
@@ -123,7 +132,7 @@ const speakersData: Speaker[] = [
     bio: 'Mark Lutter is the founder and Executive Chairman of the Charter Cities Institute, a nonprofit building the ecosystem for charter cities. He is also the founder and CEO of Braavos Cities, a charter city development company. He has a PhD in economics from George Mason University and has been published or quoted in the New Yorker, Chicago Tribune, Financial Times, and other publications.',
   },
   {
-    id: 11,
+    id: 'peter-ludlow',
     initial: 'P',
     name: 'Peter Ludlow',
     title: 'Author',
@@ -132,7 +141,16 @@ const speakersData: Speaker[] = [
     bio: 'Peter Ludlow entered the world of philosophy through a deep interest in linguistics, the philosophy of language, and digital technologies. His early work in artificial intelligence and natural language processing showed him the cooperative part of language comprehension – an idea explored in his book, Living Words. This led him to make significant contributions to our understanding of how meaning is a shared, collaborative enterprise. As a leading voice in the philosophy of mind and language, Peter has authored and contributed to influential works on the intersection of technology and society, including the seminal anthology on how cyberspace is poised to impact human organisation, Crypto Anarchy, Cyberstates, and Pirate Utopias. His current focus is on the potential for digital platforms to foster self-sovereign communities and new, decentralised yet collaborative social orders.',
   },
   {
-    id: 12,
+    id: 'timour-kosters',
+    initial: 'T',
+    name: 'Timour Kosters',
+    title: 'Co-founder',
+    org: 'Edge City',
+    profileImage: '/assets/participants/timour-kosters.jpg',
+    bio: 'Timour Kosters is the Co-Founder of Edge City, an organisation that convenes builders from the frontiers of tech, science, and society in popup villages across the globe. Prior, he was a partner at Seed Club Ventures, and a startup operator, where he built Artsy, Kama, and Impact media.',
+  },
+  {
+    id: 'tom-w-bell',
     initial: 'T',
     name: 'Tom W. Bell',
     title: 'Author',
@@ -141,7 +159,7 @@ const speakersData: Speaker[] = [
     bio: 'Professor Tom W. Bell earned his JD degree from the University of Chicago and then practised law in Silicon Valley and Washington, DC before joining the faculty of Chapman University Fowler School of Law in Orange County, California. He teaches Constitutional Law, all of the first-year common law courses, and electives in IP, technology, and business law. Tom has published widely on special jurisdictions, copyrights, Internet law, prediction markets, and the Third Amendment. His books include Intellectual Privilege: Copyright, Common Law, and the Common Good and Your Next Government?: From the Nation State to Stateless Nations. As a consultant, Bell has an active practice designing, installing, and supporting legal systems for special jurisdictions.',
   },
   {
-    id: 13,
+    id: 'veronica-schrenk',
     initial: 'V',
     name: 'Veronica Schrenk',
     title: 'Founder',
@@ -150,7 +168,7 @@ const speakersData: Speaker[] = [
     bio: 'Veronica Schrenk is the co-initiator of ZuVillage, organised the ZuVillage Georgia experiment this summer, and leads operations at Zuzalu.city, the decentralised and open-source platform powering the Zuzalu ecosystem. With a background in education and the rationality community, she seeks to infuse truth-seeking into Zuzalu as it evolves. Current side quests include the AI critical thinking tutor Socratic.bot and the UChicago Alumni Free Speech Alliance.',
   },
   {
-    id: 14,
+    id: 'yann-aouidef',
     initial: 'V',
     name: 'Yann Aouidef',
     title: 'Researcher',
@@ -162,10 +180,10 @@ const speakersData: Speaker[] = [
 
 const ParticipantsSection: React.FC = () => {
   const [expandedCards, setExpandedCards] = useState<{
-    [key: number]: boolean
+    [key: string]: boolean
   }>({})
 
-  const toggleCard = (id: number) => {
+  const toggleCard = (id: string) => {
     setExpandedCards((prev) => ({ ...prev, [id]: !prev[id] }))
   }
 
