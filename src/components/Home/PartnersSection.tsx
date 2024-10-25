@@ -64,6 +64,10 @@ const partnersData: Partner[] = [
     logo: '/assets/partners/woman-web3-privacy.svg',
     name: 'women in\nweb3privacy',
   },
+  {
+    logo: '/assets/partners/darkifi.svg',
+    name: 'DarkFi',
+  },
 ]
 
 const PartnersSection: React.FC = () => {
