@@ -105,15 +105,6 @@ const speakersData: Speaker[] = [
     bio: 'Jarrad Hope came to Bitcoin in early 2011 through agorism, counter-economics, and crypto anarchy. Seeing that Bitcoin could operate a monetary policy in a hostile environment, he began to view public blockchains as a voluntary social order, one that did not depend on a monopoly of violence. From there, he participated in early attempts to generalise the Bitcoin script to advance institutional libertarianism, ultimately becoming an early contributor to Ethereum. While advancing privacy technologies through the development of the e2e and p2p private messaging client and super app Status, Jarrad realised that privacy technologies are not enough and now advocates for self-sovereign crypto networks and the realisation of a latent cypherpunk dream, the cryptostate.',
   },
   {
-    id: 'janine-leger',
-    initial: 'J',
-    name: 'Janine Leger',
-    title: 'Co-founder',
-    org: 'EdgeCity',
-    profileImage: '/assets/participants/janine.png',
-    bio: "Janine Leger is the Co-founder of Edge City, an organisation that convenes builders across tech, science, and society in pop-up villages around the globe. She's one of the co-creators of Zuzalu and led the Public Goods Funding team at Gitcoin.",
-  },
-  {
     id: 'layer0x',
     initial: 'L',
     name: 'Layer0x',
