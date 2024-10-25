@@ -292,9 +292,11 @@ const ParticipantsSection: React.FC = () => {
             />
           ))}
       </SpeakerGrid>
-      <MobileSeeAllButton onClick={handleMobileSeeAll}>
-        {mobileSeeAll ? 'See Less' : 'See All'}
-      </MobileSeeAllButton>
+      {!mobileSeeAll && (
+        <MobileSeeAllButton onClick={handleMobileSeeAll}>
+          See All
+        </MobileSeeAllButton>
+      )}
     </Section>
   )
 }
@@ -306,6 +308,11 @@ const SpeakerGrid = styled.div`
   width: 100%;
   gap: 40px 16px;
   align-items: start;
+
+  * {
+    overflow: hidden;
+    word-wrap: break-word;
+  }
 
   @media (max-width: ${breakpoints.sm}px) {
     grid-template-columns: repeat(2, 1fr);

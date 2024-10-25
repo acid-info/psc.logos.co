@@ -1,3 +1,4 @@
+import { breakpoints } from '@/configs/ui.configs'
 import styled from '@emotion/styled'
 
 interface SpeakerCardProps {
@@ -52,7 +53,7 @@ const CardWrapper = styled.div`
     margin: 0 auto;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${breakpoints.sm}px) {
     min-width: unset;
   }
 `
@@ -107,8 +108,6 @@ const SpeakerName = styled.h3`
 
   @media (max-width: 768px) {
     font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 24px;
   }
 `
