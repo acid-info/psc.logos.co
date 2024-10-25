@@ -58,7 +58,7 @@ const partnersData: Partner[] = [
   },
   {
     logo: '/assets/partners/rns.svg',
-    name: 'RNS',
+    name: 'RNS.ID',
   },
   {
     logo: '/assets/partners/woman-web3-privacy.svg',
