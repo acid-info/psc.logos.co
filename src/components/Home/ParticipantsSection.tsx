@@ -1,5 +1,7 @@
+import { breakpoints } from '@/configs/ui.configs'
 import styled from '@emotion/styled'
 import React, { useState } from 'react'
+import useWindowSize from '../../../hooks/useWindowSize'
 import SpeakerCard from '../Cards/SpeakerCard'
 import { Section, SectionTitle } from './StyledComponents'
 
@@ -78,6 +80,15 @@ const speakersData: Speaker[] = [
     bio: 'Eva is a researcher at the Africa Urban Lab under the Cities, Culture, and Technology research cluster. Prior to joining AUL, she held positions at the Charter Cities Institute, London School of Economics, and World Bank. Most recently, she co-founded Zanzalu, a pop-up city based in Fumba Town, Zanzibar.',
   },
   {
+    id: 'evin-mc-mullen',
+    initial: 'E',
+    name: 'Evin Mc Mullen',
+    title: 'Co-Founder',
+    org: 'Privado ID',
+    profileImage: '/assets/participants/evin-mc-mullen.jpg',
+    bio: 'Evin McMullen is Chief Strategy Officer and co-Founder of Privado ID, enabling Unified Identity across blockchains and legacy systems. Evin previously served as CEO and founder of verifiable data platform Disco.xyz, and as a Director at Berkshire Hathaway and ConsenSys. She is a cofounder of DAO Jones and inkDAO, and an advisor to Boys Club. She is a graduate of Yale University.',
+  },
+  {
     id: 'federico-ast',
     initial: 'F',
     name: 'Federico Ast',
@@ -85,6 +96,15 @@ const speakersData: Speaker[] = [
     org: 'Kleros',
     profileImage: '/assets/participants/federico-ast.png',
     bio: 'Federico Ast earned degrees in economics and philosophy from the University of Buenos Aires and holds a PhD in management from IAE Business School. He is the co-founder and CEO of Kleros. A pioneer in the field of decentralised justice, Federico has lectured at prestigious universities, including Stanford and Oxford, and spoken at international organisations such as the United Nations. He is passionate about leveraging exponential technologies like artificial intelligence, crowdsourcing, and blockchain to drive social innovation.',
+  },
+  {
+    id: 'franck-royer',
+    initial: 'F',
+    name: 'Franck Royer',
+    title: 'Program Lead',
+    org: 'Waku',
+    profileImage: '/assets/participants/franck-royer.jpg',
+    bio: 'Franck is currently leading the Waku project, a suite of protocol and network that enables censorship-resistant and private off-chain communications, using novel zero-knowledge technology to prevent spamming. He joined the blockchain ecosystem for the Cypherpunk and privacy values, previously working on multi-chain private swap protocols.',
   },
   {
     id: 'guy-louis-grau',
@@ -96,6 +116,15 @@ const speakersData: Speaker[] = [
     bio: 'From a young age, Guy-Louis Grau has been passionate about hacking electronic devices, turning household gadgets into his personal playground. He graduated as an electronics engineer from École Centrale Paris and led the development of innovative consumer electronics at various companies for more than 15 years. His introduction to Ethereum in 2017 lit a fire under him and sparked an obsession with crafting software and hardware to uphold user sovereignty. Currently, Guy-Louis is leading the development of Keycard, an open-source, principle-backed hardware wallet, for the IFT.',
   },
   {
+    id: 'henry-de valence',
+    initial: 'H',
+    name: 'Henry de Valence',
+    title: 'CTO',
+    org: 'Penumbra',
+    profileImage: '/assets/participants/henry-de valence.jpg',
+    bio: 'Henry is a cryptographer, interested in fast, safe zero-knowledge cryptography for privacy-preserving systems. Previously, he did cryptography work at the Zcash Foundation, Interstellar, Chain Inc., Cloudflare, and in grad school. his other interests include number theory, algebra, geometry, privacy, freedom, and the number 24.',
+  },
+  {
     id: 'jarrad-hope',
     initial: 'J',
     name: 'Jarrad Hope',
@@ -103,6 +132,24 @@ const speakersData: Speaker[] = [
     org: 'Logos, IFT',
     profileImage: '/assets/participants/jarrad-hope.png',
     bio: 'Jarrad Hope came to Bitcoin in early 2011 through agorism, counter-economics, and crypto anarchy. Seeing that Bitcoin could operate a monetary policy in a hostile environment, he began to view public blockchains as a voluntary social order, one that did not depend on a monopoly of violence. From there, he participated in early attempts to generalise the Bitcoin script to advance institutional libertarianism, ultimately becoming an early contributor to Ethereum. While advancing privacy technologies through the development of the e2e and p2p private messaging client and super app Status, Jarrad realised that privacy technologies are not enough and now advocates for self-sovereign crypto networks and the realisation of a latent cypherpunk dream, the cryptostate.',
+  },
+  {
+    id: 'kelsie-nabbens',
+    initial: 'K',
+    name: 'Kelsie Nabben',
+    title: 'Max Weber Fellow',
+    org: 'European University Institute,\nBlockchainGov',
+    profileImage: '/assets/participants/kelsie-nabbens.jpg',
+    bio: 'Dr Kelsie Nabben is an ethnographic researcher specialising in the social impacts of emerging technologies, particularly decentralised digital infrastructure (including blockchains, peer-to-peer protocols, and Decentralised Autonomous Organisations) and other algorithmic systems (such as Large-Language-Models). Her interdisciplinary research involves analysis of the interplay between social and technical elements of digital infrastructure with a focus on resilience and accountability in contexts of digital governance.',
+  },
+  {
+    id: 'kevin-owocki',
+    initial: 'K',
+    name: 'Kevin Owocki',
+    title: 'Founder',
+    org: 'Gitcoin',
+    profileImage: '/assets/participants/kevin-owocki.jpg',
+    bio: 'Kevin Owocki is a blockchain expert, computer scientist, and host of the Greenpill.network podcast. Since founding Gitcoin in 2017, his vision of a positive-sum ecosystem has facilitated the distribution of over $62 million to projects, solidifying Gitcoin as an essential component of the Ethereum ecosystem. In 2021, the Gitcoin DAO launched, and Gitcoin Grants evolved into a suite of modular and decentralised protocols. As of 2023, web3 projects integrate Gitcoin Grants through Grants Stack or Allo Protocol, further reinforcing its pivotal role in supporting and marketing countless innovative projects.',
   },
   {
     id: 'layer0x',
@@ -132,6 +179,24 @@ const speakersData: Speaker[] = [
     bio: 'Peter Ludlow entered the world of philosophy through a deep interest in linguistics, the philosophy of language, and digital technologies. His early work in artificial intelligence and natural language processing showed him the cooperative part of language comprehension – an idea explored in his book, Living Words. This led him to make significant contributions to our understanding of how meaning is a shared, collaborative enterprise. As a leading voice in the philosophy of mind and language, Peter has authored and contributed to influential works on the intersection of technology and society, including the seminal anthology on how cyberspace is poised to impact human organisation, Crypto Anarchy, Cyberstates, and Pirate Utopias. His current focus is on the potential for digital platforms to foster self-sovereign communities and new, decentralised yet collaborative social orders.',
   },
   {
+    id: 'puja-ohlhaver',
+    initial: 'P',
+    name: 'Puja Ohlhaver',
+    title: 'Researcher',
+    org: 'Harvard Getting-Plurality',
+    profileImage: '/assets/participants/puja-ohlhaver.jpg',
+    bio: "Puja Ohlhaver is a lawyer, innovator, and technologist. She is a member of the Getting Plurality Research Group at Harvard's Allen Lab for Democracy Renovation. Her writing has been featured in the New York Times, Washington Post, Politico, and WIRED. She previously practised law at Skadden, Arps and founded ClearPath Surgical, Inc., a women’s healthcare company.",
+  },
+  {
+    id: 'rachel-rose',
+    initial: 'R',
+    name: "Rachel-Rose O'Leary",
+    title: 'Core Dev',
+    org: 'DarkFi',
+    profileImage: '/assets/participants/rachel-rose.jpg',
+    bio: "Rachel-Rose O'Leary is a DarkFi core developer and writer. She authored 'Lunarpunk and the Dark Side of the Cycle', a text which helped create a web3 privacy revival. She is the lead editor of the philosophy journal Agorism in the 21st Century. She was the tech lead for CoinDesk 2017-2018, and has written for WIRED, Rekt News and Defiant. She has a background in philosophy and digital art.",
+  },
+  {
     id: 'timour-kosters',
     initial: 'T',
     name: 'Timour Kosters',
@@ -159,6 +224,24 @@ const speakersData: Speaker[] = [
     bio: 'Veronica Schrenk is the co-initiator of ZuVillage, organised the ZuVillage Georgia experiment this summer, and leads operations at Zuzalu.city, the decentralised and open-source platform powering the Zuzalu ecosystem. With a background in education and the rationality community, she seeks to infuse truth-seeking into Zuzalu as it evolves. Current side quests include the AI critical thinking tutor Socratic.bot and the UChicago Alumni Free Speech Alliance.',
   },
   {
+    id: 'william-wang',
+    initial: 'W',
+    name: 'William Wang',
+    title: 'CEO',
+    org: 'Cryptic Labs (RNS.ID)',
+    profileImage: '/assets/participants/william-wang.jpg',
+    bio: 'William is the CEO of Cryptic Labs (RNS.ID), leading the Palau Digital Residency Program. He advises at Universidade NOVA de Lisboa, Harvard Blockchain Club, and previously at Stanford DTI. He pioneers secure digital identity solutions, driving innovation in the global identity space.',
+  },
+  {
+    id: 'yan-mastrosova',
+    initial: 'V',
+    name: 'Yana Mastrosova',
+    title: 'Software Developer',
+    org: 'Nym',
+    profileImage: '/assets/participants/yan-mastrosova.jpg',
+    bio: 'Yana is a Software Developer at Nym, deeply engaged with the Ukrainian Nym community. She also contributes to RawBox, a community-driven project focused on building a router that runs on the native Nym mixnet. Additionally, Yana is a core contributor to the "Women In Privacy" initiative, advocating for privacy for women and non-binary in the digital space.',
+  },
+  {
     id: 'yann-aouidef',
     initial: 'V',
     name: 'Yann Aouidef',
@@ -169,29 +252,49 @@ const speakersData: Speaker[] = [
   },
 ]
 
+const MOBILE_LIMIT = 6
+
 const ParticipantsSection: React.FC = () => {
   const [expandedCards, setExpandedCards] = useState<{
     [key: string]: boolean
   }>({})
 
+  const { width } = useWindowSize()
+
+  const [mobileSeeAll, setMobileSeeAll] = useState(false)
+
   const toggleCard = (id: string) => {
     setExpandedCards((prev) => ({ ...prev, [id]: !prev[id] }))
+  }
+
+  const handleMobileSeeAll = () => {
+    setMobileSeeAll((prev) => !prev)
   }
 
   return (
     <Section id="participants">
       <SectionTitle>Participants</SectionTitle>
       <SpeakerGrid>
-        {speakersData.map((speaker, index) => (
-          <SpeakerCard
-            key={speaker.id}
-            {...speaker}
-            expanded={!!expandedCards[speaker.id]}
-            onToggle={() => toggleCard(speaker.id)}
-            className={`speaker-card-${index + 1}`}
-          />
-        ))}
+        {speakersData
+          .slice(
+            0,
+            width < breakpoints.sm && !mobileSeeAll
+              ? MOBILE_LIMIT
+              : speakersData.length,
+          )
+          .map((speaker, index) => (
+            <SpeakerCard
+              key={speaker.id}
+              {...speaker}
+              expanded={!!expandedCards[speaker.id]}
+              onToggle={() => toggleCard(speaker.id)}
+              className={`speaker-card-${index + 1}`}
+            />
+          ))}
       </SpeakerGrid>
+      <MobileSeeAllButton onClick={handleMobileSeeAll}>
+        {mobileSeeAll ? 'See Less' : 'See All'}
+      </MobileSeeAllButton>
     </Section>
   )
 }
@@ -204,10 +307,32 @@ const SpeakerGrid = styled.div`
   gap: 40px 16px;
   align-items: start;
 
-  @media (max-width: 991px) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  @media (max-width: ${breakpoints.sm}px) {
+    grid-template-columns: repeat(2, 1fr);
     gap: 48px 16px;
     margin-top: 16px;
+  }
+`
+
+const MobileSeeAllButton = styled.button`
+  display: flex;
+  padding: 10px 40px;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: white;
+
+  font-size: 12px;
+  line-height: 20px;
+
+  width: 100%;
+  text-transform: uppercase;
+  margin-top: 32px;
+
+  cursor: pointer;
+
+  @media (min-width: ${breakpoints.sm}px) {
+    display: none;
   }
 `
 
