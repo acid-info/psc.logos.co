@@ -26,7 +26,7 @@ const partnersData: Partner[] = [
   },
   {
     logo: '/assets/partners/funding-the-commons.svg',
-    name: 'Funding the Commons',
+    name: 'Funding\nthe Commons',
   },
   {
     logo: '/assets/partners/codex.svg',
@@ -55,6 +55,14 @@ const partnersData: Partner[] = [
   {
     logo: '/assets/partners/shan-hai-woo.svg',
     name: 'Shan Hai Woo',
+  },
+  {
+    logo: '/assets/partners/rns.svg',
+    name: 'RNS',
+  },
+  {
+    logo: '/assets/partners/woman-web3-privacy.svg',
+    name: 'women in\nweb3privacy',
   },
 ]
 
@@ -117,6 +125,7 @@ const PartnerName = styled.div`
   color: var(--text-color);
   text-align: center;
   line-height: 24px;
+  white-space: pre-line;
 `
 
 export default PartnersSection
