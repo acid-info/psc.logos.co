@@ -152,6 +152,15 @@ const speakersData: Speaker[] = [
     bio: 'Kevin Owocki is a blockchain expert, computer scientist, and host of the Greenpill.network podcast. Since founding Gitcoin in 2017, his vision of a positive-sum ecosystem has facilitated the distribution of over $62 million to projects, solidifying Gitcoin as an essential component of the Ethereum ecosystem. In 2021, the Gitcoin DAO launched, and Gitcoin Grants evolved into a suite of modular and decentralised protocols. As of 2023, web3 projects integrate Gitcoin Grants through Grants Stack or Allo Protocol, further reinforcing its pivotal role in supporting and marketing countless innovative projects.',
   },
   {
+    id: 'kieran-mesquita',
+    initial: 'K',
+    name: 'Kieran Mesquita',
+    title: 'Contributor',
+    org: 'Railgun DAO',
+    profileImage: '/assets/participants/kieran-mesquita.jpg',
+    bio: 'Kieran is a long-time advocate for freedom-enabling technologies, with a strong background in crypto as an early adopter. He has contributed to multiple decentralised projects, and is currently focused on researching and developing protocol designs for RAILGUN DAO, a privacy-enabling technology.',
+  },
+  {
     id: 'layer0x',
     initial: 'L',
     name: 'Layer0x',

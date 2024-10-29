@@ -68,6 +68,10 @@ const partnersData: Partner[] = [
     logo: '/assets/partners/darkifi.svg',
     name: 'DarkFi',
   },
+  {
+    logo: '/assets/partners/railgun.svg',
+    name: 'Railgun',
+  },
 ]
 
 const PartnersSection: React.FC = () => {
