@@ -18,10 +18,18 @@ const Footer: React.FC = () => {
       </TopSection>
       <BottomSection>
         <BusinessUnits>
-          Built by{' '}
-          <Link href="https://free.technology/" target="_blank">
-            IFT
-          </Link>
+          <div>
+            Built by{' '}
+            <Link href="https://free.technology/" target="_blank">
+              IFT
+            </Link>
+          </div>
+          <div>
+            Organised by{' '}
+            <Link href="https://logos.co/" target="_blank">
+              Logos
+            </Link>
+          </div>
         </BusinessUnits>
         <LegalLinks />
         <InfraLinks />
@@ -117,7 +125,7 @@ const BottomSection = styled.section`
   }
 `
 
-const BusinessUnits = styled.p`
+const BusinessUnits = styled.div`
   color: #000;
   font-size: 14px;
   width: 50%;
