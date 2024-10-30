@@ -35,117 +35,299 @@ export const FooterLinksItems: {
   },
 }
 
-export const agendaData = [
-  {
-    time: '11:00',
-    sessions: {
-      mainStage: {
-        title: 'Welcome',
-        speakers: ['Joe Nakamoto'],
-      },
-      demoRoom: null,
-      roundTable: null,
+export const agendaData = {
+  mainStage: [
+    {
+      title: 'Doors Open',
+      speakers: [],
+      startTime: '10:30',
+      endTime: '11:00',
     },
-  },
-  {
-    time: '11:40',
-    sessions: {
-      mainStage: {
-        title: 'Logos Welcome',
-        speakers: ['Jarrad Hope'],
-      },
-      demoRoom: null,
-      roundTable: null,
+    {
+      title: 'Welcome',
+      speakers: ['Joe Nakamoto'],
+      startTime: '11:00',
+      endTime: '11:10',
     },
-  },
-  {
-    time: '11:30',
-    sessions: {
-      mainStage: {
-        title: 'Farewell to Westphalia: Beyond the Nation State',
-        speakers: ['Tom W. Bell', 'Jarrad Hope', 'Peter Ludlow'],
-      },
-      demoRoom: {
-        title: 'Keycard Pro: A Next-Generation Hardware Wallet',
-        speakers: ['Guy Louis Grau'],
-      },
-      roundTable: null,
+    {
+      title: 'Logos Welcome',
+      speakers: ['Jarrad Hope'],
+      startTime: '11:10',
+      endTime: '11:30',
     },
-  },
-  {
-    time: '12:30',
-    sessions: {
-      mainStage: {
-        title: 'Lunch',
-        speakers: ['Chill Zone'],
-      },
-      demoRoom: null,
-      roundTable: null,
+    {
+      title: 'Farewell to Westphalia: Beyond the Nation State',
+      speakers: ['Tom W. Bell', 'Jarrad Hope', 'Peter Ludlow'],
+      startTime: '11:30',
+      endTime: '12:30',
     },
-  },
-  {
-    time: '13:30',
-    sessions: {
-      mainStage: {
-        title: 'Accessing Justice via Decentralised Legal Systems',
-        speakers: ['Eric Alston', 'Federico Ast', 'LayerX', 'Kelsie Nabben'],
-      },
-      demoRoom: {
-        title: 'Introduction to Decentralised Self-Organization',
-        speakers: ['Andrej Berlin'],
-      },
-      roundTable: {
-        title: 'Sovereign Tools: Workshop by Women in Web3 Privacy',
-        speakers: [],
-      },
+    {
+      title: 'Lunch',
+      speakers: ['Chill Zone'],
+      startTime: '12:30',
+      endTime: '13:30',
     },
-  },
-  {
-    time: '14:30',
-    sessions: {
-      mainStage: {
-        title: 'Bitcoin: A Parallel Global Economy',
-        speakers: ['Joe Nakamoto', 'Edan Yago'],
-      },
-      demoRoom: {
-        title: 'Funding the Commons, Pilot Research',
-        speakers: ['Puja Ohlhaver'],
-      },
-      roundTable: null,
+    {
+      title: 'Accessing Justice via Decentralised Legal Systems',
+      speakers: ['Eric Alston', 'Federico Ast', 'LayerX', 'Kelsie Nabben'],
+      startTime: '13:30',
+      endTime: '14:30',
     },
-  },
-  {
-    time: '15:00',
-    sessions: {
-      mainStage: {
-        title: 'Zanzibar: Building a Granton Ecosystem in Africa',
-        speakers: ['Eva Kailis', 'Mark Lutter'],
-      },
-      demoRoom: {
-        title: 'Community Currencies: How to Price Parallel Societies',
-        speakers: ['Joe Nakamoto'],
-      },
-      roundTable: {
-        title: 'Codex Demo: Durable Archiving for Network Societies',
-        speakers: ['Evan McMullen', 'Henry de Valence', 'Yana Martsovska'],
-      },
+    {
+      title: 'Bitcoin: A Parallel Global Economy',
+      speakers: ['Joe Nakamoto', 'Edan Yago'],
+      startTime: '14:30',
+      endTime: '15:00',
     },
-  },
-  {
-    time: '15:30',
-    sessions: {
-      mainStage: {
-        title: 'Coffee Break',
-        speakers: [],
-      },
-      demoRoom: {
-        title: 'Chill Zone',
-        speakers: [],
-      },
-      roundTable: {
-        title: 'Lightning Talks',
-        speakers: [],
-      },
+    {
+      title: 'Zanzalu: Building a Growth Ecosystem in Africa',
+      speakers: ['Eva Kailis', 'Mark Lutter'],
+      startTime: '15:00',
+      endTime: '16:00',
     },
-  },
-]
+    {
+      title: 'Zanzalu: Building a Growth Ecosystem in Africa',
+      speakers: ['Eva Kailis', 'Mark Lutter'],
+      startTime: '15:00',
+      endTime: '16:00',
+    },
+    {
+      title: 'Coffee Break',
+      speakers: ['Chill Zone'],
+      startTime: '16:00',
+      endTime: '16:30',
+    },
+    {
+      title: 'How Governments Can Benefit from Parallel Societies',
+      speakers: ['Angelo Alessio', 'William Wang'],
+      startTime: '16:30',
+      endTime: '17:00',
+    },
+    {
+      title: 'How to Start Your Own Pop-up Village',
+      speakers: ['Audrey Tang', 'Timour Koster', 'Veronika Scherm'],
+      startTime: '17:00',
+      endTime: '18:00',
+    },
+    {
+      title: 'Regenerative Public Goods for Sustainable Communities',
+      speakers: ['David Casey', 'Kevin Owocki', 'Michel Bauwens'],
+      startTime: '18:00',
+      endTime: '19:00',
+    },
+    {
+      title: 'Closing Message',
+      speakers: ['Michel Bauwens', 'David Casey', 'Kevin Owocki'],
+      startTime: '19:00',
+      endTime: '19:10',
+    },
+    {
+      title: 'Thai Food market & Drinks',
+      speakers: ['chill zone'],
+      startTime: '19:10',
+      endTime: '21:00',
+    },
+    {
+      title: 'Drinks Only',
+      speakers: ['chill zone'],
+      startTime: '21:00',
+      endTime: '22:00',
+    },
+  ],
+  demoRoom: [
+    {
+      title: 'Doors Open',
+      speakers: [],
+      startTime: '10:30',
+      endTime: '11:00',
+    },
+    {
+      title: '',
+      speakers: [''],
+      startTime: '',
+      endTime: '',
+    },
+    {
+      title: '',
+      speakers: [''],
+      startTime: '',
+      endTime: '',
+    },
+    {
+      title: 'Keycard Pro: A Next-Generation Hardware Wallet',
+      speakers: ['Guy Louis Grau'],
+      startTime: '11:40',
+      endTime: '12:30',
+    },
+    {
+      title: 'Lunch',
+      speakers: ['Chill Zone'],
+      startTime: '12:30',
+      endTime: '13:30',
+    },
+    {
+      title: 'Introduction to Decentralised Self-Organization',
+      speakers: ['Andrej Berlin'],
+      startTime: '13:30',
+      endTime: '14:30',
+    },
+    {
+      title: 'Funding the Commons, Pilot Research',
+      speakers: ['Puja Ohlhaver'],
+      startTime: '14:30',
+      endTime: '15:00',
+    },
+    {
+      title: 'Community Currencies: How to Price Parallel Societies',
+      speakers: ['Joe Nakamoto'],
+      startTime: '15:00',
+      endTime: '15:30',
+    },
+    {
+      title: 'Coffee Break',
+      speakers: ['Chill Zone'],
+      startTime: '15:30',
+      endTime: '16:00',
+    },
+    {
+      title: 'Codex Demo: Durable Archiving for Network Societies',
+      speakers: ['Aqeel Mohammad', 'Arnaud Deville'],
+      startTime: '16:00',
+      endTime: '17:00',
+    },
+    {
+      title: 'Codex Demo: Durable Archiving for Network Societies',
+      speakers: ['Aqeel Mohammad', 'Arnaud Deville'],
+      startTime: '16:00',
+      endTime: '17:00',
+    },
+    {
+      title: 'Kleros Dispute Resolution: From Disagreements to Resolution',
+      speakers: ['Yann Aouidef'],
+      startTime: '17:00',
+      endTime: '18:00',
+    },
+    {
+      title: 'Parallel Society Tech: State of the Art and Future',
+      speakers: ['Franck Royer', 'Kieram Mesquita', "Rachel-Rose O'Leary"],
+      startTime: '18:00',
+      endTime: '19:00',
+    },
+    {
+      title: '',
+      speakers: [''],
+      startTime: '',
+      endTime: '',
+    },
+    {
+      title: 'Thai Food market & Drinks',
+      speakers: ['chill zone'],
+      startTime: '19:10',
+      endTime: '21:00',
+    },
+    {
+      title: 'Drinks Only',
+      speakers: ['chill zone'],
+      startTime: '21:00',
+      endTime: '22:00',
+    },
+  ],
+  roundTable: [
+    {
+      title: 'Doors Open',
+      speakers: [],
+      startTime: '10:30',
+      endTime: '11:00',
+    },
+    {
+      title: '',
+      speakers: [''],
+      startTime: '',
+      endTime: '',
+    },
+    {
+      title: '',
+      speakers: [''],
+      startTime: '',
+      endTime: '',
+    },
+    {
+      title: '',
+      speakers: [''],
+      startTime: '',
+      endTime: '',
+    },
+    {
+      title: 'Lunch',
+      speakers: ['Chill Zone'],
+      startTime: '12:30',
+      endTime: '13:30',
+    },
+    {
+      title: 'Sovereign Tools: Workshop by Women in Web3 Privacy',
+      speakers: ['Evin McMullen', 'Henry de Valence', 'Yana Mastrosoeva'],
+      startTime: '13:30',
+      endTime: '15:30',
+    },
+    {
+      title: 'Sovereign Tools: Workshop by Women in Web3 Privacy',
+      speakers: ['Evin McMullen', 'Henry de Valence', 'Yana Mastrosoeva'],
+      startTime: '13:30',
+      endTime: '15:30',
+    },
+    {
+      title: 'Sovereign Tools: Workshop by Women in Web3 Privacy',
+      speakers: ['Evin McMullen', 'Henry de Valence', 'Yana Mastrosoeva'],
+      startTime: '13:30',
+      endTime: '15:30',
+    },
+    {
+      title: 'Coffee Break',
+      speakers: ['Chill Zone'],
+      startTime: '15:30',
+      endTime: '16:00',
+    },
+    {
+      title: 'Lightning Talks',
+      speakers: ['Kimberly Adams'],
+      startTime: '16:00',
+      endTime: '18:00',
+    },
+    {
+      title: 'Lightning Talks',
+      speakers: ['Kimberly Adams'],
+      startTime: '16:00',
+      endTime: '18:00',
+    },
+    {
+      title: 'Lightning Talks',
+      speakers: ['Kimberly Adams'],
+      startTime: '16:00',
+      endTime: '18:00',
+    },
+    {
+      title: '',
+      speakers: [''],
+      startTime: '',
+      endTime: '',
+    },
+    {
+      title: '',
+      speakers: [''],
+      startTime: '',
+      endTime: '',
+    },
+    {
+      title: 'Thai Food market & Drinks',
+      speakers: ['chill zone'],
+      startTime: '19:10',
+      endTime: '21:00',
+    },
+    {
+      title: 'Drinks Only',
+      speakers: ['chill zone'],
+      startTime: '21:00',
+      endTime: '22:00',
+    },
+  ],
+}
