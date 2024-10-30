@@ -1,5 +1,6 @@
 import { agendaData } from '@/configs/data.configs'
 import styled from '@emotion/styled'
+import { useState } from 'react'
 import { Section, SectionTitle } from './StyledComponents'
 
 type Session = {
@@ -12,30 +13,54 @@ type Session = {
 type AgendaColumnProps = {
   sessions: Session[]
   columnKey: string
+  mobileSelected: string
 }
 
 const AgendasSection: React.FC = () => {
+  const [mobileSelected, setMobileSelected] = useState('mainStage')
+
   return (
     <Section id="agenda">
       <SectionTitle>Agenda</SectionTitle>
       <StyledTable>
         <HeaderContainer>
           <div></div>
-          <p>Main Stage</p>
+          <ColumnButton
+            isMobileActive={mobileSelected === 'mainStage'}
+            onClick={() => setMobileSelected('mainStage')}
+          >
+            Main Stage
+          </ColumnButton>
           <div></div>
-          <p>Demo Room</p>
+          <ColumnButton
+            isMobileActive={mobileSelected === 'demoRoom'}
+            onClick={() => setMobileSelected('demoRoom')}
+          >
+            Demo Room
+          </ColumnButton>
           <div></div>
-          <p>Round Table</p>
+          <ColumnButton
+            isMobileActive={mobileSelected === 'roundTable'}
+            onClick={() => setMobileSelected('roundTable')}
+          >
+            Round Table
+          </ColumnButton>
         </HeaderContainer>
         <Items>
           <SessionColumn
             sessions={agendaData.mainStage}
             columnKey="mainStage"
+            mobileSelected={mobileSelected}
           />
-          <SessionColumn sessions={agendaData.demoRoom} columnKey="demoRoom" />
+          <SessionColumn
+            sessions={agendaData.demoRoom}
+            columnKey="demoRoom"
+            mobileSelected={mobileSelected}
+          />
           <SessionColumn
             sessions={agendaData.roundTable}
             columnKey="roundTable"
+            mobileSelected={mobileSelected}
           />
         </Items>
       </StyledTable>
@@ -46,6 +71,8 @@ const AgendasSection: React.FC = () => {
 const SessionColumn: React.FC<AgendaColumnProps> = ({
   sessions,
   columnKey,
+  mobileSelected,
+  ...props
 }) => {
   const groupSessions = (sessions: Session[]) => {
     const groupedSessions: { session: Session; count: number }[] = []
@@ -73,13 +100,17 @@ const SessionColumn: React.FC<AgendaColumnProps> = ({
   const groupedSessions = groupSessions(sessions)
 
   return (
-    <Column>
+    <Column
+      {...props}
+      mobileSelected={mobileSelected === columnKey ? true : false}
+    >
       {groupedSessions.map(({ session, count }, index) => (
         <SessionItem
           key={`${columnKey}-${index}`}
           count={count}
           hasBorderRight={columnKey !== 'roundTable'}
           hasBorderBottom={!(index === groupedSessions.length - 1)}
+          mobileRemove={session.title?.length === 0}
         >
           <TimeSlot count={count}>
             {session.title?.length > 0
@@ -122,11 +153,30 @@ const HeaderContainer = styled.div`
   display: grid;
   grid-template-columns: 52px 1fr 52px 1fr 52px 1fr;
 
-  p {
-    font-size: 14px;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 18px;
+  @media (max-width: 1024px) {
+    display: flex;
+    width: 100%;
+  }
+`
+
+const ColumnButton = styled.button<{ isMobileActive: boolean }>`
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 18px;
+  border: none;
+  background: none;
+
+  @media (max-width: 1024px) {
+    background-color: ${({ isMobileActive }) =>
+      isMobileActive ? '#000' : 'transparent'};
+
+    color: ${({ isMobileActive }) => (isMobileActive ? '#fff' : '#000')};
+    border-radius: 56px;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 10px 16px;
+    cursor: pointer;
   }
 `
 
@@ -136,16 +186,22 @@ const Items = styled.div`
   border: 1px dashed #000;
 `
 
-const Column = styled.div`
+const Column = styled.div<{ mobileSelected: boolean }>`
   display: flex;
   flex-direction: column;
   width: calc(100% / 3);
+
+  @media (max-width: 1024px) {
+    display: ${({ mobileSelected }) => (mobileSelected ? 'flex' : 'none')};
+    width: 100%;
+  }
 `
 
 const SessionItem = styled.div<{
   count: number
   hasBorderRight: boolean
   hasBorderBottom: boolean
+  mobileRemove: boolean
 }>`
   display: flex;
   align-items: center;
@@ -154,6 +210,13 @@ const SessionItem = styled.div<{
     hasBorderBottom ? '1px dashed #000' : 'none'};
   border-right: ${({ hasBorderRight }) =>
     hasBorderRight ? '1px dashed #000' : 'none'};
+
+  @media (max-width: 1024px) {
+    border-right: none;
+    height: auto;
+
+    display: ${({ mobileRemove }) => (mobileRemove ? 'none' : 'flex')};
+  }
 `
 
 const TimeSlot = styled.div<{ count: number }>`
@@ -167,6 +230,10 @@ const TimeSlot = styled.div<{ count: number }>`
   background-color: #fafafa;
 
   border-left: 1px dashed #000;
+
+  @media (max-width: 1024px) {
+    height: 190px;
+  }
 `
 
 const TableData = styled.div`
