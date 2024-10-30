@@ -15,10 +15,12 @@ type AgendaColumnProps = {
   sessions: Session[]
   columnKey: string
   mobileSelected: string
+  seeMore: boolean
 }
 
 const AgendasSection: React.FC = () => {
   const [mobileSelected, setMobileSelected] = useState('mainStage')
+  const [seeMore, setSeeMore] = useState(false)
 
   return (
     <Section id="agenda">
@@ -52,18 +54,25 @@ const AgendasSection: React.FC = () => {
             sessions={agendaData.mainStage}
             columnKey="mainStage"
             mobileSelected={mobileSelected}
+            seeMore={seeMore}
           />
           <SessionColumn
             sessions={agendaData.demoRoom}
             columnKey="demoRoom"
             mobileSelected={mobileSelected}
+            seeMore={seeMore}
           />
           <SessionColumn
             sessions={agendaData.roundTable}
             columnKey="roundTable"
             mobileSelected={mobileSelected}
+            seeMore={seeMore}
           />
+          {!seeMore && <Gradient></Gradient>}
         </Items>
+        <SeeMoreButton onClick={() => setSeeMore((prev) => !prev)}>
+          {seeMore ? 'See Less' : 'See More'}
+        </SeeMoreButton>
       </StyledTable>
     </Section>
   )
@@ -73,10 +82,12 @@ const SessionColumn: React.FC<AgendaColumnProps> = ({
   sessions,
   columnKey,
   mobileSelected,
+  seeMore,
   ...props
 }) => {
   const groupSessions = (sessions: Session[]) => {
     const groupedSessions: { session: Session; count: number }[] = []
+
     for (let i = 0; i < sessions.length; i++) {
       if (
         groupedSessions.length > 0 &&
@@ -98,7 +109,9 @@ const SessionColumn: React.FC<AgendaColumnProps> = ({
     return groupedSessions
   }
 
-  const groupedSessions = groupSessions(sessions)
+  const groupedSessions = groupSessions(
+    seeMore ? sessions : sessions.slice(0, 4),
+  )
 
   return (
     <Column
@@ -191,6 +204,7 @@ const Items = styled.div`
   display: flex;
   gap: 1px;
   border: 1px dashed #000;
+  position: relative;
 `
 
 const Column = styled.div<{ mobileSelected: boolean }>`
@@ -264,6 +278,40 @@ const TableContent = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+`
+
+const SeeMoreButton = styled.button`
+  display: block;
+  width: 460px;
+  height: 88px;
+  background: black;
+  color: white;
+  border: none;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 24px;
+  margin-inline: auto;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  @media (max-width: ${breakpoints.sm}px) {
+    width: 100%;
+    height: 44px;
+    padding: 6px 12px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+  }
+`
+
+const Gradient = styled.div`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 700px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 57.5%, #fff 100%);
+  z-index: 1000;
 `
 
 export default AgendasSection
