@@ -71,6 +71,15 @@ const speakersData: Speaker[] = [
     bio: "A four-time founder, David Casey enjoys working at the ecosystem level to engineer systemic change and currently is a Director at Funding the Commons, which aims to accelerate blockchain-based public goods funding. In 2013, David became interested in blockchain technology's utility for cross-border payments within one of his own companies. By 2015, he deployed his first blockchain-based asset using Bitcoin’s Colored Coins protocol. Within the blockchain industry, David has worn multiple hats, including roles as a founder and CEO.",
   },
   {
+    id: 'edan-yago',
+    initial: 'E',
+    name: 'Edan Yago',
+    title: 'CEO & Co-founder',
+    org: 'BitcoinOS',
+    profileImage: '/assets/participants/edan-yago.jpg',
+    bio: 'Edan Yago is CEO and Co-founder of BitcoinOS, the smart contract operating system for Bitcoin. He is also an early core contributor to Sovryn, a decentralised Layer 2 Bitcoin trading and lending and asset management platform. As an anti-finance financier and radical optimist, he is a passionate advocate for the mass adoption of open, borderless and incorruptible finance. Yago is a believer in both the reliable permanence of Bitcoin and the decentralised innovation of crypto.',
+  },
+  {
     id: 'eva-klaus',
     initial: 'E',
     name: 'Eva Klaus',
@@ -134,6 +143,15 @@ const speakersData: Speaker[] = [
     bio: 'Jarrad Hope came to Bitcoin in early 2011 through agorism, counter-economics, and crypto anarchy. Seeing that Bitcoin could operate a monetary policy in a hostile environment, he began to view public blockchains as a voluntary social order, one that did not depend on a monopoly of violence. From there, he participated in early attempts to generalise the Bitcoin script to advance institutional libertarianism, ultimately becoming an early contributor to Ethereum. While advancing privacy technologies through the development of the e2e and p2p private messaging client and super app Status, Jarrad realised that privacy technologies are not enough and now advocates for self-sovereign crypto networks and the realisation of a latent cypherpunk dream, the cryptostate.',
   },
   {
+    id: 'joe-nakamoto',
+    initial: 'J',
+    name: 'Joe Nakamoto',
+    title: 'Host',
+    org: 'Parallel Society Congress',
+    profileImage: '/assets/participants/joe-nakamoto.jpg',
+    bio: '@joenakamoto is a journalist, documentary maker & MC. As an independent journalist, Joe pushes the boundaries of Bitcoin content, giving away free Sats to strangers and shooting Youtube-friendly challenge videos. Joe is multi-lingual and travels the world trying to make sense of Bitcoin.',
+  },
+  {
     id: 'kelsie-nabbens',
     initial: 'K',
     name: 'Kelsie Nabben',
@@ -159,6 +177,15 @@ const speakersData: Speaker[] = [
     org: 'Railgun DAO',
     profileImage: '/assets/participants/kieran-mesquita.jpg',
     bio: 'Kieran is a long-time advocate for freedom-enabling technologies, with a strong background in crypto as an early adopter. He has contributed to multiple decentralised projects, and is currently focused on researching and developing protocol designs for RAILGUN DAO, a privacy-enabling technology.',
+  },
+  {
+    id: 'kimberly-adams',
+    initial: 'K',
+    name: 'Kimberly Adams',
+    title: 'Lightning Talks Host',
+    org: 'Bankless Ventures',
+    profileImage: '/assets/participants/kimberly-adams.jpg',
+    bio: 'Kimberly Adams is a 10-year crypto veteran and builder who initially spent her time focusing on banking the unbanked in the Caribbean where she led the roll out of the world’s first CBDC. Kimberly has lived a bankless journey for the past decade, operating solely in crypto showing what it’s like to live a crypto native lifestyle. She now leads all research efforts at Bankless ventures.',
   },
   {
     id: 'layer0x',
