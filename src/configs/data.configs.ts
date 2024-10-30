@@ -34,3 +34,59 @@ export const FooterLinksItems: {
     ],
   },
 }
+
+export const agendaData = [
+  {
+    time: '11:00',
+    sessions: {
+      mainStage: {
+        title: 'WELCOME',
+        speakers: ['Joe Nakamoto'],
+      },
+      demoRoom: null,
+      roundTable: null,
+    },
+  },
+  {
+    time: '11:10',
+    sessions: {
+      mainStage: {
+        title: 'LOGOS WELCOME',
+        speakers: ['Jarrad Hope'],
+      },
+      demoRoom: null,
+      roundTable: null,
+    },
+  },
+  {
+    time: '11:30',
+    sessions: {
+      mainStage: {
+        title: 'FAREWELL TO WESTPHALIA; BEYOND THE NATION STATE',
+        speakers: ['Tom W. Bell', 'Jarrad Hope', 'Peter Ludlow'],
+      },
+      demoRoom: {
+        title: 'KEYCARD PRO: A NEXT-GENERATION HARDWARE WALLET',
+        speakers: ['Guy Louis Grau'],
+      },
+      roundTable: null,
+    },
+  },
+  {
+    time: '12:30',
+    sessions: {
+      mainStage: {
+        title: 'LUNCH',
+        speakers: ['Chill Zone'],
+      },
+      demoRoom: {
+        title: 'LUNCH',
+        speakers: ['Chill Zone'],
+      },
+      roundTable: {
+        title: 'LUNCH',
+        speakers: ['Chill Zone'],
+      },
+    },
+  },
+]
