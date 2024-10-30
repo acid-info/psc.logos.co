@@ -1,4 +1,5 @@
 import { agendaData } from '@/configs/data.configs'
+import { breakpoints } from '@/configs/ui.configs'
 import styled from '@emotion/styled'
 import { useState } from 'react'
 import { Section, SectionTitle } from './StyledComponents'
@@ -147,6 +148,12 @@ const StyledTable = styled.div`
     text-overflow: ellipsis;
     min-height: 80px;
   }
+
+  @media (max-width: ${breakpoints.sm}px) {
+    h4 {
+      font-size: 14px;
+    }
+  }
 `
 
 const HeaderContainer = styled.div`
@@ -232,7 +239,7 @@ const TimeSlot = styled.div<{ count: number }>`
   border-left: 1px dashed #000;
 
   @media (max-width: 1024px) {
-    height: 190px;
+    height: 156px;
   }
 `
 
@@ -246,6 +253,10 @@ const SpeakerInfo = styled.span`
   font-size: 14px;
   opacity: 0.5;
   text-transform: uppercase;
+
+  @media (max-width: ${breakpoints.sm}px) {
+    font-size: 12px;
+  }
 `
 
 const TableContent = styled.div`
