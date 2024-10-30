@@ -19,6 +19,14 @@ const AgendasSection: React.FC = () => {
     <Section id="agenda">
       <SectionTitle>Agenda</SectionTitle>
       <StyledTable>
+        <HeaderContainer>
+          <div></div>
+          <p>Main Stage</p>
+          <div></div>
+          <p>Demo Room</p>
+          <div></div>
+          <p>Round Table</p>
+        </HeaderContainer>
         <Items>
           <SessionColumn
             sessions={agendaData.mainStage}
@@ -107,6 +115,18 @@ const StyledTable = styled.div`
     text-transform: uppercase;
     text-overflow: ellipsis;
     min-height: 80px;
+  }
+`
+
+const HeaderContainer = styled.div`
+  display: grid;
+  grid-template-columns: 52px 1fr 52px 1fr 52px 1fr;
+
+  p {
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 18px;
   }
 `
 
