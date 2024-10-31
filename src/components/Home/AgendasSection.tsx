@@ -182,6 +182,7 @@ const StyledTable = styled.div`
   @media (max-width: ${breakpoints.sm}px) {
     h4 {
       font-size: 14px;
+      min-height: unset;
     }
   }
 `
@@ -209,6 +210,7 @@ const ColumnButton = styled.button<{ isMobileActive: boolean }>`
       isMobileActive ? '#000' : 'transparent'};
 
     color: ${({ isMobileActive }) => (isMobileActive ? '#fff' : '#000')};
+
     border-radius: 56px;
     font-size: 12px;
     line-height: 16px;
@@ -249,8 +251,10 @@ const SessionItem = styled.div<{
   display: flex;
   align-items: center;
   height: ${({ count, shrink }) => (shrink ? 76 : 190 * count)}px;
+
   border-bottom: ${({ hasBorderBottom }) =>
     hasBorderBottom ? '1px dashed #000' : 'none'};
+
   border-right: ${({ hasBorderRight, merged, removeBorderRight }) =>
     merged || removeBorderRight
       ? '1px solid #fafafa'
@@ -265,9 +269,10 @@ const SessionItem = styled.div<{
 
   @media (max-width: 1024px) {
     border-right: none;
-    height: auto;
+    height: ${({ shrink }) => (shrink ? '76px' : '156px')};
 
     display: ${({ mobileRemove }) => (mobileRemove ? 'none' : 'flex')};
+    color: #000;
   }
 `
 
@@ -289,7 +294,9 @@ const TimeSlot = styled.div<{
     merged ? '1px solid #fafafa' : '1px dashed #000'};
 
   @media (max-width: 1024px) {
-    height: 156px;
+    height: ${({ shrink }) => (shrink ? '75px' : '154px')};
+    color: #000;
+    border-left: 1px dashed #000;
   }
 `
 
