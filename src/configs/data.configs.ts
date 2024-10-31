@@ -42,6 +42,9 @@ export const agendaData = {
       speakers: [],
       startTime: '10:30',
       endTime: '11:00',
+      shrink: true,
+      highlight: true,
+      removeBorderRight: true,
     },
     {
       title: 'Welcome',
@@ -60,6 +63,8 @@ export const agendaData = {
       speakers: ['Chill Zone'],
       startTime: '12:30',
       endTime: '13:30',
+      highlight: true,
+      removeBorderRight: true,
     },
     {
       title: 'Accessing Justice via Decentralised Legal Systems',
@@ -96,6 +101,7 @@ export const agendaData = {
       speakers: ['Chill Zone'],
       startTime: '16:00',
       endTime: '16:30',
+      gray: true,
     },
     {
       title: 'How Governments Can Benefit from Parallel Societies',
@@ -137,12 +143,16 @@ export const agendaData = {
       speakers: ['chill zone'],
       startTime: '19:10',
       endTime: '21:00',
+      highlight: true,
+      removeBorderRight: true,
     },
     {
       title: 'Drinks Only',
       speakers: ['chill zone'],
       startTime: '21:00',
       endTime: '22:00',
+      highlight: true,
+      removeBorderRight: true,
     },
   ],
   demoRoom: [
@@ -151,6 +161,9 @@ export const agendaData = {
       speakers: [],
       startTime: '10:30',
       endTime: '11:00',
+      shrink: true,
+      highlight: true,
+      merged: true,
     },
     {
       title: '',
@@ -169,6 +182,8 @@ export const agendaData = {
       speakers: ['Chill Zone'],
       startTime: '12:30',
       endTime: '13:30',
+      highlight: true,
+      merged: true,
     },
     {
       title: 'Introduction to Decentralised Self-Organization',
@@ -193,6 +208,8 @@ export const agendaData = {
       speakers: ['Chill Zone'],
       startTime: '15:30',
       endTime: '16:00',
+      gray: true,
+      removeBorderRight: true,
     },
     {
       title: 'Codex Demo: Durable Archiving for Network Societies',
@@ -229,12 +246,16 @@ export const agendaData = {
       speakers: ['chill zone'],
       startTime: '19:10',
       endTime: '21:00',
+      highlight: true,
+      merged: true,
     },
     {
       title: 'Drinks Only',
       speakers: ['chill zone'],
       startTime: '21:00',
       endTime: '22:00',
+      highlight: true,
+      merged: true,
     },
   ],
   roundTable: [
@@ -243,6 +264,9 @@ export const agendaData = {
       speakers: [],
       startTime: '10:30',
       endTime: '11:00',
+      shrink: true,
+      highlight: true,
+      merged: true,
     },
     {
       title: '',
@@ -261,6 +285,8 @@ export const agendaData = {
       speakers: ['Chill Zone'],
       startTime: '12:30',
       endTime: '13:30',
+      highlight: true,
+      merged: true,
     },
     {
       title: 'Sovereign Tools: Workshop by Women in Web3 Privacy',
@@ -285,6 +311,8 @@ export const agendaData = {
       speakers: ['Chill Zone'],
       startTime: '15:30',
       endTime: '16:00',
+      highlight: true,
+      merged: true,
     },
     {
       title: 'Lightning Talks',
@@ -321,12 +349,16 @@ export const agendaData = {
       speakers: ['chill zone'],
       startTime: '19:10',
       endTime: '21:00',
+      highlight: true,
+      merged: true,
     },
     {
       title: 'Drinks Only',
       speakers: ['chill zone'],
       startTime: '21:00',
       endTime: '22:00',
+      highlight: true,
+      merged: true,
     },
   ],
 }

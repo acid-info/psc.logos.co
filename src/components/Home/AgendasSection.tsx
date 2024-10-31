@@ -9,6 +9,11 @@ type Session = {
   speakers: string[]
   startTime: string
   endTime: string
+  shrink?: boolean
+  highlight?: boolean
+  merged?: boolean
+  removeBorderRight?: boolean
+  gray?: boolean
 }
 
 type AgendaColumnProps = {
@@ -125,9 +130,20 @@ const SessionColumn: React.FC<AgendaColumnProps> = ({
           hasBorderRight={columnKey !== 'roundTable'}
           hasBorderBottom={!(index === groupedSessions.length - 1)}
           mobileRemove={session.title?.length === 0}
+          shrink={session.shrink}
+          highlight={session.highlight}
+          merged={session.merged}
+          removeBorderRight={session.removeBorderRight}
+          gray={session.gray}
         >
-          <TimeSlot count={count}>
-            {session.title?.length > 0
+          <TimeSlot
+            count={count}
+            shrink={session.shrink}
+            merged={session.merged}
+          >
+            {session.shrink
+              ? session.startTime
+              : session.title?.length > 0
               ? `${session.startTime} - ${session.endTime}`
               : ''}
           </TimeSlot>
@@ -224,14 +240,28 @@ const SessionItem = styled.div<{
   hasBorderRight: boolean
   hasBorderBottom: boolean
   mobileRemove: boolean
+  shrink?: boolean
+  highlight?: boolean
+  merged?: boolean
+  removeBorderRight?: boolean
+  gray?: boolean
 }>`
   display: flex;
   align-items: center;
-  height: ${({ count }) => 190 * count}px;
+  height: ${({ count, shrink }) => (shrink ? 76 : 190 * count)}px;
   border-bottom: ${({ hasBorderBottom }) =>
     hasBorderBottom ? '1px dashed #000' : 'none'};
-  border-right: ${({ hasBorderRight }) =>
-    hasBorderRight ? '1px dashed #000' : 'none'};
+  border-right: ${({ hasBorderRight, merged, removeBorderRight }) =>
+    merged || removeBorderRight
+      ? '1px solid #fafafa'
+      : hasBorderRight
+      ? '1px dashed #000'
+      : 'none'};
+
+  background-color: ${({ highlight, gray }) =>
+    highlight || gray ? '#fafafa' : '#fff'};
+
+  color: ${({ merged }) => (merged ? '#fafafa' : '#000')};
 
   @media (max-width: 1024px) {
     border-right: none;
@@ -241,17 +271,22 @@ const SessionItem = styled.div<{
   }
 `
 
-const TimeSlot = styled.div<{ count: number }>`
+const TimeSlot = styled.div<{
+  count: number
+  shrink?: boolean
+  merged?: boolean
+}>`
   font-size: 14px;
   padding: 0 16px;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   text-align: center;
   width: 52px;
-  height: ${({ count }) => 189 * count}px;
+  height: ${({ count, shrink }) => (shrink ? 75 : 189 * count)}px;
   background-color: #fafafa;
 
-  border-left: 1px dashed #000;
+  border-left: ${({ merged }) =>
+    merged ? '1px solid #fafafa' : '1px dashed #000'};
 
   @media (max-width: 1024px) {
     height: 156px;
