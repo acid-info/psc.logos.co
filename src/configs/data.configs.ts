@@ -68,13 +68,7 @@ export const agendaData = {
     },
     {
       title: 'Accessing Justice via Decentralised Legal Systems',
-      speakers: [
-        'Federico Ast',
-        'Eric Alston',
-        'Layer0x',
-        'Kelsie Nabben',
-        'Federico Ast',
-      ],
+      speakers: ['Federico Ast', 'Eric Alston', 'Layer0x', 'Kelsie Nabben'],
       startTime: '13:30',
       endTime: '14:30',
     },
