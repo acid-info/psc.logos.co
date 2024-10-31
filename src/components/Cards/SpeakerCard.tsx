@@ -10,6 +10,7 @@ interface SpeakerCardProps {
   bio: string
   expanded: boolean
   onToggle: () => void
+  noSeeMore?: boolean
   className?: string
 }
 
@@ -22,6 +23,7 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
   bio,
   expanded,
   onToggle,
+  noSeeMore,
   className,
 }) => {
   return (
@@ -34,9 +36,11 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
         <SpeakerTitle>{title}</SpeakerTitle>
         <SpeakerOrg titleLines={title.includes('\n') ? 1 : 2}>{org}</SpeakerOrg>
         <SpeakerBio expanded={expanded}>{bio}</SpeakerBio>
-        <ReadMoreButton onClick={onToggle}>
-          {expanded ? 'Read less' : 'Read more'}
-        </ReadMoreButton>
+        {noSeeMore ? null : (
+          <ReadMoreButton onClick={onToggle}>
+            {expanded ? 'Read less' : 'Read more'}
+          </ReadMoreButton>
+        )}
       </CardContent>
     </CardWrapper>
   )

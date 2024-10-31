@@ -154,6 +154,7 @@ const StyledTable = styled.div`
   width: 100%;
   border-collapse: collapse;
   margin-top: 24px;
+  position: relative;
 
   h4 {
     font-size: 18px;
@@ -307,9 +308,10 @@ const SeeMoreButton = styled.button`
 
 const Gradient = styled.div`
   position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 700px;
+  width: calc(100% + 8px);
+  left: -4px;
+  bottom: -4px;
+  height: 750px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 57.5%, #fff 100%);
   z-index: 1000;
 `

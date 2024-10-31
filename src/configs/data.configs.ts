@@ -45,15 +45,9 @@ export const agendaData = {
     },
     {
       title: 'Welcome',
-      speakers: ['Joe Nakamoto'],
+      speakers: ['Joe Nakamoto', 'Jarrad Hope'],
       startTime: '11:00',
-      endTime: '11:10',
-    },
-    {
-      title: 'Logos Welcome',
-      speakers: ['Jarrad Hope'],
-      startTime: '11:10',
-      endTime: '11:20',
+      endTime: '11:30',
     },
     {
       title: 'Farewell to Westphalia: Post Nation State Governance',
@@ -165,12 +159,6 @@ export const agendaData = {
       endTime: '',
     },
     {
-      title: '',
-      speakers: [''],
-      startTime: '',
-      endTime: '',
-    },
-    {
       title: 'Keycard Pro: A Next-Generation Hardware Wallet',
       speakers: ['Guy Louis Grau'],
       startTime: '11:40',
@@ -255,12 +243,6 @@ export const agendaData = {
       speakers: [],
       startTime: '10:30',
       endTime: '11:00',
-    },
-    {
-      title: '',
-      speakers: [''],
-      startTime: '',
-      endTime: '',
     },
     {
       title: '',

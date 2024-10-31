@@ -3,11 +3,11 @@ import Link from 'next/link'
 import React from 'react'
 
 export const navItems = [
-  { name: 'Participants', href: '#participants' },
   { name: 'Collaborators', href: '#collaborators' },
+  { name: 'Participants', href: '#participants' },
   { name: 'About', href: '#about-logos' },
   { name: 'Articles', href: '#articles' },
-  { name: 'Merchandise', href: '#merchandise' },
+  { name: 'Agenda', href: '#agenda' },
   // { name: 'Location', href: '#location' },
   // { name: 'Programme', href: '#programme' },
   { name: 'FAQs', href: '#faqs' },

@@ -25,8 +25,8 @@ const HomePage: React.FC = () => {
         <HeroSection />
         <VideoSection />
         {/* <EventInfoSection /> */}
-        <ParticipantsSection />
         <PartnersSection />
+        <ParticipantsSection />
         <AboutLogosSection />
         <AgendasSection />
         {/* <ProgrammeSection /> */}
