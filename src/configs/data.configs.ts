@@ -128,7 +128,7 @@ export const agendaData = {
     },
     {
       title: 'Closing Message',
-      speakers: ['Jarrad Hope / Carl Bennetts'],
+      speakers: [''],
       startTime: '19:00',
       endTime: '19:10',
     },
@@ -181,7 +181,7 @@ export const agendaData = {
     },
     {
       title: 'Introduction to Decentralised Self-Organization',
-      speakers: ['Andrej Berlin', 'Angelo'],
+      speakers: ['Andrej Berlin', 'Angelo Alessio'],
       startTime: '13:30',
       endTime: '14:30',
     },

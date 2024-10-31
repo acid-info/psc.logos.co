@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { useEffect } from 'react'
 
 export default function WorldDebt() {
   async function fetchDebtData() {
@@ -17,6 +18,11 @@ export default function WorldDebt() {
       console.error('Error fetching data:', error)
     }
   }
+
+  useEffect(() => {
+    fetchDebtData()
+  }, [])
+
   return (
     <Background>
       <Content>
