@@ -1,7 +1,9 @@
 import styled from '@emotion/styled'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function WorldDebt() {
+  const [debt, setDebt] = useState(null)
+
   async function fetchDebtData() {
     try {
       const response = await fetch(

@@ -207,13 +207,13 @@ export const agendaData = {
     },
     {
       title: 'Codex Demo: Durable Archiving for Network Societies',
-      speakers: ['Aqeel Mohammad', 'Arnaud Deville', 'Dmitry'],
+      speakers: ['Aqeel Mohammad', 'Arnaud Deville', 'Dmitriy Ryajov'],
       startTime: '16:00',
       endTime: '17:00',
     },
     {
       title: 'Codex Demo: Durable Archiving for Network Societies',
-      speakers: ['Aqeel Mohammad', 'Arnaud Deville', 'Dmitry'],
+      speakers: ['Aqeel Mohammad', 'Arnaud Deville', 'Dmitriy Ryajov'],
       startTime: '16:00',
       endTime: '17:00',
     },
