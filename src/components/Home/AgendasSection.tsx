@@ -356,6 +356,10 @@ const Gradient = styled.div`
   height: 750px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 57.5%, #fff 100%);
   z-index: 1000;
+
+  @media (max-width: 1024px) {
+    height: 200px;
+  }
 `
 
 export default AgendasSection
