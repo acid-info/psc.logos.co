@@ -281,8 +281,12 @@ const TimeSlot = styled.div<{
   shrink?: boolean
   merged?: boolean
 }>`
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+
   font-size: 14px;
-  padding: 0 16px;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   text-align: center;

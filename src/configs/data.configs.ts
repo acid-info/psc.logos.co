@@ -80,13 +80,13 @@ export const agendaData = {
     },
     {
       title: 'Zanzalu: Building a Growth Ecosystem in Africa',
-      speakers: ['Eva Kailis', 'Mark Lutter'],
+      speakers: ['Eva Klaus', 'Mark Lutter'],
       startTime: '15:00',
       endTime: '16:00',
     },
     {
       title: 'Zanzalu: Building a Growth Ecosystem in Africa',
-      speakers: ['Eva Kailis', 'Mark Lutter'],
+      speakers: ['Eva Klaus', 'Mark Lutter'],
       startTime: '15:00',
       endTime: '16:00',
     },
@@ -108,7 +108,6 @@ export const agendaData = {
       speakers: [
         'Audrey Tang',
         'Timour Koster',
-        'Veronika Scherm',
         'Veronica Schrenk',
         'Eva Klaus',
       ],
@@ -117,12 +116,7 @@ export const agendaData = {
     },
     {
       title: 'Regenerative Public Goods for Sustainable Communities',
-      speakers: [
-        'Michel Bauwens',
-        'Kevin Owocki',
-        'Kevin Owocki',
-        'Sterlin Lujan',
-      ],
+      speakers: ['Michel Bauwens', 'David Casey', 'Kevin Owocki'],
       startTime: '18:00',
       endTime: '19:00',
     },
@@ -141,7 +135,7 @@ export const agendaData = {
       removeBorderRight: true,
     },
     {
-      title: 'Drinks Only',
+      title: 'Drinks',
       speakers: ['chill zone'],
       startTime: '21:00',
       endTime: '22:00',
@@ -168,7 +162,7 @@ export const agendaData = {
     {
       title: 'Keycard Pro: A Next-Generation Hardware Wallet',
       speakers: ['Guy Louis Grau'],
-      startTime: '11:40',
+      startTime: '11:45',
       endTime: '12:30',
     },
     {
@@ -180,20 +174,20 @@ export const agendaData = {
       merged: true,
     },
     {
-      title: 'Introduction to Decentralised Self-Organization',
-      speakers: ['Andrej Berlin', 'Angelo Alessio'],
+      title: 'INTRODUCTION TO DECENTRALISED SELF-ORGANISATION',
+      speakers: ['Andrej Berlin'],
       startTime: '13:30',
       endTime: '14:30',
     },
     {
       title: 'Building Real-World Blockchain Pilots: Partnerships for Impact',
-      speakers: ['David Casey', 'Sterlin Lujan'],
+      speakers: ['David Casey'],
       startTime: '14:30',
       endTime: '15:00',
     },
     {
       title: 'Community Currencies: How to Price Parallel Societies',
-      speakers: ['Puja Ohlhaver', 'Sterlin Lujan'],
+      speakers: ['Puja Ohlhaver'],
       startTime: '15:00',
       endTime: '15:30',
     },
@@ -207,25 +201,25 @@ export const agendaData = {
     },
     {
       title: 'Codex Demo: Durable Archiving for Network Societies',
-      speakers: ['Aqeel Mohammad', 'Arnaud Deville', 'Dmitriy Ryajov'],
+      speakers: ['Aqeel Mohammad', 'Arnaud Deville'],
       startTime: '16:00',
       endTime: '17:00',
     },
     {
       title: 'Codex Demo: Durable Archiving for Network Societies',
-      speakers: ['Aqeel Mohammad', 'Arnaud Deville', 'Dmitriy Ryajov'],
+      speakers: ['Aqeel Mohammad', 'Arnaud Deville'],
       startTime: '16:00',
       endTime: '17:00',
     },
     {
       title: 'Kleros Dispute Resolution: From Disagreements to Resolution',
-      speakers: ['Yann Aouidef', 'Federico'],
+      speakers: ['Yann Aouidef'],
       startTime: '17:00',
       endTime: '18:00',
     },
     {
       title: 'Parallel Society Tech: State of the Art and Future',
-      speakers: ['Franck Royer', 'Kieram Mesquita', "Rachel-Rose O'Leary"],
+      speakers: ['Franck Royer', 'Kieran Mesquita', "Rachel-Rose O'Leary"],
       startTime: '18:00',
       endTime: '19:00',
     },
@@ -244,7 +238,7 @@ export const agendaData = {
       merged: true,
     },
     {
-      title: 'Drinks Only',
+      title: 'Drinks',
       speakers: ['chill zone'],
       startTime: '21:00',
       endTime: '22:00',
@@ -310,19 +304,19 @@ export const agendaData = {
     },
     {
       title: 'Lightning Talks',
-      speakers: ['Kimberly Adams'],
+      speakers: ['HOSTED BY KIMBERLY ADAMS'],
       startTime: '16:00',
       endTime: '19:00',
     },
     {
       title: 'Lightning Talks',
-      speakers: ['Kimberly Adams'],
+      speakers: ['HOSTED BY KIMBERLY ADAMS'],
       startTime: '16:00',
       endTime: '19:00',
     },
     {
       title: 'Lightning Talks',
-      speakers: ['Kimberly Adams'],
+      speakers: ['HOSTED BY KIMBERLY ADAMS'],
       startTime: '16:00',
       endTime: '19:00',
     },
@@ -347,7 +341,7 @@ export const agendaData = {
       merged: true,
     },
     {
-      title: 'Drinks Only',
+      title: 'Drinks',
       speakers: ['chill zone'],
       startTime: '21:00',
       endTime: '22:00',
