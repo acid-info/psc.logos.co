@@ -321,10 +321,10 @@ export const agendaData = {
       endTime: '19:00',
     },
     {
-      title: '',
-      speakers: [''],
-      startTime: '',
-      endTime: '',
+      title: 'Lightning Talks',
+      speakers: ['HOSTED BY KIMBERLY ADAMS'],
+      startTime: '16:00',
+      endTime: '19:00',
     },
     {
       title: '',
