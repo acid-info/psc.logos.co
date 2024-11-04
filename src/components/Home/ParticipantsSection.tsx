@@ -207,6 +207,15 @@ const speakersData: Speaker[] = [
     bio: 'Mark Lutter is the founder and Executive Chairman of the Charter Cities Institute, a nonprofit building the ecosystem for charter cities. He is also the founder and CEO of Braavos Cities, a charter city development company. He has a PhD in economics from George Mason University and has been published or quoted in the New Yorker, Chicago Tribune, Financial Times, and other publications.',
   },
   {
+    id: 'michel-bauwens',
+    initial: 'M',
+    name: 'Michel Bauwens',
+    title: 'Founder',
+    org: 'P2P Foundation',
+    profileImage: '/assets/participants/michel-bauwens.jpg',
+    bio: "Michel Bauwens is a Belgian who moved to Chiang Mai in 2003. He has been specialising in documenting the emergence and transformative capacity of peer to peer dynamics and commons-based resources at wiki.p2pfoundation.net. In this capacity, he has advised governments (Ecuador) and cities about commons-based policies, worked for the European labour mutual SMart, and participated in the Pontifical Academy of Social Sciences inside the Vatican. He was the first person to tweet about Bitcoin and the host of Satoshi's White Paper.",
+  },
+  {
     id: 'peter-ludlow',
     initial: 'P',
     name: 'Peter Ludlow',

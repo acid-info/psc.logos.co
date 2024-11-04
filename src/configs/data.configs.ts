@@ -174,7 +174,7 @@ export const agendaData = {
       merged: true,
     },
     {
-      title: 'INTRODUCTION TO DECENTRALISED SELF-ORGANISATION',
+      title: 'How Might We Solve Local Economic Challenges Together',
       speakers: ['Andrej Berlin'],
       startTime: '13:30',
       endTime: '14:30',
