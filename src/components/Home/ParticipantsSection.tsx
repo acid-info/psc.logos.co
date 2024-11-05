@@ -289,12 +289,12 @@ const speakersData: Speaker[] = [
     bio: 'William is the CEO of Cryptic Labs (RNS.ID), leading the Palau Digital Residency Program. He advises at Universidade NOVA de Lisboa, Harvard Blockchain Club, and previously at Stanford DTI. He pioneers secure digital identity solutions, driving innovation in the global identity space.',
   },
   {
-    id: 'yan-mastrosova',
+    id: 'yana-matrosova',
     initial: 'V',
-    name: 'Yana Mastrosova',
+    name: 'Yana Matrosova',
     title: 'Software Developer',
     org: 'Nym',
-    profileImage: '/assets/participants/yan-mastrosova.jpg',
+    profileImage: '/assets/participants/yana-matrosova.jpg',
     bio: 'Yana is a Software Developer at Nym, deeply engaged with the Ukrainian Nym community. She also contributes to RawBox, a community-driven project focused on building a router that runs on the native Nym mixnet. Additionally, Yana is a core contributor to the "Women In Privacy" initiative, advocating for privacy for women and non-binary in the digital space.',
   },
   {

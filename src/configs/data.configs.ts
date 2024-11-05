@@ -278,19 +278,19 @@ export const agendaData = {
     },
     {
       title: 'Sovereign Tools: Workshop by Women in Web3 Privacy',
-      speakers: ['Evin McMullen', 'Henry de Valence', 'Yana Mastrosoeva'],
+      speakers: ['Evin McMullen', 'Henry de Valence', 'Yana Matrosova'],
       startTime: '13:30',
       endTime: '15:30',
     },
     {
       title: 'Sovereign Tools: Workshop by Women in Web3 Privacy',
-      speakers: ['Evin McMullen', 'Henry de Valence', 'Yana Mastrosoeva'],
+      speakers: ['Evin McMullen', 'Henry de Valence', 'Yana Matrosova'],
       startTime: '13:30',
       endTime: '15:30',
     },
     {
       title: 'Sovereign Tools: Workshop by Women in Web3 Privacy',
-      speakers: ['Evin McMullen', 'Henry de Valence', 'Yana Mastrosoeva'],
+      speakers: ['Evin McMullen', 'Henry de Valence', 'Yana Matrosova'],
       startTime: '13:30',
       endTime: '15:30',
     },
