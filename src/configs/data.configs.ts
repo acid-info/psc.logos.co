@@ -303,25 +303,29 @@ export const agendaData = {
       merged: true,
     },
     {
-      title: 'Lightning Talks',
+      title:
+        'Lightning Talks:\n\n4Seas,\nGelephu Mindfulness City,\nLiberland,\nRegistryChain,\nZu-Grama,\nZuitzerland',
       speakers: ['HOSTED BY KIMBERLY ADAMS'],
       startTime: '16:00',
       endTime: '19:00',
     },
     {
-      title: 'Lightning Talks',
+      title:
+        'Lightning Talks:\n\n4Seas,\nGelephu Mindfulness City,\nLiberland,\nRegistryChain,\nZu-Grama,\nZuitzerland',
       speakers: ['HOSTED BY KIMBERLY ADAMS'],
       startTime: '16:00',
       endTime: '19:00',
     },
     {
-      title: 'Lightning Talks',
+      title:
+        'Lightning Talks:\n\n4Seas,\nGelephu Mindfulness City,\nLiberland,\nRegistryChain,\nZu-Grama,\nZuitzerland',
       speakers: ['HOSTED BY KIMBERLY ADAMS'],
       startTime: '16:00',
       endTime: '19:00',
     },
     {
-      title: 'Lightning Talks',
+      title:
+        'Lightning Talks:\n\n4Seas,\nGelephu Mindfulness City,\nLiberland,\nRegistryChain,\nZu-Grama,\nZuitzerland',
       speakers: ['HOSTED BY KIMBERLY ADAMS'],
       startTime: '16:00',
       endTime: '19:00',

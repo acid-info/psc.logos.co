@@ -177,6 +177,7 @@ const StyledTable = styled.div`
     text-transform: uppercase;
     text-overflow: ellipsis;
     min-height: 80px;
+    white-space: pre-wrap;
   }
 
   @media (max-width: ${breakpoints.sm}px) {
