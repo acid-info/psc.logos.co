@@ -184,6 +184,7 @@ const StyledTable = styled.div`
     h4 {
       font-size: 14px;
       min-height: unset;
+      padding-bottom: 16px;
     }
   }
 `
@@ -309,6 +310,14 @@ const TableData = styled.div`
   font-size: 12px;
   padding: 24px;
   height: 100%;
+
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
 `
 
 const SpeakerInfo = styled.span`
@@ -332,9 +341,9 @@ const SeeMoreButton = styled.button`
   display: block;
   width: 460px;
   height: 88px;
-  background: black;
-  color: white;
-  border: none;
+  background: white;
+  border: 1px solid #000;
+  color: black;
   font-size: 14px;
   line-height: 20px;
   margin-top: 24px;

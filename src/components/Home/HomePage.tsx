@@ -30,6 +30,7 @@ const HomePage: React.FC = () => {
         <AboutLogosSection />
         <AgendasSection />
         {/* <ProgrammeSection /> */}
+        <LightningTalksSection />
         <ArticlesSection />
         <MerchandiseSection />
         {/* <LocationSection /> */}
@@ -38,7 +39,6 @@ const HomePage: React.FC = () => {
         <CustomLink href="https://lu.ma/psc1" target="_blank">
           <RegisterButton id="tickets">REGISTER FOR TICKETS</RegisterButton>
         </CustomLink>
-        <LightningTalksSection />
       </Main>
       <Footer />
     </Container>

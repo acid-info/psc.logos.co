@@ -6,6 +6,35 @@ import rehypeRaw from 'rehype-raw'
 import LightningTalksModal from '../Modals/LightningTalksModal'
 import { Section } from './StyledComponents'
 
+const presentationData = [
+  {
+    src: '/assets/lightning-talks/liberland.svg',
+    alt: 'Liberland',
+    name: 'Liberland',
+  },
+  {
+    src: '/assets/lightning-talks/liberland.svg',
+    alt: 'Gelephu Mindfulness City',
+    name: 'Gelephu Mindfulness City',
+  },
+  { src: '/assets/lightning-talks/4seas.svg', alt: '4Seas', name: '4Seas' },
+  {
+    src: '/assets/lightning-talks/zuitzerland.svg',
+    alt: 'Zuitzerland',
+    name: 'Zuitzerland',
+  },
+  {
+    src: '/assets/lightning-talks/registry-chain.svg',
+    alt: 'RegistryChain',
+    name: 'RegistryChain',
+  },
+  {
+    src: '/assets/lightning-talks/zu-grama.svg',
+    alt: 'Zu-grama',
+    name: 'Zu-grama',
+  },
+]
+
 const LightningTalksSection: React.FC = () => {
   const [openModal, setOpenModal] = useState(false)
 
@@ -17,26 +46,35 @@ const LightningTalksSection: React.FC = () => {
       />
       <Section id="lightning-talks">
         <Container>
+          <Title>Lightning Talks</Title>
           <Wrapper>
-            <Title>Lightning Talks</Title>
             <Content>
               <Paragraph rehypePlugins={[rehypeRaw]}>
                 {`Do you have an alternative governance project you want to share with aligned and empathetic thinkers? Do you need collaborators, feedback, or just a forum to hone your pitch?
 
 Following our open-source principles, Parallel Society Congress offers a space for lightning talks. The goal is to spotlight innovative teams pushing the frontier of the post-nation-state movement.`}
               </Paragraph>
-              <Divider></Divider>
               <Paragraph rehypePlugins={[rehypeRaw]}>
                 {`We welcome projects in any stage of development from the following areas: cyberstates / network states, charter cities, pop-up communities, SEZs, special administrative zones, network nations, decentralised governance, or the technology needed to support any of the above.
 
 You can present a pitch, a new feature of an established initiative, a project overview, or just a promising idea. Apply below and come share your vision with the community.`}
               </Paragraph>
-
-              <SubmitButton onClick={() => setOpenModal(true)}>
-                Submit
-              </SubmitButton>
             </Content>
           </Wrapper>
+          <PresentedBy>
+            <p className="title">Presentations by:</p>
+            <div className="grid">
+              {presentationData.map(({ src, alt, name }) => (
+                <div key={name} className="grid-item">
+                  <div className="grid-img-container">
+                    <img src={src} alt={alt} />
+                  </div>
+                  <p>{name}</p>
+                </div>
+              ))}
+            </div>
+          </PresentedBy>
+          <SubmitButton onClick={() => setOpenModal(true)}>Submit</SubmitButton>
         </Container>
       </Section>
     </>
@@ -48,17 +86,14 @@ const Container = styled.div`
     text-decoration: none;
   }
 
-  margin-top: 216px;
-
   @media (max-width: ${breakpoints.sm}px) {
     margin-top: 156px;
   }
 `
 
 const Wrapper = styled.div`
-  border-top: 1px dashed #000;
   display: flex;
-  min-height: 460px;
+  margin-top: 24px;
 
   a {
     text-decoration: underline;
@@ -84,7 +119,6 @@ const Title = styled.h2`
   line-height: normal;
   text-transform: uppercase;
   width: 50%;
-  border-right: 1px dashed #000;
 
   @media (max-width: ${breakpoints.sm}px) {
     width: 100%;
@@ -93,21 +127,20 @@ const Title = styled.h2`
 `
 
 const Content = styled.div`
-  width: 50%;
+  display: flex;
+  gap: 16px;
   white-space: pre-wrap;
-  padding-top: 24px;
-  padding-left: 24px;
 
   @media (max-width: ${breakpoints.sm}px) {
     width: 100%;
     padding-left: 0;
-    border-top: 1px dashed #000;
   }
 `
 
 const Paragraph = styled(Markdown)`
   font-size: 16px;
   line-height: 24px;
+  width: 50%;
 
   @media (max-width: 768px) {
     font-size: 14px;
@@ -116,35 +149,102 @@ const Paragraph = styled(Markdown)`
   }
 `
 
-const Divider = styled.div`
-  height: 1px;
-  /* border-top: 1px dashed #000; */
-  margin: 16px 0;
-`
+// const Divider = styled.div`
+//   height: 1px;
+//   /* border-top: 1px dashed #000; */
+//   margin: 16px 0;
+// `
 
-const MobileReadMore = styled.p`
-  display: none;
+const PresentedBy = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
 
   @media (max-width: 768px) {
-    display: block;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
-    text-decoration-line: underline;
-    text-overflow: ellipsis;
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  .grid {
+    margin-top: 16px;
+    border-top: 1px dashed #000;
+    border-bottom: 1px dashed #000;
+    // 3x2 grid
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+
+    padding-block: 6px;
+
+    @media (max-width: ${breakpoints.sm}px) {
+      grid-template-columns: repeat(2, 1fr);
+      overflow-x: auto;
+    }
+  }
+
+  .grid-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 78px;
+  }
+
+  .grid-item {
+    height: 78px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    p {
+      font-size: 14px;
+      line-height: 16px;
+      margin-left: 32px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: ${breakpoints.sm}px) {
+      width: 238px;
+      flex-shrink: 0;
+    }
   }
 `
 
-const MobileReadMoreWithMargin = styled(MobileReadMore)`
-  margin-bottom: 24px;
-`
+// const MobileReadMore = styled.p`
+//   display: none;
+
+//   @media (max-width: 768px) {
+//     display: block;
+//     font-size: 14px;
+//     font-style: normal;
+//     font-weight: 400;
+//     line-height: 20px;
+//     text-decoration-line: underline;
+//     text-overflow: ellipsis;
+//   }
+// `
+
+// const MobileReadMoreWithMargin = styled(MobileReadMore)`
+//   margin-bottom: 24px;
+// `
 
 const SubmitButton = styled.button`
   display: flex;
-  padding: 10px 40px;
   justify-content: center;
   align-items: center;
+  width: 460px;
+  height: 88px;
 
   font-size: 14px;
   font-weight: 400;
@@ -155,7 +255,7 @@ const SubmitButton = styled.button`
   color: white;
   border: none;
 
-  margin-top: 40px;
+  margin: 64px auto 0;
 
   cursor: pointer;
 `

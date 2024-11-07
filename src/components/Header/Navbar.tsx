@@ -7,11 +7,11 @@ export const navItems = [
   { name: 'Participants', href: '#participants' },
   { name: 'About', href: '#about-logos' },
   { name: 'Agenda', href: '#agenda' },
+  { name: 'Lightning Talks', href: '#lightning-talks' },
   { name: 'Articles', href: '#articles' },
   // { name: 'Location', href: '#location' },
   // { name: 'Programme', href: '#programme' },
   { name: 'FAQs', href: '#faqs' },
-  { name: 'Lightning Talks', href: '#lightning-talks' },
 ]
 
 const Navbar: React.FC = () => {
