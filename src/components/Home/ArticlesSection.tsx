@@ -80,7 +80,11 @@ const ArticlesSection: React.FC = () => {
           <ArticleItem key={index}>
             {article.image && (
               <CustomLink href={article.href} target="_blank">
-                <ArticleImage src={article.image} alt={article.title} />
+                <ArticleImage
+                  src={article.image}
+                  alt={article.title}
+                  loading="lazy"
+                />
               </CustomLink>
             )}
             <ArticleContent>

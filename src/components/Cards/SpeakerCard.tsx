@@ -29,7 +29,11 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
   return (
     <CardWrapper className={className}>
       <ImageContainer>
-        {profileImage ? <img src={profileImage} alt={name} /> : initial}
+        {profileImage ? (
+          <img src={profileImage} alt={name} loading="lazy" />
+        ) : (
+          initial
+        )}
       </ImageContainer>
       <CardContent>
         <SpeakerName>{name}</SpeakerName>

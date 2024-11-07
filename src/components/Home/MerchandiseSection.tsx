@@ -96,7 +96,7 @@ const MerchandiseSection: React.FC = () => {
           .slice(0, showAll ? merchandiseData.length : 3)
           .map((item, index) => (
             <ProductItem key={index}>
-              <ProductImage src={item.image} alt={item.name} />
+              <ProductImage src={item.image} alt={item.name} loading="lazy" />
               <ProductInfo>
                 <ProductName>{item.name}</ProductName>
                 {/* <ProductPrice>{item.price}</ProductPrice> */}
