@@ -42,7 +42,7 @@ const FooterWrapper = styled.footer`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: 66px;
+  margin-top: 200px;
 
   a {
     text-decoration: underline;
@@ -67,7 +67,7 @@ const FooterWrapper = styled.footer`
   }
 
   @media (max-width: 768px) {
-    margin-top: 96px;
+    margin-top: 182px;
   }
 `
 
