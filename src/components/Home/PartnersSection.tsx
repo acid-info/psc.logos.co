@@ -82,7 +82,7 @@ const PartnersSection: React.FC = () => {
         {partnersData.map((partner, index) => (
           <PartnerItem key={index}>
             <LogoContainer>
-              <Logo src={partner.logo} alt={partner.name} loading="lazy" />
+              <Logo src={partner.logo} alt={partner.name} />
             </LogoContainer>
             <PartnerName>{partner.name}</PartnerName>
           </PartnerItem>
