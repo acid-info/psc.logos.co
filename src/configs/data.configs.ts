@@ -186,7 +186,7 @@ export const agendaData = {
       endTime: '15:00',
     },
     {
-      title: 'Community Currencies: How to Price Parallel Societies',
+      title: 'Common Knowledge Machines',
       speakers: ['Puja Ohlhaver'],
       startTime: '15:00',
       endTime: '15:30',

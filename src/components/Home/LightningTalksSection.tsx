@@ -166,7 +166,7 @@ const Paragraph = styled(Markdown)`
 const PresentedBy = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
   margin-top: 24px;
 
   @media (max-width: 768px) {
@@ -180,14 +180,14 @@ const PresentedBy = styled.div`
   }
 
   .grid {
-    margin-top: 16px;
     border-top: 1px dashed #000;
     border-bottom: 1px dashed #000;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-around;
-    gap: 14px 0;
+    row-gap: 8px;
+    column-gap: 40px;
 
     padding-block: 16px;
 
@@ -214,7 +214,7 @@ const PresentedBy = styled.div`
 
   .grid-item {
     height: 64px;
-    padding: 8px;
+    padding: 14px 8px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
