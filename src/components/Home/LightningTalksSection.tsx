@@ -1,5 +1,6 @@
 import { breakpoints } from '@/configs/ui.configs'
 import styled from '@emotion/styled'
+import clsx from 'clsx'
 import React, { useState } from 'react'
 import Markdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
@@ -13,15 +14,15 @@ const presentationData = [
     name: 'Liberland',
   },
   {
-    src: '/assets/lightning-talks/liberland.svg',
-    alt: 'Gelephu Mindfulness City',
-    name: 'Gelephu Mindfulness City',
-  },
-  { src: '/assets/lightning-talks/4seas.svg', alt: '4Seas', name: '4Seas' },
-  {
     src: '/assets/lightning-talks/zuitzerland.svg',
     alt: 'Zuitzerland',
     name: 'Zuitzerland',
+    isLong: true,
+  },
+  {
+    src: '/assets/lightning-talks/gelephu-mindfulness-city.svg',
+    alt: 'Gelephu Mindfulness City',
+    name: 'Gelephu Mindfulness City',
   },
   {
     src: '/assets/lightning-talks/registry-chain.svg',
@@ -32,7 +33,9 @@ const presentationData = [
     src: '/assets/lightning-talks/zu-grama.svg',
     alt: 'Zu-grama',
     name: 'Zu-grama',
+    isLong: true,
   },
+  { src: '/assets/lightning-talks/4seas.svg', alt: '4Seas', name: '4Seas' },
 ]
 
 const LightningTalksSection: React.FC = () => {
@@ -64,9 +67,14 @@ You can present a pitch, a new feature of an established initiative, a project o
           <PresentedBy>
             <p className="title">Presentations by:</p>
             <div className="grid">
-              {presentationData.map(({ src, alt, name }) => (
+              {presentationData.map(({ src, alt, name, isLong }) => (
                 <div key={name} className="grid-item">
-                  <div className="grid-img-container">
+                  <div
+                    className={clsx(
+                      'grid-img-container',
+                      isLong && 'long-image',
+                    )}
+                  >
                     <img src={src} alt={alt} />
                   </div>
                   <p>{name}</p>
@@ -175,30 +183,38 @@ const PresentedBy = styled.div`
     margin-top: 16px;
     border-top: 1px dashed #000;
     border-bottom: 1px dashed #000;
-    // 3x2 grid
+
     display: grid;
-    gap: 8px;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-around;
+    gap: 14px 0;
 
-    padding-block: 6px;
+    padding-block: 16px;
 
     @media (max-width: ${breakpoints.sm}px) {
       grid-template-columns: repeat(2, 1fr);
+
       overflow-x: auto;
+
+      .grid {
+        padding-block: 6px;
+      }
     }
+  }
+
+  .long-image {
+    width: 110px;
   }
 
   .grid-img-container {
     display: flex;
-    justify-content: center;
+    gap: 40px;
     align-items: center;
-
-    width: 78px;
   }
 
   .grid-item {
-    height: 78px;
+    height: 64px;
+    padding: 8px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -215,8 +231,16 @@ const PresentedBy = styled.div`
     }
 
     @media (max-width: ${breakpoints.sm}px) {
-      width: 238px;
+      width: 260px;
       flex-shrink: 0;
+
+      .grid-img-container {
+        width: 100px;
+      }
+
+      p {
+        width: 95px;
+      }
     }
   }
 `

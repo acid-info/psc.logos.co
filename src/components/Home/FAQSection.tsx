@@ -27,10 +27,6 @@ const faqData: FAQItem[] = [
       'All registration and ticketing will take place through our <a href="https://lu.ma/psc1" target="_blank">Luma page.</a>',
   },
   {
-    question: 'Is there disabled access?',
-    answer: 'Yes',
-  },
-  {
     question: 'Is there parking on site?',
     answer:
       'No. However, you can park your vehicle at Samyan Mitrtown mall for an affordable day rate.',
