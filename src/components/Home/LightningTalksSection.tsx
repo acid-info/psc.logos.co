@@ -142,6 +142,7 @@ const Content = styled.div`
   @media (max-width: ${breakpoints.sm}px) {
     width: 100%;
     padding-left: 0;
+    flex-direction: column;
   }
 `
 
@@ -192,9 +193,11 @@ const PresentedBy = styled.div`
     padding-block: 16px;
 
     @media (max-width: ${breakpoints.sm}px) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
 
       overflow-x: auto;
+      column-gap: 8px;
+      row-gap: 14px;
 
       .grid {
         padding-block: 6px;
@@ -231,15 +234,11 @@ const PresentedBy = styled.div`
     }
 
     @media (max-width: ${breakpoints.sm}px) {
-      width: 260px;
+      width: 267px;
       flex-shrink: 0;
 
-      .grid-img-container {
-        width: 100px;
-      }
-
       p {
-        width: 95px;
+        width: auto;
       }
     }
   }
