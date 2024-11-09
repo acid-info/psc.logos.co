@@ -186,16 +186,17 @@ const PresentedBy = styled.div`
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-content: space-around;
+
     row-gap: 8px;
     column-gap: 40px;
 
     padding-block: 16px;
 
     @media (max-width: ${breakpoints.sm}px) {
-      grid-template-columns: repeat(3, 1fr);
-
       overflow-x: auto;
+      grid-template-columns: repeat(3, 1fr);
+      overflow-y: hidden;
+
       column-gap: 8px;
       row-gap: 14px;
 
@@ -235,6 +236,7 @@ const PresentedBy = styled.div`
 
     @media (max-width: ${breakpoints.sm}px) {
       width: 267px;
+
       flex-shrink: 0;
 
       p {
