@@ -283,6 +283,16 @@ const SubmitButton = styled.button`
   margin: 64px auto 0;
 
   cursor: pointer;
+
+  @media (max-width: ${breakpoints.sm}px) {
+    width: 100%;
+    height: 44px;
+
+    font-size: 12px;
+    line-height: 16px;
+
+    margin: 40px auto 0;
+  }
 `
 
 export default LightningTalksSection

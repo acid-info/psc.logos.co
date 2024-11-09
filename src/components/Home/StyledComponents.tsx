@@ -6,7 +6,7 @@ export const Section = styled.section`
   scroll-margin-top: 80px;
 
   @media (max-width: 768px) {
-    margin-top: 56px;
+    margin-top: 64px;
   }
 `
 
