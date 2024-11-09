@@ -243,16 +243,6 @@ const speakersData: Speaker[] = [
     bio: "Rachel-Rose O'Leary is a DarkFi core developer and writer. She authored 'Lunarpunk and the Dark Side of the Cycle', a text which helped create a web3 privacy revival. She is the lead editor of the philosophy journal Agorism in the 21st Century. She was the tech lead for CoinDesk 2017-2018, and has written for WIRED, Rekt News and Defiant. She has a background in philosophy and digital art.",
   },
   {
-    id: 'surprise-keynote',
-    initial: 'V',
-    name: 'Surprise Keynote',
-    title: 'Crecimiento',
-    org: 'n/a',
-    profileImage: '/assets/participants/surprise-keynote.jpg',
-    bio: "Crecimiento is a movement transforming Argentina into the world's first crypto nation.",
-    noSeeMore: true,
-  },
-  {
     id: 'timour-kosters',
     initial: 'T',
     name: 'Timour Kosters',
