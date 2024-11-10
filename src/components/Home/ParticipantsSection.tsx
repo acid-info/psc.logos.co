@@ -180,15 +180,6 @@ const speakersData: Speaker[] = [
     bio: 'Kieran is a long-time advocate for freedom-enabling technologies, with a strong background in crypto as an early adopter. He has contributed to multiple decentralised projects, and is currently focused on researching and developing protocol designs for RAILGUN DAO, a privacy-enabling technology.',
   },
   {
-    id: 'kimberly-adams',
-    initial: 'K',
-    name: 'Kimberly Adams',
-    title: 'Host, Lightning Talks',
-    org: 'Bankless Ventures',
-    profileImage: '/assets/participants/kimberly-adams.jpg',
-    bio: 'Kimberly Adams is a 10-year crypto veteran and builder who initially spent her time focusing on banking the unbanked in the Caribbean where she led the roll out of the world’s first CBDC. Kimberly has lived a bankless journey for the past decade, operating solely in crypto showing what it’s like to live a crypto native lifestyle. She now leads all research efforts at Bankless ventures.',
-  },
-  {
     id: 'layer0x',
     initial: 'L',
     name: 'Layer0x',
