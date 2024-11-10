@@ -81,6 +81,15 @@ const speakersData: Speaker[] = [
     bio: 'Edan Yago is CEO and Co-founder of BitcoinOS, the smart contract operating system for Bitcoin. He is also an early core contributor to Sovryn, a decentralised Layer 2 Bitcoin trading and lending and asset management platform. As an anti-finance financier and radical optimist, he is a passionate advocate for the mass adoption of open, borderless and incorruptible finance. Yago is a believer in both the reliable permanence of Bitcoin and the decentralised innovation of crypto.',
   },
   {
+    id: 'eric-alston',
+    initial: 'E',
+    name: 'Eric Alston',
+    title: 'Scholar in Residence',
+    org: 'University of Colorado Boulder',
+    profileImage: '/assets/participants/eric-alston.jpg',
+    bio: 'Eric Alston is a Scholar in Residence in the Finance Division at University of Colorado Boulder. Eric’s research applies methodologies and concepts from institutional & organisational analysis and law & economics to studies of constitutions, economic rights on frontiers, and digital governance. Eric is also currently engaged in governance design for several distributed network projects.',
+  },
+  {
     id: 'eva-klaus',
     initial: 'E',
     name: 'Eva Klaus',
