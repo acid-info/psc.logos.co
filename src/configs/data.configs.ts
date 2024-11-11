@@ -135,6 +135,12 @@ export const agendaData = {
       removeBorderRight: true,
     },
     {
+      title: 'The Paradise Bangkok Molam International Band',
+      speakers: [''],
+      startTime: '20:30',
+      endTime: '21:30',
+    },
+    {
       title: 'Drinks',
       speakers: ['chill zone'],
       startTime: '21:00',
@@ -236,6 +242,12 @@ export const agendaData = {
       endTime: '21:00',
       highlight: true,
       merged: true,
+    },
+    {
+      title: '',
+      speakers: [''],
+      startTime: '',
+      endTime: '',
     },
     {
       title: 'Drinks',
@@ -343,6 +355,12 @@ export const agendaData = {
       endTime: '21:00',
       highlight: true,
       merged: true,
+    },
+    {
+      title: '',
+      speakers: [''],
+      startTime: '',
+      endTime: '',
     },
     {
       title: 'Drinks',
