@@ -6,7 +6,7 @@ import { navItems } from './Navbar'
 const HamburgerIcon = styled.div`
   display: none;
   position: fixed;
-  top: 15px;
+  top: 40px;
   left: 15px;
   width: 30px;
   height: 30px;
