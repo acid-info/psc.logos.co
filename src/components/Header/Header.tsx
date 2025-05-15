@@ -1,6 +1,7 @@
 import { uiConfigs } from '@/configs/ui.configs'
 import styled from '@emotion/styled'
 import { useEffect, useState } from 'react'
+import Banner from '../Banner/Banner'
 import HamburgerMenu from './HamburgerMenu'
 import Navbar from './Navbar'
 
@@ -56,6 +57,7 @@ const Header = () => {
       <Container showNavbar={showNavbar}>
         <Navbar />
       </Container>
+      <Banner showNavbarFromHeader={showNavbar} />
       <HamburgerMenu />
     </>
   )
